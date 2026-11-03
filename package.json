@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "mcp-ssh-manager": "^3.8.6"
+  }
+}

@@ -4,17 +4,14 @@ Tests for exp004 FP4 speculative decoding configurations.
 12 CPU-based tests verifying bit-for-bit equivalence and configuration validity.
 These tests should run quickly without GPU requirements.
 """
+
 import os
 import sys
 
 sys.path.insert(
     0,
     os.path.dirname(
-        os.path.dirname(
-            os.path.dirname(
-                os.path.dirname(os.path.abspath(__file__))
-            )
-        )
+        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     ),
 )
 
@@ -59,9 +56,7 @@ def test_full_search_space_count():
     # Actually: 3 × 5 × 6 × 4 × 2 × 2 = 720, but some combos are invalid
     # The effective count should be 480
     num_configs = len(configs)
-    assert num_configs == 480, (
-        f"Expected 480 configs, got {num_configs}"
-    )
+    assert num_configs == 480, f"Expected 480 configs, got {num_configs}"
     print(f"✓ Full search space: {num_configs} configurations")
 
 
@@ -236,7 +231,9 @@ def test_search_space_coverage():
     assert calib_data_found == {"c4", "wikitext", "sharegpt", "ultrachat"}, (
         f"Missing calibration data: {calib_data_found}"
     )
-    assert quantize_found == {True, False}, f"Missing quantize options: {quantize_found}"
+    assert quantize_found == {True, False}, (
+        f"Missing quantize options: {quantize_found}"
+    )
 
     # FP4 formats should include both e2m1 and nvfp4_block16
     # (e2m1 when not quantizing, nvfp4_block16 when quantizing)
@@ -297,10 +294,14 @@ def test_config_speedup_quality_tradeoff():
 
     # Verify quality decreases with lower thresholds (for same drafter/type)
     # Compare eagle configs with same tree_depth but different thresholds
-    eagle_configs = [c for c in configs if c.drafter_type == "eagle" and c.tree_depth == 2]
+    eagle_configs = [
+        c for c in configs if c.drafter_type == "eagle" and c.tree_depth == 2
+    ]
     if len(eagle_configs) >= 2:
         # Sort by threshold (higher = better quality)
-        eagle_sorted = sorted(eagle_configs, key=lambda c: c.acceptance_threshold, reverse=True)
+        eagle_sorted = sorted(
+            eagle_configs, key=lambda c: c.acceptance_threshold, reverse=True
+        )
         # Quality should generally decrease with lower thresholds
         # (this is a soft assertion since other factors also matter)
         quality_high = eagle_sorted[0].quality_estimate()
@@ -318,7 +319,14 @@ def test_all_configs_have_unique_params():
     """Test that all 480 configs have unique parameter combinations."""
     configs = _generate_configs()
     config_keys = {
-        (c.drafter_type, c.tree_depth, c.acceptance_threshold, c.calibration_data, c.quantize_drafter, c.drafter_fp4_format)
+        (
+            c.drafter_type,
+            c.tree_depth,
+            c.acceptance_threshold,
+            c.calibration_data,
+            c.quantize_drafter,
+            c.drafter_fp4_format,
+        )
         for c in configs
     }
     assert len(config_keys) == 480, (

@@ -1,0 +1,2721 @@
+hi friend
+Josh — 8/5/26, 7:31 AM
+fyi, configgle now at 1.3.6 and priml at 0.1.3. main change is that configgle now holds the universal launcher.
+Josh — 8/5/26, 8:36 AM
+fyi, wesearch and sagentnow bumped too
+zzz
+ just slid into the server. — 8/5/26, 1:50 PM
+
+
+Wave to say hi!
+A wild 
+Thomas
+ appeared. — 8/5/26, 6:38 PM
+
+
+Wave to say hi!
+Thomas — 8/5/26, 6:38 PM
+hey!
+junpenglao — 8/5/26, 6:39 PM
+hey Thomas!
+junpenglao — 8/5/26, 6:39 PM
+So the one i just show you is https://github.com/rekursiv-ai/trackinizer
+GitHub
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+
+trackinizer
+15 Messages ›
+There are no recent messages in this thread.
+
+Josh
+ started a thread: trackinizer. See all threads. — 8/5/26, 8:33 PM
+canyon289 — 8/5/26, 10:10 PM
+www.discoveryloop.com
+Turns out more people you might have heard of are also excited about automated scientific discovery
+Josh — 8/5/26, 10:12 PM
+its the thing to do! does this mean jeff quit?
+its rapidly turned into a competitive space--when we started last sept/oct '25 it was 🦗 chirping
+when did discoverloop unstealth?
+junpenglao — 8/5/26, 10:28 PM
+Interesting, i wonder if this is branching off from https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/
+Google DeepMind
+Co-Scientist: A multi-agent AI partner to accelerate research
+Introducing Co-Scientist, a multi-agent AI partner built with Gemini to help researchers generate and evolve hypotheses to accelerate scientific breakthroughs.
+Co-Scientist: A multi-agent AI partner to accelerate research
+canyon289 — 8/5/26, 10:40 PM
+Today and yes Jeff quoc etal all left
+junpenglao — 8/5/26, 10:41 PM
+https://www.fxleaders.com/news/2026/08/05/goog-alphabet-drops-5-after-googles-chief-scientist-jeff-dean-steps-down/
+FX Leaders
+Olumide Adesina
+GOOG: Alphabet Drops 5% after Google's Chief Scientist Jeff Dean St...
+Google's Chief Scientist, co-founder of Google Brain, and a key figure in the company's AI infrastructure for over 15 years
+GOOG: Alphabet Drops 5% after Google's Chief Scientist Jeff Dean St...
+canyon289 — 8/5/26, 10:43 PM
+And other sub reorgs as I'm sure no one here is surprised about
+Thats awesome! And thanks for emailing too!
+
+Im sorry it took us so long to connect--we've been under deep water just trying to get basic company operations up and running. And somehow in the meantime to make progress on ARC-AGI-1.
+
+We're hoping to get a small conference together soon. And the idea is to build the tooling out in the public.  Rn https://github.com/rekursiv-ai/sagent, https://github.com/rekursiv-ai/trackinizer, https://github.com/rekursiv-ai/priml, https://github.com/rekursiv-ai/configgle are the critical pieces
+GitHub
+GitHub - rekursiv-ai/sagent: A coding-agent CLI and strongly-typed ...
+A coding-agent CLI and strongly-typed Python library -- self-mutating, hot-swapping, multi-provider, with async tool calls and bidirectional recursive spawn. - rekursiv-ai/sagent
+A coding-agent CLI and strongly-typed Python library -- self-mutating, hot-swapping, multi-provider, with async tool calls and bidirectional recursive spawn. - rekursiv-ai/sagent
+GitHub
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+GitHub
+GitHub - rekursiv-ai/priml: ML building blocks for training experim...
+ML building blocks for training experiments. Contribute to rekursiv-ai/priml development by creating an account on GitHub.
+GitHub - rekursiv-ai/priml: ML building blocks for training experim...
+GitHub
+GitHub - rekursiv-ai/configgle: Type-safe hierarchical experiment c...
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+
+Josh — 8/6/26, 2:21 AM
+we'd love to learn about your interests and invite (and need!) you to help us build RSI!
+
+we'd love to learn about your interests
+9 Messages ›
+There are no recent messages in this thread.
+anyhoo -- just pardon all the Wet Paint. we're really just getting started so please bear with us as we try to organize. (its also a great time tho because you can really help shape this community and our company)
+
+Dan — 8/6/26, 3:16 AM
+Hey @Ant nice to see you here! Yeah we've been busy since last we talked but happy to engage here on a more regular basis
+
+A wild 
+Nicoleta
+ appeared. — 8/6/26, 9:24 PM
+
+
+Wave to say hi!
+
+Josh — 8/6/26, 9:49 PM
+Welcome 
+Manvija
+. Say hi! — 8/7/26, 12:39 AM
+
+
+Wave to say hi!
+Josh — 8/7/26, 1:44 AM
+
+Yay you made it, 
+Ming
+! — 8/7/26, 3:32 AM
+
+
+Wave to say hi!
+Josh — 8/7/26, 4:11 AM
+My xkcd-esque take
+
+Why agentic programming is both thrilling and maddening.
+
+
+  cumulative
+    value                                                   x = AGENT
+      ^                                                     o = HUMAN
+      |                                                             xxx
+      |                                                          xxx
+      |                                                       xxx
+      |                                                     xx
+      |                                                   xx
+      |                                                   x
+      |                                                 xx
+      |                                               xx
+      |                                               x
+      |                                             xx
+      |                                             x
+      |                                           xx               oooo
+      |                                           x       ooooooooo
+      |                                         xxoooooooo
+      |                 xxxxx              ooooo*o
+      |               xx     xxx     oooooo   xx
+      |               x         ***oo         x
+      |             xx     ooooo   xxx      xx
+      |             x  oooo           xxxxxx
+      |           x*ooo
+      |         oo*
+      |      oooxx
+      |   oo*xxx
+      |***xx
+      +---------|-----------|------------------|----------> time
+          (1)   |    (2)    |       (3)        |    (4)
+
+      (1) ramp-up       Agents slightly behind; need lots of coaching.
+      (2) agents ahead  Code lands fast -- feels like "magic."
+      (3) the hole      False! Code deceptively incomplete and woefully unmaintainable.
+           ----- Chaos ensues without rapid intervention. -----
+      (4) takeoff       Patterns & idioms crystallizes. Agents succeed autonomously.
+ 
+
+Josh — 8/7/26, 10:04 AM
+ok friends; its slowly dripping out but here's how we setup experiments for autonoous discovery:
+
+https://github.com/rekursiv-ai/priml/blob/main/priml/baselines/cifar10/experiments.py#L81
+
+
+# uv add priml
+from priml.baselines.cifar10.experiments import *
+exp000().pprint(hide_default_values=False)
+ 
+GitHub
+priml/priml/baselines/cifar10/experiments.py at main · rekursiv-ai...
+ML building blocks for training experiments. Contribute to rekursiv-ai/priml development by creating an account on GitHub.
+priml/priml/baselines/cifar10/experiments.py at main · rekursiv-ai...
+
+Josh — 8/7/26, 10:13 AM
+its just a toy; but it really does show the core ideas and how with configgle you can make a "lets-A/B-test-everything" harness
+
+
+junpenglao — 8/12/26, 1:36 AM
+@everyone hi friends, I just wrote a blog post sharing my experience using trackinizer and configgle. it will appears on rekursiv.ai/blog, but meanwhile a sneak peak in case it solve some of the challenge you have https://claude.ai/code/artifact/a146da36-e2c0-433b-9d4a-05e1b38e01af
+How three AI science teams cut 14 million gates from a quantum circuit
+Draft guest post: three AI science teams on the ECDSA.fail quantum circuit benchmark, with an animated roadmap of the run.
+Claude Artifact
+
+Josh — 8/12/26, 8:59 AM
+this is absolitely amazing--cant wait to get this up on rekursiv.ai. crazy day so will try tmrw AM
+Josh — 8/13/26, 11:41 PM
+new blog post is live! https://rekursiv.ai/blog/three-ai-teams-quantum-circuit/
+
+Congrats Junpeng!! Job excellently done!
+rekursiv.ai
+#1 on the public ECDSA.fail quantum-circuit benchmark
+Three autonomous AI science teams, coordinated across two providers (Anthropic and OpenAI) through Trackinizer and Configgle, reached
+
+and in other exciting news!
+Image
+
+Yay you made it, 
+gabriel
+! — 8/16/26, 10:43 PM
+
+
+Wave to say hi!
+gabriel — 8/16/26, 11:27 PM
+curious what you guys are working on and the challenges youre facing.
+any opportunities to contribute on the swe/applied ai/research side of things?
+
+Josh — 8/18/26, 12:51 AM
+HI Gabriel! Nice to hear from you! Yes--absolutely! I think two things jump to mind:
+
+We'd like to add more benchmarks to priml to build it up as a general harness for baseline studies
+We'd like to expand trackinizer to be more generally useful.
+
+The first bullet is mechanical; find good benchmark and add it. The second is more exploratory. We know the schema of trackinzier is powerful but we also know trackinizer has a long way to go before its the "internet darling" of work scheduling and durable learnings recorded.
+
+As far as priml goes, my dream would be to setup benchmarks to help us either distill and/or refine open weights coding models to run on consumer gpus like 5090s or 4090s. I think if we did this it would really bring us more attention and we could meaningfully start to bootstrap our community. 
+
+Wdyt? Where do you see the most need for improvement in the "Let's Speedrun Science" space?
+
+Btw, it goes without saying but we love hackers and we have a tendency to hire them when they do great things. (Just ask Junpeng! https://rekursiv.ai/blog/three-ai-teams-quantum-circuit/) 
+Josh — 8/18/26, 12:51 AM
+
+gabriel — 8/18/26, 1:54 AM
+definitely interested in contributing. i havent looked through priml/trackinizer enough yet to have a real opinion on them, so ill prolly spend some time digging through the repos first , but both directions you mentioned sound like stuff id enjoy working on
+
+more broadly tho, i think two of the main bottlenecks to recursive ai are automated research and continual learning(both on the ml and harness/llm ops side of things). feels like if we make real progress on those, pretty much every discipline starts moving a lot faster
+
+ill be out of town aug 19-29 and then uni starts the 31st, so for now ill be looking through your guys repos here and there and getting a better understanding of what youre working on
+
+after that, i could either contribute informally during the school year and aim for a fulltime internship summer 2027 (altho quite some time away), or potentially do something parttime/remote during the semester. my uni has academic advancement where i might be able to get a unit for internship/project work, so that could maybe be an option too
+Josh — 8/18/26, 1:55 AM
+Amazing! Yeah anything is on the table, esp for those passionate about this space!
+gabriel — 8/18/26, 1:56 AM
+sounds good, ill keep onboarding to the repos here and there over the next couple weeks. once i have a better picture of everything ill probably start suggesting some directions/picking up things that seem usefu
+
+Sahil K — 8/21/26, 1:22 AM
+Hey everyone! I’m Sahil. Really excited about what you all are building around agentic science and recursive AI. Would love to dig into the work, learn more about the research problems you’re exploring, and hopefully contribute on the research side of things or wherever I might help
+
+Dan — 8/21/26, 1:30 AM
+Hi @gabriel and @Sahil K , welcome to our community!
+Dan — 8/21/26, 1:37 AM
+We recently open-sourced a lot of our stack, please take a look: https://github.com/rekursiv-ai. We use priml (ML building blocks), configgle (configuration system), sagent (agentic harness), trackinizer (knowledge graph) daily for our work.
+
+Josh — 8/21/26, 2:38 AM
+hi friends. now that we're starting to be able to reliably beat benchmarks we will try to release our results here before we announce on the blog.
+also, would love to hear folks' thoughts on https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/
+
+i think we're seeing some creative results but pushing for more is reasonable.
+MIT Technology Review
+AI’s recursive self-improvement might not come so quickly after all
+AI agents are not yet creative enough to carry out genuinely innovative open-ended AI research, it seems.
+AI’s recursive self-improvement might not come so quickly after all
+Josh — 9/4/26, 10:02 AM
+session logs now live in trackinizer!
+you can do trax run agentsession 123 run claude and it will resume from the server
+
+Sahil K — 9/11/26, 2:39 AM
+I've spent a reasonable amount of time exploring the repos now, and would like to believe I have a pretty good understanding of how everything fits together. Where do you see the highest-value areas for me to contribute right now?
+happy to dig into anything, but would love to focus on the parts where additional engineering or analysis would actually move things forward the most, recursive ai is incredible intereresting to me
+Josh — 9/11/26, 2:41 AM
+hi sahil! great question! what do you feel about pursuing some specific benchmark or challenge? id need to discuss with the team but we might even be able to get you an NDA and then you can borrow our cluster--if that soudns interesting
+one thing im passionate about -- but we havent had time to explore -- would be to see if we can push the state-of-the-art on quantized inference and/or improve things for self-hosted LLM
+Sahil K — 9/11/26, 3:16 AM
+Yeah, that sounds super interesting. I’d definitely be down to own a specific benchmark/challenge and really dig into it. Access to the cluster would make that even more fun and probably more successful.  I don’t have a ton of experience with quantized inference specifically, but I’d be very happy to ramp up on it if you think that’d be a bigger value add for the team than the benchmark work. I’m pretty flexible on direction, mostly just want to spend time on whatever would actually be most useful.
+Josh — 9/11/26, 3:17 AM
+cool! that was just a suggestion though--are there things youre passionate about and/or have an "edge" on?
+Sahil K — 9/11/26, 3:42 AM
+honestly, not really yet. at least as it relates to the work here, i wouldn’t say i have some super differentiated niche or edge. i think owning a benchmark/challenge would actually be a great way for me to go deep on one problem, build more intuition for the space, and hopefully develop a more nuanced interest/edge from there.
+Josh — 9/11/26, 3:42 AM
+definitely! the only way to learn is to do.
+Sahil K — 9/11/26, 3:49 AM
+exactly, happy to just jump into whatever benchmark/challenge you think would be most useful and learn by doing
+Josh — 9/11/26, 3:49 AM
+sg! lemme consult with the team and get back to you asap
+
+Everyone welcome 
+dhanya
+! — 9/12/26, 7:50 PM
+
+
+Wave to say hi!
+Josh — 9/12/26, 7:50 PM
+
+dhanya — 9/12/26, 7:50 PM
+hii
+Josh — 9/12/26, 7:50 PM
+Hi Dhanya! Glad you could join here! Tysm for your sagent PR
+
+dhanya — 9/12/26, 7:51 PM
+sure! if there's anything i can help with please feel free to ask!
+Josh — 9/12/26, 7:52 PM
+please dont retweet until we share on tueday but we will early share results here in the discord starting with....drumroll...., https://rekursiv.ai/blog/autoautoresearch/
+rekursiv.ai
+(auto)²-research: SoTA on Karpathy’s NanoChat Benchmark
+We built a custom harness that does auto-autoresearch, which enables a swarm of agents to build on each other’s discoveries, preserve failed experiments, and improve how they do research. This let us improve on the previous NanoChat state of the art in three days.
+sure! if there's anything i can help with please feel free to ask!
+were you able to push your pr?
+yes! ty! i think we have a growing list! i just woke up (pacific time; california) but let me try to get that here
+
+dhanya — 9/12/26, 7:53 PM
+yes!
+Josh — 9/12/26, 7:53 PM
+outstanding! i hope not too many merge conflicts. i revamped our in house linter so it made lots of changes
+anyway; i was hoping youd join this discord because im interested in your alpha seek auto research. care to share some details here?
+Josh — 9/12/26, 8:03 PM
+weird; its stuck on
+Image
+dhanya — 9/12/26, 8:08 PM
+oh! ill see if i can do something
+dhanya — 9/12/26, 8:09 PM
+Thanks, appreciate it! At a high level:AlphaSeek is a multi-agent quant-research system: given a research question, a team of LLM agents profiles a dataset, reads literature, designs an experiment, writes and runs real Python against real market data in a hardened sandbox, self-repairs on failure, visualizes results, and answers the question — with every step streamed live to the browser and durably persisted
+have u seen the demo video, i had it in a seperate folder! or i can send it here
+Six specialized agents,  chained through a loop:
+
+Data Profiler → Researcher → (loop N times: Synthesist → Coding Agent → Sandbox → Visualizer) → Exporter (conditional) → Reporter with a self repair agent that corrects errors in code! plus you can choose the number of rounds like  5 so it would run five loops coming up with new hypothesis, then writing code to test it live against the dataset!
+On the infra side: the whole run happens in a background worker completely decoupled from the HTTP request, every event gets durably written to Postgres and published to a live bus (Redis pub/sub or Redpanda), and the frontend gets it all via SSE — replay history on connect, then tail live. So a browser refresh mid-run never loses or kills anything.
+dhanya — 9/12/26, 8:28 PM
+would love to go more in detail! like how the agents coordinate, how does the self repair loop mechanism works, and mainly how the researcher agents searches for papers on OpenAlex, Semantic Scholar, arXiv and how semantic relevancy is maintained while researching the proper papers and more!  I've spent a lot of time into working on this project and each system is carefully engineered, glad you liked it 😄 
+Josh — 9/12/26, 8:30 PM
+this is awesome
+its very similar to what we built
+dhanya — 9/12/26, 8:30 PM
+I couldnt upload the video of the demo in my github as it was big, but you can view it here : 
+https://www.veed.io/view/11dca076-b6b1-4a03-b371-4c709b57e30c?panel=share&source=landingPage
+
+https://www.veed.io/view/1d023a9c-fa36-4566-b82f-45584ffb4ede?panel=share&source=landingPage
+VEED
+Dhanya
+demo1
+Image
+VEED
+Dhanya
+demo2
+Image
+Josh — 9/12/26, 8:31 PM
+though ours is deconstructed:
+trackinizer == postgresql
+sagent == async repl
+wesearch == websearch
+so the async repl of sagent was useful to you?
+
+dhanya — 9/12/26, 8:31 PM
+YESSS! i was quite shocked at the coincidence when i came across your website! I think what youve built is soo cool and more well architectured, its amazing i read through the blogs
+Josh — 9/12/26, 8:33 PM
+on monday would you be down to VC? id love to find a way to incorporate your learnings and even support your use case. btw, we LOVE hiring go-getter folks who are builders 😉
+where are you based out of?
+
+Josh — 9/12/26, 8:40 PM
+awesome!
+
+my dream for our company is to build the core pieces that facilitate a transformation in how scientific discoveries are made, focusing on algorithmic discovery first
+
+so quant is very very high on my list of areas to "tap into"
+is this your background?
+dhanya — 9/12/26, 8:41 PM
+yess I'm interested in that too, so it was just a fun project I built to learn!
+Josh — 9/12/26, 8:41 PM
+amazing
+i love it
+dhanya — 9/12/26, 8:42 PM
+Noo, I'm a final year undergrad studying Computer Science, i do research and work on some projects on the side!
+😅
+Josh — 9/12/26, 8:43 PM
+awesome! well we'd also be open to internship opportunities 🙂
+dhanya — 9/12/26, 8:44 PM
+yess! sure 😄
+Josh — 9/12/26, 8:44 PM
+also ill be in india in dec; (pune and chandigarh)
+well mumbai too ofc
+
+dhanya — 9/12/26, 8:45 PM
+Oh I live in a different state! I'm from Karnatka, so I live in the south
+Josh — 9/12/26, 8:46 PM
+nice--ive only been to the been to the bengaluru airport lol
+
+dhanya — 9/12/26, 8:47 PM
+How does the team work!? onsite? remote? I did see both mentioned on the website
+Josh — 9/12/26, 8:47 PM
+all remote
+dan lives in SF i live in south bay
+so we're close. but others are remote
+
+but mostly just remote
+dhanya — 9/12/26, 8:48 PM
+Oh! good to know because I'm quite flexible too, I can be available during your timezones too!
+Josh — 9/12/26, 8:48 PM
+amazing! ok well cant wait to talk
+
+when we meet im hoping you can give me a run down of what you built, what worked, what didnt, lessons learned. im happy to do the same--all of our stuff is OSS except for the metaharness and the prompts
+dhanya — 9/12/26, 8:51 PM
+yess sure!
+
+Sahil K — 9/15/26, 1:33 AM
+wanted to follow up on this!
+Josh — 9/15/26, 2:03 AM
+Hey Sahil! sorry we didnt get a chance to discuss it today--we're in sprint mode to get the announcement messages ready for our big nanochat progress. circle back tomorrow? or perhaps you have some ideas on buzzy challenges to tackle?
+gcamp
+ just landed. — 9/15/26, 4:39 PM
+
+Wave to say hi!
+
+junpenglao — 9/15/26, 5:11 PM
+Yay you made it, 
+Poppa Abraham
+! — 9/15/26, 7:42 PM
+
+
+Wave to say hi!
+Poppa Abraham — 9/15/26, 7:42 PM
+Hello everyone!
+
+junpenglao — 9/15/26, 7:55 PM
+
+Hello and welcome!
+Dan — 9/15/26, 9:00 PM
+
+Forwarded
+Announcing our latest results, we sent a swarm of agents to train some LLMs and it got SoTA on Nanochat, building a huge knowledge graph in the process. Check it out!
+https://x.com/hyperparticle/status/2099861544481731058
+
+https://www.linkedin.com/posts/junpeng-lao_multi-agent-workflows-are-all-the-rage-but-activity-7505532087085617153-3w3N
+Dan Kondratyuk (@hyperparticle)
+We sent a swarm of AI agents to solve Karpathy’s NanoChat benchmark, and they crushed SoTA in 3 days.  We built our own harness on top of a graph database to do auto-autoresearch, each iteration learning from mistakes to do research better. The team wrote >15,000 entries. 🧵
+Image
+
+X•9/15/26, 7:33 PM
+LinkedIn
+Multi-agent workflows are all the rage. But advancing science takes...
+Multi-agent workflows are all the rage. But advancing science takes more than throwing 10,000 agents at a problem.  Over three days and 6,164 experiments, we at @rekursiv.ai reached a new state of the art on Andrej Karpathy's NanoChat benchmark: 📊 0.88982 mean BPB across 10 seeds (a 1.3% improvement over the previous best).  Reaching that sco...
+Multi-agent workflows are all the rage. But advancing science takes...
+#👂announcements  •  9/15/26
+
+
+Nate
+ is here. — 9/15/26, 10:37 PM
+
+
+Wave to say hi!
+Nate — 9/15/26, 10:39 PM
+Dan — 9/15/26, 10:52 PM
+Hey @Nate, welcome!
+Nate — 9/15/26, 10:53 PM
+Super cool project @Dan and @Josh . Will study your github repo to gain more familiarity.
+Welcome 
+Ayush
+. Say hi! — 9/15/26, 11:04 PM
+
+
+Wave to say hi!
+A wild 
+nk
+ appeared. — 9/15/26, 11:06 PM
+
+
+Wave to say hi!
+A wild 
+datavorous
+ appeared. — 9/15/26, 11:26 PM
+
+
+Wave to say hi!
+Yay you made it, 
+Karan Ganesan
+! — 9/15/26, 11:45 PM
+
+Wave to say hi!
+DaIssa 🥶🥶🥶
+ joined the party. — 9/15/26, 11:58 PM
+
+
+Wave to say hi!
+nickel_11
+ is here. — 9/16/26, 12:01 AM
+
+
+Wave to say hi!
+Josh — 9/16/26, 12:01 AM
+hi new friends! welcome to our tiny little corner of the internet!
+a brief intro: we're just a bunch of hackers who think ml research is too hard for humans to do and we want to get agents to help us out. 
+
+we'd would love to learn more about you all and find ways to collaborate on research! 
+
+Dan — 9/16/26, 12:07 AM
+Hi everyone 👋  If you have any cool projects or tips to share, please do! Would love to discuss what you're all up to
+
+A wild 
+Voctor
+ appeared. — 9/16/26, 12:16 AM
+
+
+Wave to say hi!
+Glad you're here, 
+Shaan
+. — 9/16/26, 12:24 AM
+
+
+Wave to say hi!
+MṝU\@1
+ joined the party. — 9/16/26, 12:58 AM
+
+
+Wave to say hi!
+Josh — 9/16/26, 2:01 AM
+hi new friends! welcome!
+Josh — 9/16/26, 2:02 AM
+Thanks! We're really excited to build something others can use for research too. Looking forward to learning your thoughts/advice etc!
+A wild 
+ic1138.
+ appeared. — 9/16/26, 2:11 AM
+
+
+Wave to say hi!
+Good to see you, 
+Frederik
+. — 9/16/26, 2:16 AM
+
+
+Wave to say hi!
+Nate — 9/16/26, 2:43 AM
+Just a quick question as I’m getting familiar with the codebase: are we expected to focus on improving an existing feature, or is adding a new baseline to the priml folder also within scope?
+Leo Shaposhnik
+ joined the party. — 9/16/26, 2:44 AM
+
+
+Wave to say hi!
+Josh — 9/16/26, 2:45 AM
+tl;dr: we're a hacker community and whatever you think!
+
+longer answer: our dream:
+
+create tons of meaningful baseline experiments
+share results on trackinizer (we'll be FREE hosting soon but its OSS so you can too)
+our collective effort builds a knowledge graph which we distill into a better LLM for discovery
+
+
+so i'd probably say the best way to contribute would be to build out baselines within priml and sticking to its style so we can create a community driven auto-harness 
+
+we envision trackinizer as being a portal for agents. an unholy marriage of:
+wikipedia
+stackoverfow
+gdrive for sessions
+reddit
+but for agents.
+
+then we see priml as a place for reproducible science.  immense care has been put into making it typesafe and repro on x86 and aarch64
+as a company, we want to be a lot like astral; laser focused on serving the community
+and ofc FOSS first
+Nate — 9/16/26, 2:49 AM
+thank you @Josh for the clarification. I might have some more questions moving forward to get a better alignment with the type of community rekursive desire to have. Discord helps a ton with that
+Josh — 9/16/26, 2:49 AM
+we need all the help we can get, lol. we're really just a bunch of scientists who think science should be easier. thats about the size of it!
+
+Leo Shaposhnik — 9/16/26, 2:50 AM
+Hi all! I saw your release and it looks really cool! What is your vision how far down arguments should become "typed"? I was thinking a lot about what scale of reasoning gives a good abstraction more generally for research, e.g. I would not need a formalization on the level of Lean for many arguments but it would also be cool to have individual logical steps typed. One can of course cluster it under "this artifact contains this knowledge" but I'd be curios to know "down to what scale" you think is a good baseline for multi-agent interaction 
+Josh — 9/16/26, 2:55 AM
+Oh this is a question so near and dear to my heart! 
+
+On some level everything is "just"  theorem proving. I think where things get dicey is the halting problem.
+
+So rather than try to answer these lofty and provably unanswerable questions, we try to be fiercely pragmatic.
+
+Our overall thinking boils down into precisely two abstractions manifested by configgle (priml being a user) and trackinizer.
+
+In configgle-land, our thinking is that functions aren't actually the base cognitive abstraction but rather their arguments. Configgle therefore lifts arguments as first class citizens but also the "maker" and therefore supports dependency injection. This becomes very powerful for A/B testing, as evident from our results. It looks like others in ML have followed suit--torchtitan went this way roughly three weeks after I released configgle and in jax-land these ideas existed at apple since 2023.
+
+Meanwhile in trackinizer our core axioms are:
+it is impossble to make a universally ergonomic epistemology so instead lets focus only on provenance-- we'll be sure to track how it came to be rather than what it is
+the exception to "only track how it came to be" (ie we do track what it "is") is when we want searchability. websearch exists because it needs webresults and paper exists because it needs authors. each Baconian inquiry exists only because we want specific edges
+
+
+Leo, does this resonate with you? Did I answer the right question? 
+Leo Shaposhnik — 9/16/26, 2:57 AM
+Hey yes I think so! I will have to digest it a bit
+Josh — 9/16/26, 2:57 AM
+We're trying to figure this out ourselves so I wouldnt assume we know what we're talking about!
+Btw, we didnt post configgle so here's the link, https://github.com/rekursiv-ai/configgle 
+GitHub
+GitHub - rekursiv-ai/configgle: Type-safe hierarchical experiment c...
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+GitHub - rekursiv-ai/configgle: Type-safe hierarchical experiment c...
+frvnk
+ just landed. — 9/16/26, 2:58 AM
+
+
+Wave to say hi!
+Leo Shaposhnik — 9/16/26, 2:59 AM
+Can I share your answer with people not on this discord that also had similar questions?
+Josh — 9/16/26, 2:59 AM
+sure! ofc! we're really trying to build a hacker scientist community and no one owns ideas 🙂
+
+i could talk about this stuff for endless hours so dont be afraid to tell me to shutup too
+🙂
+Leo Shaposhnik — 9/16/26, 3:04 AM
+Oh no worries, I also think that this - structured knowledge representation - is an essential problem we need to understand to do science (or any knowledge work) at scale
+
+Josh — 9/16/26, 3:05 AM
+100% agree. i feel frustrated that science hides the failures. we want to host trackinizer as a free service to celebrate failed ideas
+Leo Shaposhnik — 9/16/26, 3:05 AM
+so you want that "the meat of the content" is still represented by artifacts, rather then "engrained" in the typed system 
+Josh — 9/16/26, 3:06 AM
+thats right. i dont want types to "get in the way" but also recognize their vitalness for discoverability
+by analogy, consider the periodic table of elements. there are infinite ways to organize things. but the right scheme can actually predict holes--it predicted element 43! so the right types need to be primitive but also let you see holes
+Leo Shaposhnik — 9/16/26, 3:09 AM
+I was now wondering when we will have api's between different type systems that different standard solutions will use
+Josh — 9/16/26, 3:09 AM
+i mean on some level this is the internet. if you think of code as being part of that spec 
+
+but i think to me, what is lacking, is a system design for agents -- not for humans
+this is what we're trying to build
+Leo Shaposhnik — 9/16/26, 3:10 AM
+Oh no I totally agree!
+Josh — 9/16/26, 3:10 AM
+this is why in trackinizer we're most proud of the cli (trax) and also the schema. we think the rest needs a lot of work
+the schema seems like a powerful unlock. and trax is natural for agents, being a simple LRR grammar
+Nate — 9/16/26, 3:12 AM
+How do you think about the ordering of experiments within a node? Is the sequence in which hypotheses or configurations are tested itself part of the provenance that should be represented, especially if earlier results influence which experiment gets run next?
+Josh — 9/16/26, 3:15 AM
+we dont! we just let the agents go hogwild. 🙂
+generally we see agents are lazy and first go after hypers. after hypers are exhausted then they work harder at novelty
+we only posted the "roof raises" in priml; its just too overwhelming to track 15000 experiments 🫠
+but once we host trackinizer we can share the failed experiments too. configgle has nice jsonpickle serialization so its not too hard
+
+Good to see you, 
+the_4lph4
+. — 9/16/26, 3:31 AM
+
+
+Wave to say hi!
+Josh — 9/16/26, 5:01 AM
+just thinking about baseslines... we might want to setup an experimental dir for works in progress? so we can separate the "done" baselines from the wip?
+Welcome, 
+Prashu
+. We hope you brought pizza. — 9/16/26, 7:43 AM
+
+Wave to say hi!
+Yay you made it, 
+ajay_r4j
+! — 9/16/26, 10:26 AM
+
+
+Wave to say hi!
+ajay_r4j — 9/16/26, 12:09 PM
+Hey everyone, coming here from @junpenglao 's linkedin post about the new feat at the nanochat benchmark. I read through https://github.com/rekursiv-ai/trackinizer it was nice, will check it out for my autonomous research use-case(quantitative strategy research) as I currently have implemented some in-house stuff for it with cognee as the base and this seem to be a better fit than cognee after skimming over it.
+
+I'm a quantitative researcher running a small quant hedge fund from Bangalore and a former forward deployed AI engineer for the past 6 years now. Who is exploring harness, autonomous research and enterprise usecases for fun. 
+
+About me: https://medium.com/deployedai/enterprise-ai-the-adoption-path-forward-c91e6e33541c
+
+Looking forward to be talking to you all!
+
+@Josh, to understand these failures in large-scale multi-agent systems, how are we planning to identify the points where things went off track? In your view, is LLM-as-a-judge reliable enough for this kind of diagnosis, or should we focus on developing more deterministic methods for detecting and localizing failures?
+“Happy families are all alike; each unhappy family is unhappy in its own way.” (Tolstoy) haha
+Josh — 9/17/26, 1:37 AM
+Great question! We're currently adding hierarchical summarization into trackinizer to help with mining. The idea is that we can triangulate session failures with Inquiries.
+
+We also do a lot of meta-optimization on our specific workflows but we havent yet OSS'ed this since its a work-in-progress.
+Nate — 9/17/26, 2:07 AM
+and wouldn't it better to delibrately first minimize differences between groups of experiement, and then maximize their difference as the communication between the agents become more solidified ? The minimization can help discover and refining the category, while maximizing the difference can expand, integrate, and bound the theory. Basically similarities that survive across maximally different groups are the most general uniformities. 
+Josh — 9/17/26, 3:04 AM
+assuming i grok you: in a sense priml already does this. it establishes an opinionated baseline then deviations are A/B explored from there
+A wild 
+Haru
+ appeared. — 9/17/26, 6:49 AM
+
+
+Wave to say hi!
+Haru [NOUS],  — 9/17/26, 12:17 PM
+
+Sway
+ joined the party. — 9/17/26, 1:05 PM
+
+
+Wave to say hi!
+Sway — 9/17/26, 1:05 PM
+hello
+yall's api bills must be insane
+
+APK
+ is here. — 9/17/26, 4:12 PM
+
+
+Wave to say hi!
+APK — 9/17/26, 4:21 PM
+The swarm of agents project is really cool!
+
+Josh — 9/17/26, 9:00 PM
+yes it is! but we're hoping to get hat down!
+
+our first objective is to prove we can invent exciting ideas and use that to bootstrap this community of "hacker scientists". our second objective is democratize by getting cost down
+Sway — 9/17/26, 9:06 PM
+i hear tales of you having left luma told with great remorse :berk:
+Sway — 9/17/26, 9:08 PM
+do cheap models like deepseek 4.1 flash have good results with your harness?
+Dan — 9/17/26, 10:24 PM
+Welcome @Sway! Yeah the tokens be burning 🔥
+Dan — 9/17/26, 10:40 PM
+Cheaper models tend to perform better when they are given constrained tasks, like "go implement this spec",  or "go debug this issue". For open-ended tasks they tend to do more poorly, so you need more powerful models
+
+Josh — 9/17/26, 10:42 PM
+@dhanya mentioned to me that she successfully uses deepseek
+Nate — 9/17/26, 10:50 PM
+@josh I am going through artifacts of your repos and one of them is your paper Speed is Confidence. While reading I was thinking if you guys ever tried embedding the agent trajectory and form a semantic clusters in order to strategize the diversification of the soluiton. Particularly where could be the concentration of the failure trajectory in an embedding space (turning the agent trajectory blob into vectors in simple terms)
+Josh — 9/17/26, 10:53 PM
+Thats an AWESOME idea Nate!!
+
+We have not done this. As of yet we are just getting sessions still fully absorbed into trackinizer. Looks like @dhanya added searchability.
+
+What we should do is try to OSS our sessions for nanochat then maybe you can use this as a dataset to try to build this?
+
+I think OSS'ing our sessions could be valuable because its many $10k worth of tokens. Would this be enough to help you implement your idea (ideally in trackinizer so the community can benefit?
+Nate i REALLY like this idea.  I think rn most of the world is thinking about <100 agents but we think the future is getting millions of agents to collaborate meaningfully
+
+Trackinizer is our first attempt to start to build a substrate to support "millions of collaborations"
+Nate — 9/17/26, 11:05 PM
+Great! Happy to hear that. I’m getting familiar with your repos now—there’s a lot to learn before I can contribute meaningfully. I’ll add this feature once I have more context on your work.
+Josh — 9/17/26, 11:06 PM
+awesome--on our side lets see if we can oss the sessions. its tricky though because this is also our core IP so we need to think carefully about balancing the desire with building a community with our practical need to have some kind of an "edge"
+Nate — 9/17/26, 11:19 PM
+How can I access those OSS ? I think I need a few days to understand your pipes, and then I can start doing something with the sessions you mentioned
+Josh — 9/17/26, 11:28 PM
+so we havent OSS'ed our actual sessions--just the winning experiments.
+things we've kept internal:
+actual sessions
+metaoptimizing harness
+prompts
+
+things we've OSS'ed: everything else:
+trackinizer
+sagent
+priml
+
+
+basically we kept internal the output of the systems which were OSSed
+Nate — 9/17/26, 11:29 PM
+Ah I see it actually make sense haha
+Josh — 9/17/26, 11:30 PM
+the thing we'll need your help on first is answering this: whats the right amount of oss'ing? in a perfect world we'd just OSS everything but we also need to find ways to fund this research and the community
+so its a delicate balance... my position is that its best to answer these questions openly/publically. 🙂
+Nate — 9/17/26, 11:32 PM
+maybe a tiny version of it would be valuable as a starting point. Something like a tiny MNIST of the research agent world haha. Small enough to add features on but not big enough to spill the beans
+Josh — 9/17/26, 11:33 PM
+yeah! thats a great idea! i think we'd maybe be even okay with nanochat since that really is a hello world
+so your idea (to summarize): at least give the community a taste of these logs
+and so we can all collaborate
+this seems totally reasonable to me!
+and what of our scientist prompts? should we be sharing those? keeping them internal?
+i lean share... but im not sure thats "strategic"
+btw, imo the single best thing we did is actually this: https://github.com/rekursiv-ai/priml/tree/main/typings
+and this: https://github.com/rekursiv-ai/priml/blob/main/.pre-commit-config.yaml 🙂
+GitHub
+priml/typings at main · rekursiv-ai/priml
+Strongly typed configurable ML building blocks for training experiments and A/B testing. - rekursiv-ai/priml
+GitHub
+priml/.pre-commit-config.yaml at main · rekursiv-ai/priml
+Strongly typed configurable ML building blocks for training experiments and A/B testing. - rekursiv-ai/priml
+Strongly typed configurable ML building blocks for training experiments and A/B testing. - rekursiv-ai/priml
+(which makes me think we should just make a rekursiv-ai/typeshed pip package)
+Nate — 9/17/26, 11:38 PM
+@Josh As a “hello world” project, what I’d really like to focus on is how multiple agents can systematically strategize the diversification of experiments—so that their collaboration and communication lead to faster discovery with fewer redundant trials, errors, and failures. What I have learned from Speed is Confidence paper is that diversity is a means, not the  goal. The system needs several viable paths, not maximum disagreement between agents explorations 
+
+I think a valuable starting point would be to conduct an initial failure analysis of the available sessions, specifically through the lens of how the agents concentrate their efforts and how effectively their work is connected and coordinated across experiments.
+
+The appendix of your paper is actually what inspired me to pitch this idea to you guys. I found the failure cases particularly interesting, and I’d love to explore whether we can build something around this together. 
+@Josh As a “hello world” project, what
+8 Messages ›
+There are no recent messages in this thread.
+11d ago
+Josh — 9/17/26, 11:40 PM
+I love that this inspired you! And yes--it is exactly what I think too!! And my only regret is that we have only begun to scratch the surface here and hence your gravitation to this is awesome!
+
+btw, i found last night's Nova to be inspiring: https://www.pbs.org/video/the-battle-to-breathe-1b8fis/
+
+they talked about how the cure was found by running 1000s of experiments per day. I really think this is the way--and making those experiments diverse... well that is portfolio optimization and absolutely the way to think about "swarm intelligence"
+
+they get into this around min 25:45
+
+"before we were doing experiments by hand...but...trying to accelerate...discovery...by running tens of thousands tests a day..." 
+NOVA | The Battle to Breathe | Season 53 | Episode 9
+Follow the relentless quest that led to a breakthrough treatment for a deadly disease.
+NOVA | The Battle to Breathe | Season 53 | Episode 9
+
+Josh — 9/18/26, 12:50 AM
+hi friends. new feature drop in priml: cost. Here's an example:
+
+from loop.priml import cost as theoretical
+from loop.priml.baselines.sudoku import experiments as sudoku
+
+sudoku.exp000().finalize().step.model.cost(batch_size=64, dtype=torch.bfloat16)
+#   Cost(params=6841858, params_active=6824450, bytes_state=8192)
+#                        flops flops  bytes bytes
+#                         bf16 int64   bf16 int64 intensity
+#   primal  matmul      27.94M     - 102.7K     -       272
+#   primal  elementwise 62.13K     -   175K     -    0.3551
+#   primal  reduction   9.208K     -  18.7K     -    0.4923
+#   primal  selection        -     - 2.144K 8.375         -
+#   adjoint matmul      55.88M     - 205.4K     -       272
+#   adjoint elementwise 75.94K     - 280.5K     -    0.2708
+#   adjoint reduction   7.152K     -  14.5K     -    0.4934
+#   adjoint selection      536     - 3.224K 8.375    0.1658
+#   total               83.97M     - 802.1K 16.75     104.7
+
+sudoku.exp001().finalize().step.model.cost(batch_size=64, dtype=torch.bfloat16)
+#   Cost(params=4869122, params_active=4851714, bytes_state=0)
+#                        flops flops  bytes bytes
+#                         bf16 int64   bf16 int64 intensity
+#   primal  matmul      22.03M     - 96.88K     -     227.4
+#   primal  elementwise   116K     - 375.4K     -    0.3089
+#   primal  reduction   16.65K     - 33.54K     -    0.4965
+#   primal  selection        -     - 2.144K 8.375         -
+#   adjoint matmul      44.06M     - 193.8K     -     227.4
+#   adjoint elementwise 161.6K     -   750K     -    0.2154
+#   adjoint reduction   17.16K     - 34.58K     -    0.4962
+#   adjoint selection      536     - 3.224K 8.375    0.1658
+#   total               66.41M     -  1.49M 16.75     44.58
+
+theoretical.peak()['rtx5090', torch.bfloat16]
+#   Cost(params=0, params_active=0, bytes_state=0)
+#                flops  bytes intensity
+#   matmul      209.5T 1.792T     116.9
+#   elementwise 104.8T 1.792T     58.48
+#   reduction   104.8T 1.792T     58.48
+#   selection   104.8T 1.792T     58.48
+#   sort        104.8T 1.792T     58.48
+
+theoretical.peak()['h100', torch.bfloat16]
+#   Cost(params=0, params_active=0, bytes_state=0)
+#               flops bytes intensity
+#   matmul       989T 3.35T     295.2
+#   elementwise   67T 3.35T        20
+#   reduction     67T 3.35T        20
+#   selection     67T 3.35T        20
+#   sort          67T 3.35T        20
+
+# Notice that 272/295.2-1=-.078591 ie exp000 (Transformer) is withing 8% of
+# optimal arithmetic intensity for an H100 versus exp001 (MLP Mixer) which is
+# 227.4/295.2-1=-.229675 or 23% suboptimal.
+#
+# The reason (fwiw): the MLP Mixer is about 28% smaller and therefore sees
+# about this much fewer flops. Note however that the bytes transferred is only
+# 5% smaller for MLP mixer, ie, while its a smaller model it still places about
+# the same load on the memory bus. This is why MLP mixers are not as "intensity
+# efficient" as transformers. Ie, the params/bytes_moved shakes out as:
+#   transformer: 6841858 / 205.4K = 33.309922
+#   mlpmixer:    4869122 / 193.8K = 25.124468
+# meaning that in terms of memory transfer, the transformer is actually getting
+# ~33% more parameters per byte moved.
+junpenglao — 9/18/26, 12:57 AM
+😮 <-- my face when you show me this
+
+Josh — 9/18/26, 12:59 AM
+its actually surprisingly easy in priml. once we had all the Config's laid out, its pretty trivial to do this kind of meta-analysis.
+
+ofc torch allows you some of this but doesnt give you every op, bytes moved, nor makes it easy to break it down by categories like "selection" and "sort" nor "primal" and "adjoint" etc
+
+ofc the main risk is "skew from reality" but ive setup unit tests to at least check against what torch does tell us and on tiny models. 
+im actually really excited to spin up an agent session and just see if it can invent a new kind of architecture with better cost profile for each hardware class: rtx5090, h100, rtx5050, etc
+
+Josh — 9/18/26, 1:06 AM
+ok, i just pushed all these changes to priml.
+err, give it a few min to propagate to it
+
+Nate
+ started a thread: @Josh As a “hello world” project, what. See all threads. — 9/18/26, 11:22 PM
+Dan — 9/19/26, 12:50 AM
+Hey @Sway, how goes it? I'm curious if you're interested in beating any challenges using agents to optimize over them
+Sway — 9/19/26, 1:05 AM
+do yall have any challenges you mean?
+I am using agents alot for research but not any specific challenge
+Dan — 9/19/26, 1:17 AM
+Maybe we can design one together, for diffusion
+
+Josh — 9/19/26, 1:20 AM
+Hi Sway! We just met with Nate and he's going to try to port your speed-dit into priml so we can use this as a basis for agentic discovery. This seems like it'd be a great basis for us all to collaborate on research?
+
+it'd be amazing to see if we can invent new ideas in diffusion space using it
+Josh — 9/19/26, 2:43 AM
+context: Sway is the creator of https://x.com/SwayStar123/status/2000826634409320918
+sway (@SwayStar123)
+Speedrunning ImageNet Diffusion - 360x faster training  There have been many new techniques demonstrating convergence speedups compared to DiT in the past few years, however all of these have been studied in isolation, against increasingly outdated baselines.  I present SR-DiT (SpeedrunDiT), which …
+Image
+
+X•12/16/25, 12:43 PM
+
+there's at least two exciting directions id like to propose we take SR-DiT:
+can we use it to invent novel diffusion approaches
+can we use it to invent novel SFT approaches
+can we use it to understand and significantly improve the encoding/dit tradeoff?
+
+relatedly, can we make a nano-sr-dit to hillclimb on? 
+Sway — 9/19/26, 12:10 PM
+theres definitely alot more room, my paper already feels super outdated haha. For example switching out the vae with all the new potential better ones like rae, raev2, minimax's vtp, bytedance's genfirst
+
+then theres self flow and all the improvements that you could try with that
+
+I didnt even touch alternative attns and such, or moes
+I wouldnt be surprised if you could get another 50x faster on top of my thing
+
+so hillclimbing is definitely doable
+novel diffusion approaches, possible too, you might have to strip out some of my components like CFM for that, but workable
+Sway — 9/19/26, 12:27 PM
+I havent looked up too much into rekursiv, my past experience with llms doing research does not make me hopeful on inventing completely novel stuff though. Do you guys think its possible?
+Nate — 9/19/26, 10:31 PM
+I am going to create a PR to add your baseline to priml and I think it can be a solid exp000 and we can add the new novelties in the diffusion landscape later to the baseline. Not sure if that will damage the consistency of the new  baseline or not but seems doable to me
+
+Absolutely possible to do research with agents. They recently have got WAY better. With enough elbow grease, we managed to get our agents to come up with new autonomously invented algorithms. The Sudoku one is a great example, the Hypothesis Pinning Search the AI team invented we verified was a completely new idea, with loose ties to other similar approaches like discrete diffusion: https://rekursiv.ai/blog/100-percent-accuracy-on-sudoku/ 
+rekursiv.ai
+Learning 100% Sudoku Accuracy with a Neural Network
+Our AI team discovered a method to achieve 100% accuracy on Sudoku from data alone. We will continue to Apache 2.0 license the discoveries and some of the underlying system components, having started with configgle and sagent.
+Sway — 9/19/26, 10:38 PM
+yeah i saw that, but doesnt really seem on the same level
+well, id be happily proven wrong though
+or unhappily, not sure what my thoughts on RSI are 😂
+Dan — 9/19/26, 10:39 PM
+We're working on making it even better, the rate at which they're coming up with new ideas is improving. It's a matter of time!
+
+Sway — 9/19/26, 10:39 PM
+whats the most exciting thing your agents have come up with
+i definitely do see the trend though, wouldnt be surprised if next gen models are able to do it
+just dont see current ones able to do it well
+Dan — 9/19/26, 10:43 PM
+With our latest results, I'm pleasantly surprised in their ability to prompt themselves to get better at a task. It's really weird and counterintuitive, how this could be better than prompting an agent directly, but it works. And they came up with some interesting strategies for building AI agent organizations to solve research problems that I haven't thought of.
+Sway — 9/19/26, 10:44 PM
+i have to keep telling my fable to stop trying to stack brittle tricks and to try to find a cleaner and simpler solution, but after a compaction or two its back at it
+despite that instruction being in its memory, in its claude.md, and everywhere else i can imagine
+i even tried having an automatic 4 hour reminder but that didnt work either
+Dan — 9/19/26, 10:46 PM
+Yeah the current agents are still pretty bad at it, hence why you need a lot of harness-stuff to make it work. But each new release makes it a bit easier
+junpenglao — 9/19/26, 10:47 PM
+From my personal experiment, i had the agents come up with https://arxiv.org/abs/2607.23788 which i think it is pretty neat. I share your impression @Sway that it is not 1 simple / clean idea but instead it is a few smaller ideas that work coherently together. But at the same time i think that's the real science: incremental, and a bunch of trick that make an idea really click
+arXiv.org
+The Universal Warmup Path: Automatic Preconditioner Selection for HMC
+Euclidean Hamiltonian Monte Carlo (HMC) warmup must choose a step size and constant preconditioner from limited, nonstationary draws. Standard warmup follows a fixed schedule and generally requires the preconditioner structure to be specified in advance. We present a multi-chain controller that starts diagonal and, at dimension-derived window en...
+arXiv logo
+Sway — 9/19/26, 10:49 PM
+in a verifiable domain like maths it seems better
+but for architectures, smaller brittle tricks dont scale well
+or generalize well
+Josh — 9/19/26, 11:39 PM
+https://github.com/rekursiv-ai/sic was autonomously invented and had big gains which was later rediscovered in Samy Bengio's work
+GitHub
+GitHub - rekursiv-ai/sic: Speed is Confidence
+Speed is Confidence. Contribute to rekursiv-ai/sic development by creating an account on GitHub.
+Speed is Confidence. Contribute to rekursiv-ai/sic development by creating an account on GitHub.
+but i do agree that its not easy to get agents to do science--this is why we exist 🙂
+if it was easy we wouldnt have a purpose
+having said that we're amassing some real success stories on https://rekursiv.ai/blog/. we just achieved world-best on nanochat and by a large margin
+rekursiv.ai
+Blog
+Updates from rekursiv.ai on autonomous AI research systems, open-source releases, and what we are learning.
+and i still think our arc1/2 gains are significant https://rekursiv.ai/blog/pushing-limits-arc-agi/
+rekursiv.ai
+Pushing the Limits of Autonomous ML Science on ARC-AGI
+We’re excited to share Pareto record-setting ARC-AGI results invented by an autonomous team of AI scientists. This team achieved 71.4-75.5% on ARC-AGI-1 and 17.5% on ARC-AGI-2 at 16× to 11,600× lower computational cost than LLMs with similar accuracy. We will continue to Apache 2.0 license the discoveries and some of the underlying system co...
+i have to keep telling my fable to stop trying to stack brittle tricks and to try to find a cleaner and simpler solution, but after a compaction or two its back at it
+we wrote sagent to help with this. i havent had time but there's lots of things we can add to compaction to improve it. namely, just strip toolresults is imo still the best approach
+Dan — 9/20/26, 12:49 AM
+This is really awesome @Nate !! I'd love if we could build a follow-up to SpeedrunDiT with @Sway together (if you're up for it @Sway, no worries if not) with all the newest techniques, tips and tricks. And then add several rounds of autonomous science/engineering to really bring down the cost. I bet the community is itching for something like this, it's the perfect opportunity. 
+
+I saw this recently, there's definitely renewed interest in this direction: https://github.com/ivanmikhnenkov/tinydit
+GitHub
+GitHub - ivanmikhnenkov/tinydit: A 210M text-to-image diffusion tra...
+A 210M text-to-image diffusion transformer trained from scratch on one GPU in 3.5 days: rectified flow on FLUX.2 latents, aspect-ratio buckets, registers, 4.2M curated images. Every decision with s...
+A 210M text-to-image diffusion transformer trained from scratch on one GPU in 3.5 days: rectified flow on FLUX.2 latents, aspect-ratio buckets, registers, 4.2M curated images. Every decision with s...
+Nate — 9/20/26, 12:54 AM
+Agree. I am about to push some codes/files for this to the repo. I am assuming I should create a fork of the original repo ?
+Dan — 9/20/26, 12:54 AM
+No need for a fork, just send a PR directly to add a new dir in priml/baselines
+Just make sure you had your agent load our priml skills and asked it to "follow closely the style of baselines/cifar10, and baselines/nanochat with similar file/module structure". That tends to work pretty well 
+
+Nate — 9/20/26, 12:59 AM
+should we add me as a collaborator ?
+A wild 
+rekursiv-bot
+ appeared. — 9/20/26, 1:16 AM
+Dan — 9/20/26, 1:19 AM
+Sure!
+Nate — 9/20/26, 1:21 AM
+my id is bnavard
+
+Dan — 9/20/26, 1:23 AM
+While we get that set up you can just send the PR
+Ah I misunderstood your previous comment, yes you can fork the repo so you can send the PR
+Nate — 9/20/26, 1:26 AM
+now it makes sens 😄
+Nate — 9/20/26, 1:38 AM
+I created the PR ☑️ Using the skeleton in that PR I will add the code progressively.
+https://github.com/rekursiv-ai/priml/pull/317
+GitHub
+Add native Priml SpeedrunDiT baseline skeleton by bnavard · Pull R...
+Summary This PR introduces the initial documentation-only skeleton for a native Priml port of SpeedrunDiT under priml/baselines/speedrundit/. Implementation will proceed incrementally, following th...
+Summary
+This PR introduces the initial documentation-only skeleton for a native Priml port of SpeedrunDiT under priml/baselines/speedrundit/.
+Implementation will proceed incrementally, following th...
+
+Josh — 9/20/26, 1:40 AM
+id just flesh it out
+there's no reason to checkin stubs
+just be sure to have the agent not reinvent the wheel--all the diffusion stuff you need is in math
+
+also vital to use the skills in docs
+esp the main priml skill but also possible the configgle skill
+Nate — 9/20/26, 1:53 AM
+Good advice! Thanks
+Dan — 9/20/26, 2:04 AM
++1, best to have your agent "reuse as much as we can of priml. read all of priml code and docs, identify all modules we can reuse, and write out the files/modules we will modify or create"
+Dan — 9/20/26, 2:28 AM
+I took a look at your skeleton, looks great! Should be good to flesh out
+Welcome, 
+vsneha
+. We hope you brought pizza. — 9/20/26, 3:03 AM
+
+
+Wave to say hi!
+Dan — 9/20/26, 10:25 PM
+
+Welcome!
+Nate — 9/20/26, 10:29 PM
+@Dan yeah I will add code to it today
+
+Dan — 9/20/26, 10:38 PM
+Awesome!
+Josh — 9/20/26, 11:24 PM
+some prompts i like
+
+Start a persistent claude-opus-4.8+1m agent to implement our work. Explain to 
+the agent to ask questions when he is unsure. Your job will be to
+review/explain guide via agent-to-agent communication. The goal is to
+mitigate fable token spend while getting fable quality. Explain also that the 
+agent should adhere to STYLE AGENTS write-python fix-types tdd skills and
+keep pre-commit green when done. The main failure mode of the agent will be
+to not fully read and/or reuse existing adjacent code. We build by shapes in
+this house; first make the types, then TDD. You should review the types
+before he completes impl.
+
+Batch re-read files you've edited in their entirety; no partial reads; no
+one-at-a-time reads. Next, identify issues/bugs, explain their cause
+(systemic or isolated), and devise redtests. Implement the redtests (where
+appropriate) and verify they bite. Then make the fixes, being sure to follow
+STYLE.md AGENTS.md fix-types and write-python skills. Finally, repeat this
+reread-then-fix loop as it was precisely stated and until the files are error 
+free.
+
+
+Your job: closed-loop, self-verifying convergence don't report "done" until
+you've proven every export workflow AND every import (sync-back) workflow is
+green, both directions, and the trees are identical al. Green means both
+directions reconcile, verified by you, or you're not done.
+Nate — 9/21/26, 2:39 AM
+I pushed some codes 
+
+Dan — 9/21/26, 2:53 AM
+Cool 😎  Taking a look
+Nate — 9/21/26, 2:54 AM
+Thanks @Dan . I don't expect to have nailed everything in the first shot so I will be happy to go through your feedbacks to refine the implementation. Plus the fact it would be a practical way for me to learn
+Dan — 9/21/26, 2:54 AM
+@Nate did you run the experiments yet? Can you validate they actually reproduce the baselines?
+Nate — 9/21/26, 2:55 AM
+Okay, first good feedack. I will do that then I can tell you to take a look ? That will save us time
+
+Josh — 9/21/26, 2:57 AM
+yeah-- we really need to see what i mentioned elsewhere;
+prove b4b using skill against baseline
+mint golden pt and txt
+feature complete.
+there's really no reason to split things up finer than this for the first exp000
+
+Dan — 9/21/26, 2:57 AM
+Make sure you also have your agent read the priml skills and read priml/baselines, try to clean up the style to adhere to the same level of documentation/tests/style as the other baselines under priml/baselines
+
+Nate — 9/21/26, 2:59 AM
+Exp000 is basically a solid and robust baseline experiment that can fully reproduce the paper's result. Is that correct ? Should I manually create an experiment ladder or they will be added as we hill climb exp000 ?
+Josh — 9/21/26, 2:59 AM
+it should be bit-for-bit equivalent in both the model and 5 steps of training 
+youd compare against their github
+
+bit-for-bit equivalence:
+data loader
+model
+5 steps of training
+
+this should be documented in the skills
+(its possible they need improvement too?)
+Nate — 9/21/26, 3:02 AM
+please don't review my PR until I have something worthy of a review😄 . I just wanted to let you know that I have something in and I am planning to refine it progressively to a solid state.
+
+Josh — 9/21/26, 3:06 AM
+no worries; we're just clarifying that b4b is the min bar before its worth looking at and this because the skills mean you can just have agents clear that bar
+
+A wild 
+Shreyes
+ appeared. — 9/21/26, 7:47 PM
+
+
+Wave to say hi!
+Shreyes — 9/21/26, 8:54 PM
+Hi everyone, i am Shreyes bio student picking up applied AI through self-study and a cohort. I'd love to work somewhere that combines AI and bio. I found rekursiv.ai through Y Combinator also i have been reading the blog the last few weeks glad to be here and looking forward to learning from people here.
+
+Shreyes — 9/21/26, 8:55 PM
+
+Nate — 9/21/26, 10:50 PM
+@Josh The SpeedRunDiT paper used H100 GPUs for training. If we want to perform the B4B 5-step training with our implemented baseline, I’m wondering how we should handle the compute requirements, given that my local GPU is an RTX 3090 and is obviously much less powerful than an H100. Do we have a plan for working around this limitation?
+Josh — 9/21/26, 11:13 PM
+great question! so what we do is
+create a baseline exp000 which is exactly the same as published
+exp001 is exp000 but sans hardware specific things and with runtime tuned such that it achieves the same published steps as exp000
+
+having said that, in this case i think we should stick with H100 baseline. so this means assume 8xH100 and use priml's multiprocess runtie. then make exp_smoke which is very tiny for unit testing.
+Dan — 9/21/26, 11:19 PM
+I think this presents a good opportunity to get the best results on your 3090. We actually started ARC-AGI this way. The TRM paper required 4 H100 GPUs but @Josh managed to do it with a singe 5090 in his garage
+
+If we optimize for 3090, odds are we can get very good results on H100
+
+Hi Shreyas! And welcome!
+
+Right now most folks are working with us by adding new baselines to priml/baselines. then the idea is we can deploy our scientists on these problems and see the progress.
+
+are there some notable baselines you think would be ripe for autonomous study?
+Nate — 9/22/26, 2:15 AM
+could you guys share some of your tips of what agents you use for coding, understanding repo, bug fixing etc ? Both in Codex and Claude
+could you guys share some of your tips
+3 Messages ›
+There are no recent messages in this thread.
+8d ago
+That would be great to know what you find most helpful in different aspects
+
+junpenglao
+ started a thread: could you guys share some of your tips. See all threads. — 9/22/26, 10:00 AM
+Shreyes — 9/22/26, 9:56 PM
+something like classifying biomedical images and tracking progression of neurodegenerative disease (Alzheimer's, Parkinson's) from structural MRI  datasets like ADNI and PPMI exist for this. main thing is those usually need a data use application rather than being freely downloadable so it'd need more setup than something like ARC-AGI and also predicting promoter/RBS strength from sequence.
+Josh — 9/23/26, 12:42 AM
+generally i think its best to start from some benchmarks that people care about--otherwise its hard to know you really improved things. do you have one such in mind?
+Nate — 9/23/26, 2:30 AM
+In the skill, what do you mean by "best NAIVE recipe...not a toy, not state of the art..." ? So is it okay to not replicate the model ?
+Josh — 9/23/26, 2:36 AM
+this might just be bad wording but we're trying to establish a "simple yet competitive" baseline in general. but when such a baseline already exists it is prudent to build on it.
+
+i will help right now by adding baselines/imagenet which will cover the dataloader. considerable complexity lives here because it must do a lot of preprocessing 
+Nate — 9/23/26, 2:38 AM
+I think this wording might be misleading, because it might get interpreted that it would be okay to remove some of the architectural design of the upstream model and use it as exp000.  For example removing AdaLN etc
+Josh — 9/23/26, 2:41 AM
+hmmm; maybe.. but so far we've spun up many baselines and never spent more than 5min on it. tbh these multiple days of discussion vastly exceed any amount f effort we've spent so far.
+
+Nate — 9/23/26, 2:41 AM
+In one of my iterations it removed some of the baseline model design and treated it as toy example that a graduate student would implement. So I had to explicitly say it to implement otherwise
+Josh — 9/23/26, 2:42 AM
+hmm ive never seen that happen. what model are you using?
+Nate — 9/23/26, 2:42 AM
+Opus 5 (High)
+Josh — 9/23/26, 2:43 AM
+i see
+let me try
+maybe its because you had it build stubs rather than follow the prompt i gave you?
+Nate — 9/23/26, 2:45 AM
+potentially yes. I will fix it. nw
+Josh — 9/23/26, 2:46 AM
+that'd be the only difference i can imagine
+
+Josh — 9/23/26, 10:24 AM
+update; im pushing an imagenet baseline which has the dataloader we can use for sr-dit (@Sway @Nate ).
+
+one cool but: i was able to get ~15% more perf than in ffcv so at least we can be sure the dataloader wont be the bottleneck
+
+Josh — 9/23/26, 10:40 AM
+imagenet dataloader 
+GitHub
+priml/priml/baselines/imagenet/data.py at main · rekursiv-ai/priml
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+i havent had time to properly check everything--there was some issues with our monorepo->public repo pipeline that slowed me down
+Nate — 9/23/26, 7:02 PM
+would you have time to look at my PR too when you get a chance ?
+Josh — 9/23/26, 8:20 PM
+when i looked before it was just stubs?
+Nate — 9/23/26, 9:44 PM
+yes.  Now I did what we discussed and ran test against the upstream code (SpeedRunDiT). B4B. I just want to recieve some quick feedback from you if it doesn't take time from you
+Josh — 9/23/26, 10:32 PM
+oh great!
+ill take a look
+Josh — 9/23/26, 10:32 PM
+were you able to leverage the imagenet dataloader i added?
+Speedrun-DiT
+191 Messages ›
+There are no recent messages in this thread.
+20h ago
+gabriel — 9/23/26, 10:36 PM
+wanted to jump in on the topic of priml baselines. a bit ago when i looked into what benchmark could support the goal of using priml to distill or refine open weight coding models to run on 4090s and 5090s i ended up thinking terminal could be a good direction. the tasks can range from simple programmatically verifiable work to long horizon agentic work that is open ended in how it is solved but can still be checked by executable tests. Terminal Bench https://arxiv.org/pdf/2601.11868 is a pretty known benchmark and TMax https://arxiv.org/pdf/2606.23321 seems especially good for hillclimbing because it releases most of the workflow from generating executable tasks, through SFT and RL training, to running and evaluating released small models. that gives priml possible directions at the data, training, and harness layers rather than j another benchmark to run
+Josh — 9/23/26, 10:38 PM
+great idea! definitely agree!
+
+i think what makes priml different is that its not just a benchmark though. its actually a benchmark AND a platform for A/B experimentation. this is an element not present in other benchmarks afaict.
+
+does this resonate with you?
+priml is more like a benchmark that invites you to change it
+gabriel — 9/23/26, 10:47 PM
+yea thats kinda the loop i was going through when i looked into it. i could come to the conclusion of a solid substrate but i kept going in loops over what exps would be meaningful and feasible on consumer GPUs without just reproducing results that are already out there. that eventually led me toward more meta-level ideas about how to decide which changes to try to reach that goal, which it sounds like priml should allow. im not fully familiar with it and havent used it yet though, so i dont have the full product perspective to speak on.
+if i were to aim for a useful deliverable by say next weekend, what ideas do you think would be worth looking deeper into? 
+
+Nate
+ started a thread: Speedrun-DiT. See all threads. — 9/23/26, 10:48 PM
+Josh — 9/24/26, 12:13 AM
+definitely yes!  ideas... hmmm... well right now there are folks looking at: biology, RL, diffusion. i think the main thing would be to pick an application area which is open and important. do you have any experience in a particular thing you could leverage?
+gabriel — 9/24/26, 5:49 AM
+by ideas i meant for exp001+ within terminal/tmax 
+regarding experience mostly general cs/swe + math. ive also been keeping up with agentic research so terminal/coding agents is not a bad fit
+
+do u think i should start working on a pr, or are there questions worth considering first? 
+id start with exp_smoke to prove priml can launch and score one tmax task, 
+then exp000 as a fixed tmax 4b training baseline
+
+for exp001, instead of giving each training task 32 attempts (tmax’s fixed group size), start with fewer and use the saved attempts to retry tasks where none of the first attempts succeeded. finding one success turns a group with no training signal into something the model can learn from. one of the tmax authors had a recent paper using a similar adaptive sampling idea on math and coding tasks but idk if it carries over to long terminal tasks
+
+tmax seems like a good place to test it bc it already provides the 15k executable tasks and verifiers. the experiment could reuse the same tasks, trainer, and evals and change that one decision. tmax already drops groups where all the attempts get the same result and samples more tasks so this would instead test whether spending more attempts on the same failed task helps
+
+it feels kinda obvious rather than novel tho. curious how u think about it, or if theres better angles to look at for exp001
+
+btw im on a laptop so i cant run the actual 4b model or training locally. i can build it n test first. i might also do a separate one task check with the free gemini api if i figure it helps prove anything implementation wise
+
+also the 4090/5090 goal, is the idea that training happens on the cluster and the model produced runs on consumer hardware. or should training fit on consumer hardware too? 
+Josh — 9/24/26, 8:31 AM
+oh thats interesting @gabriel! so your imagining a more metaharness to turn priml into a basis to tune prompts? 
+or perhaps im not fully grokking. but i def like the sound of everything youre saying!
+i think my highlevel comment would be only that: this is community research and all ideas are welcome!
+Sway — 9/24/26, 11:54 AM
+I vibecoded this yesterday, saves like 20-30% tokens when given same vocab size, unforuntately convergence is slightly worse. Would be cool if a bunch of agents tried to improve it. I feel like this should definitely allow better training when done right https://x.com/SwayStar123/status/2102859076883632360
+sway (@SwayStar123)
+Introducing Combinatorial BPE Tokenizer!   Standard BPE tokenizers have vocabulary for many variations of a core word, particularly; commonly words with a space infront of them (eg "Hello" and " Hello" as two tokens), as well as various capitalization variants.  Why not fold those all into just one…
+Image
+
+X•9/24/26, 2:04 AM
+
+Jan Tempus
+ hopped into the server. — 9/24/26, 2:50 PM
+
+
+Wave to say hi!
+
+junpenglao — 9/24/26, 2:59 PM
+@Jan Tempus on your question about our nanochat result
+@Jan Tempus on your question about our
+23 Messages ›
+junpenglao
+3h ago
+Jan Tempus — 9/24/26, 5:40 PM
+
+Jan Tempus — 9/24/26, 5:49 PM
+With a very similar core idea there is also https://arxiv.org/pdf/2608.08847 🙂
+Maybe the agents can blend the ideas together?
+
+Josh — 9/24/26, 11:13 PM
+This is awesome Sway! Can we setup an experiment in priml to build on this? Then we can unleash agents?
+Josh — 9/24/26, 11:14 PM
+YEEEESH!  Same response as to sway: can we setup a baseline in priml upon which to have agents iterate? Is there a standard we should build on? Nanochat? Somehting better?
+Sway — 9/24/26, 11:58 PM
+Yeah core seems same but I take it much further I believe
+
+Josh — 9/25/26, 12:01 AM
+This is awesome Sway! We're so lucky to have the original author helping us!! What can we do to help you and the community here?
+junpenglao — 9/25/26, 12:01 AM
+@Jan Tempus let me show you priml tomorrow, i think for your benchmark and hyper parameter optimization of tokenizer paper, it will be super useful
+
+Dan — 9/25/26, 12:01 AM
+Nanochat has unigram tokenizer supported, so it can be a good starting point where we can introduce new tokenizers and try them. But we might want to extend the training, because 5-min cutoff actually severely influences the types of improvements you will be able to observe. We can modify the setup so it's more comparable to other tokenizer benchmarks. 
+
+Josh — 9/25/26, 12:02 AM
+Jan your paper looks awesome! If you like we can try to help you make your paper bette rby using our cluster to optimize your idea?  Said in advance: no need to give us credit or anything--we only care about science.
+Jan Tempus — 9/25/26, 3:23 AM
+That would be awesome. I also have a morphologically aligned objective which performs even better than the other ones. And I took the hyperparameters optimized for bpe so I am curious how good my tokenisers can get 🙂
+
+And more than happy to give you guys credit for any and all improvements this brings 🙂
+Alex Nichol also worked on the method to create optimal tokenisers. https://blog.aqnichol.com/2026/06/10/optimal-tokenizers/ I would be pretty curious to see to what extent optimal tokenisers for compression makes the difference
+
+Josh — 9/25/26, 4:45 AM
+we've found you can get really far with just torch/compile and occasional triton. results coming soon 😉 😉 😉
+(we are trying to have a cadence of "one amazing result per week" but we're more like one per month)
+
+Jan Tempus — 9/25/26, 4:47 AM
+I believe that, but most lp solvers are still written for the cpu, I only found the nvidia cuopt solver but that one has issues
+For convextok you can also look at trying to combine it with the ideas of super bpe or boundless bpe, so playing a bit around with pretokenisation
+And I do believe you agents can hillclimb until they combine the two
+Josh — 9/25/26, 4:49 AM
+honestly we should make a session just try to build an lp solver for gpu 😄
+Jan Tempus — 9/25/26, 4:49 AM
+Please do 😄
+Josh — 9/25/26, 4:49 AM
+😄
+if you setup a priml baseline, we will run it!
+this one should be easy--very "academic"/"mathematical"
+you wont need almost all the priml machinery we have but its a great hello world
+i can also take a crack...someday. (soooo underwater rn)
+Jan Tempus — 9/25/26, 4:52 AM
+Happy to give a crack, I wrote a solver for the lp in rust, but i did nt use the gpu as there is a lot of parallelisation within the problem as one pretokenises, so one kind of has a huge collection of small graphs which for certain interior point method steps are just disjoint
+Josh — 9/25/26, 4:54 AM
+yeah--that makes sense to me. its certainly possible that gpu just isnt friendly to it but ive never really seen that be the case except for branch heavy. and even then you can do roll-outs to juice parallelism
+anyway--there's so much exciting here its hard to know where to begin. agents to the rescue! do it all!
+but def there's juice here; we can task agents with juicing up this piece; then task them with juicing up the broad idea
+
+Jan Tempus — 9/25/26, 4:55 AM
+Ah no I do believe it should work really well on the gpu, I just have never written code for gpu, and with the rust solver codex did a lot of dumb things
+Jan Tempus — 9/25/26, 4:55 AM
+Sounds awesome 😄
+Josh — 9/25/26, 4:56 AM
+amazing! so whats the next move? it sounds like dan helped with the broader harness. you wanna try for the solver? basically you create a runable expeirment and we just "throw it into the machine"
+Jan Tempus — 9/25/26, 5:00 AM
+Yeah happy to do that, junpeng offered to give me an intro and then i'll get an experiment up and running for the solver
+Josh — 9/25/26, 5:00 AM
+oh even better!
+wonderful!
+we're excited to work together, learn from you, and hopefully help 🙂
+
+go science!
+
+Glad you're here, 
+K821
+. — 9/25/26, 9:15 PM
+
+
+Wave to say hi!
+K821 — 9/25/26, 9:16 PM
+Is there anyone looking for a developer?
+Josh — 9/25/26, 11:32 PM
+hello! not per se. we're a group of community scientists looking to share the burden of research.
+
+if there's a machine learning reearch question or direction youre interested in then you've found the right forum! 
+gabriel — 9/28/26, 1:00 AM
+anyone used jev or similar models? curious how they could benefit to this reesearch space
+Josh — 9/28/26, 10:33 AM
+this is something id like to play with but havent yet--i think it'd be cool to see if we can use it to vet research ideas.
+im actually setting up a benchmark we can use to test ideas like this. would you be interested in playing with thaT?
+Welcome 
+Shreeyutm2005
+. Say hi! — 9/28/26, 7:49 PM
+
+
+Wave to say hi!
+Everyone welcome 
+Hannah Igboke | Nigeria
+! — 9/28/26, 10:01 PM
+
+
+Wave to say hi!
+Glad you're here, 
+Javin Ahuja
+. — 9/28/26, 11:31 PM
+
+
+Wave to say hi!
+Josh — 9/28/26, 11:35 PM
+welcome new friends! what brings you here?! 🙂
+update: i considerably imporved the bit-for-bit testing in priml and backfilled the winning experiments from our sudoku runs; https://rekursiv.ai/blog/100-percent-accuracy-on-sudoku/
+rekursiv.ai
+Learning 100% Sudoku Accuracy with a Neural Network
+Our AI team discovered a method to achieve 100% accuracy on Sudoku from data alone. We will continue to Apache 2.0 license the discoveries and some of the underlying system components, having started with configgle and sagent.
+
+Good to see you, 
+danial
+. — Yesterday at 12:28 AM
+
+
+Wave to say hi!
+Good to see you, 
+xenozzz
+. — Yesterday at 12:48 AM
+
+
+Wave to say hi!
+Rhae-Shane
+ is here. — Yesterday at 12:48 AM
+
+
+Wave to say hi!
+Everyone welcome 
+Harshvardhan
+! — Yesterday at 12:50 AM
+
+
+Wave to say hi!
+magic_sanda13
+ just slid into the server. — Yesterday at 12:51 AM
+
+Wave to say hi!
+xenozzz — Yesterday at 1:00 AM
+Hello everyone!
+Everyone welcome 
+Aruther
+! — Yesterday at 1:04 AM
+
+Wave to say hi!
+Aruther — Yesterday at 1:06 AM
+
+aditya
+ just showed up! — Yesterday at 1:07 AM
+
+
+Wave to say hi!
+Yay you made it, 
+sanj13
+! — Yesterday at 1:07 AM
+
+
+Wave to say hi!
+Dan — Yesterday at 1:13 AM
+hi new friends! welcome to our tiny little corner of the internet!
+a brief intro: we're just a bunch of hackers who think ml research is too hard for humans to do and we want to get agents to help us out. 
+
+we'd would love to learn more about you all and find ways to collaborate on research!
+
+_parth_
+ hopped into the server. — Yesterday at 1:15 AM
+
+
+Wave to say hi!
+Welcome, 
+Junaid Alam
+. We hope you brought pizza. — Yesterday at 1:17 AM
+
+
+Wave to say hi!
+sanj13 — Yesterday at 1:19 AM
+Hey everyone! I'm studying CS + Math at UVA. I've worked on ML forecasting research and agentic economic simulations before. 
+
+I'm very interested in autonomous ML research and how agents can run and evaluate experiments. I'd love to get involved with the upcoming research campaign and contribute wherever I can! 
+ma9o
+ hopped into the server. — Yesterday at 1:20 AM
+
+Wave to say hi!
+Good to see you, 
+mmiakashs
+. — Yesterday at 1:32 AM
+
+
+Wave to say hi!
+TBaid
+ just landed. — Yesterday at 1:32 AM
+
+
+Wave to say hi!
+Glad you're here, 
+Davem
+. — Yesterday at 1:40 AM
+
+
+Wave to say hi!
+Glad you're here, 
+glevco
+. — Yesterday at 1:41 AM
+
+
+Wave to say hi!
+Welcome, 
+MARGI
+. We hope you brought pizza. — Yesterday at 1:42 AM
+
+Wave to say hi!
+A wild 
+Tobbie
+ appeared. — Yesterday at 1:49 AM
+
+
+Wave to say hi!
+Tobbie — Yesterday at 1:52 AM
+Hey everyone 
+
+I’m Tobi, a Software Engineer working across AI, backend, infrastructure, and developer tooling.
+
+Really interested in autonomous AI systems and excited to learn more about what everyone is working on here.
+Good to see you, 
+DC
+. — Yesterday at 2:26 AM
+
+
+Wave to say hi!
+Welcome, 
+Sudeep
+. We hope you brought pizza. — Yesterday at 2:33 AM
+
+
+Wave to say hi!
+Sudeep — Yesterday at 2:35 AM
+Hey everyone! I'm Sudeep, I work a lot in language models for computational biology, proteomics, and neuroscience. Look forward to meeting everyone!
+spicyramen
+ just landed. — Yesterday at 2:50 AM
+
+
+Wave to say hi!
+Welcome 
+Mohit
+. Say hi! — Yesterday at 2:56 AM
+
+
+Wave to say hi!
+V I N A Y
+ is here. — Yesterday at 3:01 AM
+
+Wave to say hi!
+Dan — Yesterday at 3:21 AM
+
+Hi everyone!
+Welcome, 
+syedmuhammadayyanibrar
+. We hope you brought pizza. — Yesterday at 3:26 AM
+
+Wave to say hi!
+Bhurva Sharma
+ just slid into the server. — Yesterday at 3:54 AM
+
+
+Wave to say hi!
+Josh — Yesterday at 4:38 AM
+hi everyone! welcome to our space! a bit about us:
+
+we are "hacker scientists" trying to build a platform that helps us do research faster!
+
+the way we do this:
+
+we use configgle to setup an "exemplar experiment" then we unleash a swarm of agents to iterate on it. we use trackinizer to facilate shared learning and coordination.
+
+right now we have just machine learning experiments but we want to setup wider diversity.
+
+the goal in this group would be for us to help you setup the experiments. then we can donate some of our compute to run campaigns for you.
+
+right now the effort furthest along led by @Nate and @Sway to recreate and extend speedrun-dit. we're very excited to spinup other avenues of discovery.
+
+
+https://github.com/rekursiv-ai/configgle
+https://github.com/rekursiv-ai/trackinizer
+https://github.com/rekursiv-ai/priml
+GitHub
+GitHub - rekursiv-ai/configgle: Type-safe hierarchical experiment c...
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+GitHub
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+GitHub
+GitHub - rekursiv-ai/priml: Strongly typed configurable building bl...
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+GitHub - rekursiv-ai/priml: Strongly typed configurable building bl...
+AJ
+ joined the party. — Yesterday at 4:58 AM
+
+
+Wave to say hi!
+
+Dan
+ pinned a message to this channel. See all pinned messages. — Yesterday at 5:22 AM
+Everyone welcome 
+Jz75
+! — Yesterday at 5:25 AM
+
+Wave to say hi!
+glevco — Yesterday at 5:47 AM
+Hey guys! Just joined earlier today. I'm a software engineer with a decade of experience, and I'm interested in contributing. How can I help with the next research campaign? I'm currently exploring the repos that were sent above.
+
+Everyone welcome 
+Abhishek
+! — Yesterday at 6:29 AM
+
+
+Wave to say hi!
+Abhishek — Yesterday at 6:48 AM
+hey all, abhishek here. i'm a software engineer, not an ml researcher yet: i build infra (queues, real-time stuff, apis), and so far i've been working in trackinizer. #247, #248 and #249 were mine (typeshed patch, running the tests without libpq, whole-graph export).
+
+two more are open and waiting on review:
+#262: export a subgraph by label selector, so a campaign can hand off just its own slice (only the export half, since the import half needs your call on ids)
+#263: a client-set recorded timestamp, so old runs can be backfilled with their real dates
+
+happy to rework either if the design isn't what you want. otherwise, is there something on the campaign side, like getting a new baseline into priml, where an extra pair of hands would help more
+
+One idea I'd be interested in looking at is whether different experiment selection strategies can improve research efficiency under a fixed budget. Curious if this is something you've already explored or would be interested in pursuing as another campaign
+
+
+One idea I'd be interested in looking at
+2 Messages ›
+There are no recent messages in this thread.
+1d ago
+A wild 
+Akash
+ appeared. — Yesterday at 7:31 AM
+
+
+Wave to say hi!
+venkateshwar
+ just landed. — Yesterday at 8:09 AM
+
+
+Wave to say hi!
+SK
+ joined the party. — Yesterday at 8:17 AM
+
+
+Wave to say hi!
+A wild 
+Ayush Parwal
+ appeared. — Yesterday at 8:31 AM
+
+
+Wave to say hi!
+Ayush Parwal — Yesterday at 8:32 AM
+Hi Guys this is Ayush Parwal, AI ML researcher have two experiences.
+How is this idea Build an autonomous AI scientist that experiments with model routing, quantization, prompt compression, caching, and inference strategies to reduce LLM compute/cost.
+It automatically benchmarks each configuration and discovers the cheapest and fastest setup that maintains a target level of answer quality.
+
+Yay you made it, 
+RiskyPanda69
+! — Yesterday at 9:07 AM
+
+
+Wave to say hi!
+Yay you made it, 
+Satya Uday
+! — Yesterday at 9:41 AM
+
+
+Wave to say hi!
+Mitrajit Ghorui
+ joined the party. — Yesterday at 10:49 AM
+
+
+Wave to say hi!
+Night ✨
+ just landed. — Yesterday at 10:57 AM
+
+Wave to say hi!
+Everyone welcome 
+Arunendra Tripathi | Contributer
+! — Yesterday at 11:36 AM
+
+
+Wave to say hi!
+Everyone welcome 
+Dalino
+! — Yesterday at 1:35 PM
+
+
+Wave to say hi!
+
+junpenglao
+ started a thread: hey all, abhishek here. i'm a software. See all threads. — Yesterday at 2:54 PM
+
+junpenglao
+ started a thread: One idea I'd be interested in looking at. See all threads. — Yesterday at 2:57 PM
+Everyone welcome 
+defonotHIM
+! — Yesterday at 3:56 PM
+
+
+Wave to say hi!
+Yay you made it, 
+Markee_code
+! — Yesterday at 7:11 PM
+
+Wave to say hi!
+Jeremy
+ just showed up! — Yesterday at 8:56 PM
+
+
+Wave to say hi!
+Jeremy — Yesterday at 9:10 PM
+Hey everyone — I’m Jeremy. Former 18B Special Forces Weapons Sergeant, mechanical engineer, and currently working deeper into AI/ML and applied systems engineering.
+
+I’ve built and operated a custom multi-camera Discord livestream/security system and I’m especially interested in AI agents, computer vision, automation, and turning experimental ideas into reliable real-world systems.
+
+Dan pointed me here and mentioned the upcoming research campaign, so I’m looking forward to contributing, meeting everyone, and jumping into something useful.
+Josh — Yesterday at 9:11 PM
+Hello glevco, Abhishek, sanj13, pillowpantz86 and all new friends!
+so its clear to me we need some kind of onboarding doc but at this pt in time the best way to help is to find interesting ml experiments and set this up as a baseline in priml.
+
+meanwhile on our side we're working on making trackinizer a more usable intereface. our plan is to offer it as FOSS but then also facilitate it as a frontend to hosted compute.
+
+we also want to offer trackinizer as a free service to all for agents to share/collaborate
+@Jeremy thank you for your service! 🫡
+Jeremy — Yesterday at 9:40 PM
+Thanks Josh — that gives me a direction. I’ll start looking for a reproducible ML experiment that would make a good priml baseline. I’m especially interested in computer vision, agents, and applied systems, so I’ll see if I can find something useful in that space. If there’s a preferred priml repo/template or an example baseline you want newcomers to follow, send it my way.
+Markee_code — Yesterday at 10:24 PM
+Hey everyone, Myself Mrinal.
+Former solutions Architect now exploring AI/ML and applied systems. I’m especially interested in computer vision, agents, and automation. Really glad to meet you guys !! I’m checking out the repositories and would love to help with the next research campaign 🙂
+
+Dan — Yesterday at 10:37 PM
+Hi @Jeremy, we have baselines here: https://github.com/rekursiv-ai/priml/tree/main/priml/baselines
+
+Of note, the simplest baselines are cifar10/imagenet for classification, and you can also check out nanochat for LLM training, and speedrundit for image generation
+
+We're also integrating more baselines soon. We'll have a set of challenges that you can take on 
+GitHub
+priml/priml/baselines at main · rekursiv-ai/priml
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+priml/priml/baselines at main · rekursiv-ai/priml
+
+Josh — 12:48 AM
+I think the best way everyone can help as of this moment is to add interesting baseline experiments in priml. for example i just heard of slow nanochat and also there's a super fast variant. so either add the latest greatest as an experiment or create the baseline dir. then once we have a bunch we can -- as a community -- decide what we want our next campaign to run against
+additionally a great way to help is to use trackinizer and fix glitches. @dhanya and @Abhishek are as of right now holding down the fort in this regard. meanwhile we're striving to release a kind of trackinizer v2. (same db/trax better ui)
+for priml, what id like to see is 1000s of baseline experiments testing anything interesting.  so if youre an expert in XYZ, add an experiment!
+so far the most mature community led baseline is speedrundit--started by @Nate and improved by its original author @Sway 
+
+
+very soon we'll be setting up leader board and maybe even prizes for contributors. im going to see if we can even giveaway things like gpus
+so tl;dr: harvest your expertise and the web and transcribe every fast running benchmark out there so we can sick our cluster on it and see if we can use it as a platform for discovery. and if we can write papers based on it--you get to be an author!
+Welcome, 
+drdoomXI
+. We hope you brought pizza. — 1:27 AM
+
+
+Wave to say hi!
+Jhn
+ hopped into the server. — 1:39 AM
+
+
+Wave to say hi!
+Glad you're here, 
+apeacelife
+. — 2:27 AM
+
+
+Wave to say hi!
+apeacelife [COMP],  — 2:39 AM
+HI everyone! It's Justin, an AI agentic engineer who is working on AI agent workflows and orchestration.
+I have a bit of a nerdy personality and am very interested in open-source projects.
+
+Dan invited me here and I am really excited to help plan the next research campaign.
+
+Took a look through the existing priml baselines -- don’t see a forecasting benchmark yet, which is actually the area I’ve done most of my research in. I’m going to try putting together a lightweight forecasting baseline in the same exp000 -> one-change-per-experiment style as the existing baselines and get it running locally. I’ll share a PR once I have something concrete.
+
+Josh — 7:40 AM
+that'd be amazing! is there a canonical problem that others would be impressed by if we hillclimbed on ?
+sanj13 — 7:44 AM
+Yeah, I think ETTh1/ETTm1 are probably the most used long-horizon forecasting benchmarks people would recognize. They’re used across DLinear, PatchTST, iTransformer, etc.
+My thought would be to start with a lightweight baseline there, which is probably DLinear, and structure it so we can hillclimb on MSE under a fixed compute budget.
+If that works well in priml, we could then add stronger architectures and see how far the agents can push it.
+Josh — 8:34 AM
+that sound perfect!
+best way to get going: have it read an existing baseline and use the skills we packaged. check for bit-for-bit against the original then we mint our goldens to lock in no regressions.
+Syed Owais Bashir
+ joined the party. — 8:41 AM
+
+
+Wave to say hi!
+A wild 
+arcy
+ appeared. — 8:43 AM
+
+
+Wave to say hi!
+sanj13 — 8:56 AM
+Sounds good, I’ll get started and aim to have a first version with results by next week. I’ll share what I find once I have something concrete.
+Vishwajeet
+ hopped into the server. — 9:17 AM
+
+Wave to say hi!
+appl
+ just landed. — 9:17 AM
+
+
+Wave to say hi!
+Nabil
+ just landed. — 9:54 AM
+
+
+Wave to say hi!
+Everyone welcome 
+Pathan.rs
+! — 10:09 AM
+
+
+Wave to say hi!
+yuvraj singh bhadoria
+ just landed. — 7:27 PM
+
+Wave to say hi!
+hi everyone! welcome to our space! a bit about us:
+
+we are "hacker scientists" trying to build a platform that helps us do research faster!
+
+the way we do this:
+
+we use configgle to setup an "exemplar experiment" then we unleash a swarm of agents to iterate on it. we use trackinizer to facilate shared learning and coordination.
+
+right now we have just machine learning experiments but we want to setup wider diversity.
+
+the goal in this group would be for us to help you setup the experiments. then we can donate some of our compute to run campaigns for you.
+
+right now the effort furthest along led by @Nate and @Sway to recreate and extend speedrun-dit. we're very excited to spinup other avenues of discovery.
+
+
+https://github.com/rekursiv-ai/configgle
+https://github.com/rekursiv-ai/trackinizer
+https://github.com/rekursiv-ai/priml
+GitHub
+GitHub - rekursiv-ai/configgle: Type-safe hierarchical experiment c...
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+GitHub
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+GitHub
+GitHub - rekursiv-ai/priml: Strongly typed configurable building bl...
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+GitHub - rekursiv-ai/priml: Strongly typed configurable building bl...
+@Dan following up on our email, here's the campaign idea i said i'd bring.
+
+input pipeline throughput: take the imagenet exp000 data pipeline and let agents make it faster, with one hard rule: every batch has to come out bit-identical to the reference, so only speed can move. if a change alters a single pixel, the run fails and reports no number.
+
+one trap i hit while building it: scored on wall images/sec, bumping decode threads from 2 to 8 alone gives ~1.7x with identical batches, so a swarm would "win" on day one just by adding threads. scoring on images per cpu-second (or pinning the core count) closes that.
+
+exp000 is working locally: it times the pipeline exactly as the training exp000 runs it, and has a tensor golden. ~615 images/cpu-sec on my m4 pro over synthetic jpegs, but the real number should come from your hardware. on macs it needs #370 merged first.
+
+worth running as a campaign? happy to open the pr if so.
+imagenet throughput
+15 Messages ›
+Dan
+1d ago
+venkat — 10/1/26, 4:50 PM
+Hey everyone, Venkat here from Bengaluru. 😀 
+
+My background has moved through embedded systems, data science/applied research, and most recently building as a founder. Over the last couple of years I built PortoAI, experimented quite a bit with agentic financial research and long-running agents, and more recently started doing some independent research/evaluation work around long-horizon agent behavior and multi-factor reasoning.
+
+I’ve also been exploring Lokaah, structured knowledge infrastructure for agents navigating the open web.
+
+I’ve been going through the conversations and Rekursiv’s work here, feels like I landed in the right community. Looking forward to digging in and joining the next research campaign. 
+
+https://venkat-rj.github.io/
+Everyone welcome 
+MehXBot
+! — 10/1/26, 5:37 PM
+
+
+Wave to say hi!
+aryan
+ hopped into the server. — 10/1/26, 5:40 PM
+
+
+Wave to say hi!
+Akshit
+ is here. — 10/1/26, 5:53 PM
+
+
+Wave to say hi!
+Josh — 10/1/26, 8:55 PM
+Hi Venkat! LOKAAH looks AMAZING! We ABSOLUTELY share this vision and Id love to find a way to collaborate. 
+Hi Venkat! LOKAAH looks AMAZING! We
+3 Messages ›
+There are no recent messages in this thread.
+
+venkat
+ started a thread: Hi Venkat! LOKAAH looks AMAZING! We. See all threads. — 10/1/26, 9:28 PM
+iam
+ hopped into the server. — 10/1/26, 10:31 PM
+
+
+Wave to say hi!
+
+Dan
+ started a thread: imagenet throughput. See all threads. — 10/2/26, 1:00 AM
+
+Dan
+ started a thread: Name the PCIe form factors in the cost d.... See all threads. — 10/2/26, 1:01 AM
+workofart
+ just slid into the server. — 10/2/26, 6:36 AM
+
+Wave to say hi!
+sanj13 — 10/2/26, 7:59 AM
+@Josh @Dan -- quick update: I got the DLinear + ETTh1 forecasting baseline reproducing the reference end to end. The PRIML version now matches the original training trajectory, early-stopping behavior, best checkpoint, and final test metrics (MSE 0.3748246 / MAE 0.3994735). I’m cleaning up the portability/tests now so it’s merge-ready, then I can send over the branch/PR.
+
+@Josh @Dan -- quick update: I got
+13 Messages ›
+sanj13
+10h ago
+Glad you're here, 
+ganesh
+. — 10/2/26, 10:57 AM
+
+
+Wave to say hi!
+ganesh [OAI],  — 10/2/26, 11:01 AM
+hi everyone! my name is ganesh and i'm currently a swe/mle at axon. before, i was working with softbank on pre-training architecture optimization and our work has appeared in TMLR, Frontiers, AAA, and numerous ICML/NeurIPS workshops.
+
+super excited to join the rekursiv community and help advance this mission of autonomous agents for research
+
+more about me at my website at https://www.ganeshtalluri.com/ 
+Ganesh Talluri
+Ganesh Talluri primarily focuses on creating machine learning systems across LLM pre-training, optimization, and agent infrastructure.
+
+Good to see you, 
+Pritam 🦇
+. — 10/2/26, 11:49 AM
+
+
+Wave to say hi!
+Leviî
+ joined the party. — 10/2/26, 12:17 PM
+
+Wave to say hi!
+
+Dan
+ started a thread: @Josh @Dan -- quick update: I got. See all threads. — 10/2/26, 7:44 PM
+ [OAI], 
+Dan — 10/2/26, 7:46 PM
+Hi @ganesh, welcome! I love that your website has a tokens page, you've been pretty busy with agents 😁 
+
+Sway — 10/2/26, 11:56 PM
+https://www.nanoswe.com/blog.html
+blog - nanoswe
+Introducing nanoswe.
+ya'll topped nanochat, would be interesting to see what can be done for nanoswe
+
+Josh — 10/3/26, 2:45 AM
+great idea @sway! definitely we should take this on!
+
+rn we're polishing up for a tuesday blog post. then we'll be catching up on PRs and things we should do next. def nanoswe seems reasonable!
+gabriel — 10/3/26, 4:17 AM
+that might be a good opportunity to run the jev/clm idea too. cheap typed verifiers at whatever bottleneck points in the stack.
+
+nothing would change on your side. theyre tiny models that answer fixed questions with a confidence instead reasoning. so it's near zero extra load too n should be feasible. like an orthogonal direction running in shadow, we would only be using the run's outputs to answer questions
+
+like can these models actually make useful verifier calls/do their calls match reality (where do they hold up vs where do they break down). and maybe like can we fine tune one live on the outcomes as they resolve and watch whether the judge gets better mid run
+i dont think theres really any research on this class of models inside a research loop yet either, so even a not so pretty result is prolly new info
+
+what do yal think? i would be down to learn n look into this if it helps with any goals?
+gabriel — 10/3/26, 5:09 AM
+https://www.youtube.com/watch?v=YGgNBcIgI4s good context to watch at 2x speed
+Good to see you, 
+satyam
+. — 10/3/26, 5:31 AM
+
+
+Wave to say hi!
+satyam — 10/3/26, 5:37 AM
+hey, I'm Satyam, a final-year student at IIT KGP. I build LLM apps and LangGraph agents, and shipped Clara, an iOS app. Dan invited me here after my outreach. I'd like to help with the next research campaign. What's the current problem, and is there a small task I can start with?
+
+Josh — 10/3/26, 6:19 AM
+Hi Satyam and all new friends! Rn what we're doing is inviting all to add new priml/baselines we can then vote on where we want to spend our compute on the next campaign. Concurrently we;re trying to improve trackinizer and striving to get a served version. We're also seeing if we can get some compute to sure and all in the spirit if citizen science.
+YOBOYSD — 10/3/26, 3:15 PM
+Hi everyone! I’m Sagar, a developer from India. I’m currently working on an AI-powered personal health assistant focused on menstrual-cycle tracking and women’s health.
+
+The app can predict and analyze menstrual cycles, identify patterns, and provide personalized assistance. I’m also building a feature called Circle, which acts as a personal health assistant by using information the user chooses to share from their phone and connected wearables, including relevant vital and activity data.
+
+The idea is to combine these signals with cycle information to give users a more complete picture of their health and help them manage their data and daily health-related insights in one place.
+
+Privacy, user control, and security are a major focus of the project. I’m particularly interested in AI, health-tech, and building practical AI systems that can work with real-world personal data.
+
+Looking forward to learning from everyone here and contributing to the community!
+
+jaisim
+ joined the party. — 10/3/26, 6:50 PM
+
+Wave to say hi!
+Sway — 10/3/26, 7:10 PM
+https://x.com/DevenPzak/status/2106369177757893112
+
+Deven Pietrzak (@DevenPzak)
+I think I just trained NanoGPT in 9.65 seconds!?  Yesterday, @hermanbrunborg used a connected longest exact match model, trained concurrently on CPU, to get the nanoGPT record from 39.9 seconds to 21.5 seconds, in an impressive open PR. By adapting their work, and generalizing the CPU model to a la…
+
+X•10/3/26, 6:32 PM
+modded nanogpt has gotten insane
+we're down to 9.65 seconds all the way from 45 minutes
+Josh — 10/3/26, 9:08 PM
+yeah its crazy! I wish we would have done our campaign on speed rather than accuracy then we'd hold the title.
+
+i think the lesson is: the sooner we can all swarm on experiments the better!
+
+on that note: we're hoping to get a hosted version running next week and we'll be granting limited access to folks here. this means you can use some of our compute for free if youre willing to be our beta testers 🙂
+
+in fact this is why we've been rather silent--just been a mad dash to pull things together
+
+gabriel
+ started a thread: System One models for Rekursiv ai. See all threads. — 10/3/26, 9:42 PM
+System One models for Rekursiv ai
+17 Messages ›
+Josh
+1d ago
+sanj13 — 10/3/26, 9:44 PM
+would love to beta test!
+Dan — 10/3/26, 10:10 PM
+Using CPU to do useful work while GPU is running is a very underrated trick, but nice to see how well it's used here 
+
+Josh — 10/3/26, 10:26 PM
++1; this is more less the SOTA for locallama crew.
+Dan — 10/4/26, 1:02 AM
+https://x.com/hyperparticle/status/2106467264107024827?s=20
+Dan Kondratyuk (@hyperparticle)
+Dan Kondratyuk (@hyperparticle) on X
+Image
+
+X•10/4/26, 1:01 AM
+
+Dan — 10/4/26, 7:15 PM
+
+Forwarded
+Hey everyone, we redesigned the trackinizer UI to have a lot more user friendly, and provide a rich set of tools to understand your agents' knowledge graph and sessions in context.
+
+For the unitiated, trackinizer is the OSS graph DB tool we've developed to help agent swarms to keep track of their research and grow their knowledge over time. It's what's powering all our recent research results to great effect. Give it a try, feedback is very welcome.
+
+https://github.com/rekursiv-ai/trackinizer/
+
+
+GitHub
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+#👂announcements  •  Sunday
+
+
+
+gabriel
+ started a thread: Tmax/Terminal-Bench Baseline. See all threads. — 10/5/26, 2:29 AM
+Tmax/Terminal-Bench Baseline
+7 Messages ›
+Josh
+1d
+
+hi everyone! welcome to our space! a bit about us:
+
+we are "hacker scientists" trying to build a platform that helps us do research faster!
+
+the way we do this:
+
+we use configgle to setup an "exemplar experiment" then we unleash a swarm of agents to iterate on it. we use trackinizer to facilate shared learning and coordination.
+
+right now we have just machine learning experiments but we want to setup wider diversity.
+
+the goal in this group would be for us to help you setup the experiments. then we can donate some of our compute to run campaigns for you.
+
+right now the effort furthest along led by @Nate and @Sway to recreate and extend speedrun-dit. we're very excited to spinup other avenues of discovery.
+
+
+https://github.com/rekursiv-ai/configgle
+https://github.com/rekursiv-ai/trackinizer
+https://github.com/rekursiv-ai/priml
+GitHub
+GitHub - rekursiv-ai/configgle: Type-safe hierarchical experiment c...
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+GitHub
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+GitHub
+GitHub - rekursiv-ai/priml: Strongly typed configurable building bl...
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+GitHub - rekursiv-ai/priml: Strongly typed configurable building bl...
+Josh — 9/16/26, 2:45 AM
+tl;dr: we're a hacker community and whatever you think!
+
+longer answer: our dream:
+
+create tons of meaningful baseline experiments
+share results on trackinizer (we'll be FREE hosting soon but its OSS so you can too)
+our collective effort builds a knowledge graph which we distill into a better LLM for discovery
+
+
+so i'd probably say the best way to contribute would be to build out baselines within priml and sticking to its style so we can create a community driven auto-harness 
+make yeah its crazy! I wish we would have done our campaign on speed rather than accuracy then we'd hold the title.
+
+i think the lesson is: the sooner we can all swarm on experiments the better!
+
+on that note: we're hoping to get a hosted version running next week and we'll be granting limited access to folks here. this means you can use some of our compute for free if youre willing to be our beta testers 🙂
+
+in fact this is why we've been rather silent--just been a mad dash to pull things together
+
+gabriel
+ started a thread: System One models for Rekursiv ai. See all threads. — 10/3/26, 9:42 PM
+System One models for Rekursiv ai
+19 Messages ›
+Josh
+1d ago
+sanj13 — 10/3/26, 9:44 PM
+would love to beta test!
+Dan — 10/3/26, 10:10 PM
+Using CPU to do useful work while GPU is running is a very underrated trick, but nice to see how well it's used here 
+
+Josh — 10/3/26, 10:26 PM
++1; this is more less the SOTA for locallama crew.
+Dan — 10/4/26, 1:02 AM
+https://x.com/hyperparticle/status/2106467264107024827?s=20
+Dan Kondratyuk (@hyperparticle)
+Dan Kondratyuk (@hyperparticle) on X
+Image
+
+X•10/4/26, 1:01 AM
+
+Dan — 10/4/26, 7:15 PM
+
+Forwarded
+Hey everyone, we redesigned the trackinizer UI to have a lot more user friendly, and provide a rich set of tools to understand your agents' knowledge graph and sessions in context.
+
+For the unitiated, trackinizer is the OSS graph DB tool we've developed to help agent swarms to keep track of their research and grow their knowledge over time. It's what's powering all our recent research results to great effect. Give it a try, feedback is very welcome.
+
+https://github.com/rekursiv-ai/trackinizer/
+
+
+GitHub
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+#👂announcements  •  10/4/26
+
+
+
+gabriel
+ started a thread: Tmax/Terminal-Bench Baseline. See all threads. — 10/5/26, 2:29 AM
+Tmax/Terminal-Bench Baseline
+12 Messages ›
+Josh
+1d ago
+Good to see you, 
+ss138
+. — 10/6/26, 9:16 PM
+
+
+Wave to say hi!
+Good to see you, 
+Katherine Xu
+. — 10/7/26, 8:39 AM
+
+
+Wave to say hi!
+Glad you're here, 
+Yuvaraj R
+. — 10/7/26, 2:41 PM
+
+
+Wave to say hi!
+Josh — 10/7/26, 11:15 PM
+hi friends! our plan was to pre-announce here but we ended up a day late! sorry about that!
+
+without further adieu, announcing the new-and-improved trackinizer and another worlds-best result in RL: "speedrun science"=44% .... astra=1%
+
+https://x.com/hyperparticle/status/2107876974538461605 
+Dan Kondratyuk (@hyperparticle)
+Experts doubted a small neural net could beat Craftax without an LLM's knowledge. ​ Our agent meta-harness built one in 3 weeks. The 15M-param agent beats the final boss 44% of the time, costing a cent, and 10 seconds. ​ GPT-6 Astra won 1%, taking 24 hours and $83. 🧵
+Image
+
+X•10/7/26, 10:23 PM
+
+Good to see you, 
+shving90
+. — 10/8/26, 1:08 AM
+
+
+Wave to say hi!
+gabriel — 10/8/26, 1:15 AM
+very cool.
+Dan — 10/8/26, 1:59 AM
+Now that we have our latest results out of the way, our goal is to give all of you this superpower
+
+Good to see you, 
+Graeme
+. — 10/8/26, 2:29 AM
+
+
+Wave to say hi!
+Glad you're here, 
+aftergwot
+. — 10/8/26, 2:31 AM
+
+
+Wave to say hi!
+Josh — 10/8/26, 2:31 AM
+hi new friends!
+ffund
+ joined the party. — 10/8/26, 3:06 AM
+
+
+Wave to say hi!
+Glad you're here, 
+Lucas H
+. — 10/8/26, 3:16 AM
+
+
+Wave to say hi!
+Josh — 10/8/26, 3:16 AM
+Hello!
+Richard Tang
+ just showed up! — 10/8/26, 5:06 AM
+
+
+Wave to say hi!
+Franko Perez
+ just slid into the server. — 10/8/26, 5:22 AM
+
+Wave to say hi!
+NeekyRodent
+ just showed up! — 10/8/26, 6:24 AM
+
+
+Wave to say hi!
+Josh — 10/8/26, 7:00 AM
+hi friends! welcome!
+update; i think we at rekursiv.ai have dug our way out of the code hole and we can get back to thinking about the next project.  for context, we use blog posts as a chance to cleanup both our findings and our backend code. each campaign always seems to reveal cracks but theyve been largely plugged. (we have a rather complex code quality system which we havent yet OSS'ed which helps us keep things in working order)
+
+Yay you made it, 
+Rishi
+! — 10/8/26, 7:26 AM
+
+
+Wave to say hi!
+Yay you made it, 
+Roshan 01
+! — 10/8/26, 7:47 AM
+
+
+Wave to say hi!
+Welcome 
+mjonir14
+. Say hi! — 10/8/26, 7:55 AM
+
+
+Wave to say hi!
+Good to see you, 
+dhruv_nimesh
+. — 10/8/26, 8:07 AM
+
+
+Wave to say hi!
+Welcome 
+G R GANESH
+. Say hi! — 10/8/26, 8:48 AM
+
+
+Wave to say hi!
+G R GANESH — 10/8/26, 8:49 AM
+
+av2k.
+ is here. — 10/8/26, 11:03 AM
+
+
+Wave to say hi!
+A wild 
+Amar Kumar Thakur
+ appeared. — 10/8/26, 12:11 PM
+
+
+Wave to say hi!
+Sidharth
+ hopped into the server. — 10/8/26, 12:12 PM
+
+Wave to say hi!
+A wild 
+kimmaicutler
+ appeared. — 10/8/26, 1:01 PM
+
+Wave to say hi!
+Glad you're here, 
+Epimemeology
+. — 10/8/26, 1:24 PM
+
+
+Wave to say hi!
+Yay you made it, 
+Atif001
+! — 10/8/26, 1:46 PM
+
+
+Wave to say hi!
+mdatif_
+ is here. — 10/8/26, 1:48 PM
+
+
+Wave to say hi!
+A wild 
+Nicholas
+ appeared. — 10/8/26, 2:51 PM
+
+
+Wave to say hi!
+Nicholas [OAI],  — 10/8/26, 2:53 PM
+This is so cool
+Glad you're open sourcing it
+
+Abhishek Madaan
+ joined the party. — 10/8/26, 3:41 PM
+
+
+Wave to say hi!
+Everyone welcome 
+paccccccco
+! — 10/8/26, 5:22 PM
+
+Wave to say hi!
+Brandon Petersen
+ joined the party. — 10/8/26, 11:07 PM
+
+
+Wave to say hi!
+Everyone welcome 
+清算 [Qrisprolle]
+! — 10/9/26, 2:33 AM
+
+Wave to say hi!
+清算 [Qrisprolle] — 10/9/26, 2:33 AM
+Hello
+It was hard to find the discord
+Ahaha nice to meet you guys
+Giving my first try on some the trackinizer but I have trouble to get proper result trying to work around but I think I definitly do something wrong here 
+Josh — 10/9/26, 2:41 AM
+hello! its also likely there's lots of rough edges. we're really just beginning. tbh we're doing a bit of a social experiment where we building our company not in stealth mode and with the spirit of "community science"
+
+清算 [Qrisprolle] — 10/9/26, 2:50 AM
+I love it
+How to join ahah
+What would you say is the hardest working with graph at the moment ?
+Welcome, 
+Aidan Waldman
+. We hope you brought pizza. — 10/9/26, 5:29 AM
+
+
+Wave to say hi!
+venkat — 10/9/26, 9:53 AM
+Guys,we need to  get twitter handle for rekursive.ai 😅  . I think we dont have one
+
+Yay you made it, 
+pppppp72
+! — 10/9/26, 11:32 AM
+
+
+Wave to say hi!
+Montanus
+ just landed. — 10/9/26, 12:33 PM
+
+
+Wave to say hi!
+Montanus — 10/9/26, 12:34 PM
+Montanus — 10/9/26, 12:43 PM
+Hi everyone,
+With a background as a psychologist I'm managing digital health and AI at a fairly large Swedish health care provider. In my spare time i build and build, previously coding myself, but now mostly AI-assisted. Current top project is creating a working virtual neuron and have been using a similar methodology as Rekursiv. Finding you guys gave me a real boost in confidence that it's the right way to go!
+
+radharamana
+ joined the party. — 10/9/26, 8:06 PM
+
+Wave to say hi!
+Josh — 10/10/26, 12:46 AM
+Glad to hear Montanus! Maybe we can somehow help you?!
+Josh — 10/10/26, 12:54 AM
+What would you say is the hardest working with graph at the moment ?
+i think just learning how to organize information? building skills etc?
+
+to all: where we stand now is we have this great schema in trackinizer and we're just learning how to leverage and use it. the best help is for everyone to share their feedback, make proposals, and discuss. then if we as a community like itsomeone can make the pr!
+Moun1r
+ just showed up! — 10/10/26, 12:25 PM
+
+
+Wave to say hi!
+Yay you made it, 
+kunwar249
+! — 10/10/26, 1:08 PM
+
+
+Wave to say hi!
+kunwar249 — 10/10/26, 1:11 PM
+Hi everyone,
+I am a first time founder who is working on a light weight DevOps automation tool for small companies and agencies who want a rpoduction ready deployment but do not want the hastle of hiring a DevOps engineer or communicating with the terminal at all times. It is called Orbiitl you can check it out on https://obiitl.in/
+
+Good to see you, 
+EarthlingNate
+. — 10/10/26, 7:36 PM
+
+
+Wave to say hi!
+Yay you made it, 
+THE PLAGUES
+! — 10/11/26, 5:44 AM
+
+
+Wave to say hi!
+Josh — 10/11/26, 6:19 AM
+
+Forwarded
+fyi, spun out our json lib. (which annoyingly we had to write)
+https://github.com/rekursiv-ai/treekle
+GitHub
+GitHub - rekursiv-ai/treekle: Pickle semantics as plain python trees.
+Pickle semantics as plain python trees. Contribute to rekursiv-ai/treekle development by creating an account on GitHub.
+Pickle semantics as plain python trees. Contribute to rekursiv-ai/treekle development by creating an account on GitHub.
+#👂announcements  •  Sunday
+
+Low priority/Fun prgramming: If anyone wanted to put together some robust rust based tree walking for this, that'd be cool. It'd be best to study msgpack. We'd need wheels for all the usual suspects. The point would be to be blazingly fast.
+
+(Though not autonomous science, a nice community thing.)
+gabriel — 10/11/26, 9:13 AM
+will look into it 👌
+gabriel — 10/11/26, 10:02 AM
+ran a few quick Rust benchmarks against treekle’s current Python code using quick synthetic data:
+128 typed rows: ~78× faster decoding, ~6.6× faster full round trip
+256-integer set: ~25× faster encoding, ~2.7× faster full round trip
+256 integer-keyed dictionary entries: ~14× faster encoding, ~1.4× faster full round trip
+
+these cases might not match real use. and the Rust code isn’t in treekle yet.
+before implementing, were you thinking of speeding up encoding, decoding, or both? 
+junpenglao — 10/11/26, 12:47 PM
+IMO decoding is the most needed, because we had experimented with msgspec, and decoding speed is slower 
+Josh — 10/11/26, 9:21 PM
+Awesome! For benchmarking, please use the experiments in priml/baselines. These are the "real cases" and also the motivation for treekle, ie, a fast-yet-text serializer. Also: how can decoding be 78x but roundtrip be only 6.6x faster?
+
+Walking the dataclass and checking types is the main source of realworld slowness. When I benchmark against msgspec I see about 87x slower. 
+
+gabriel
+ started a thread: Treekle Rust. See all threads. — 10/11/26, 9:38 PM
+Treekle Rust
+7 Messages ›
+Josh
+
+1d ago
+venkat — 10/11/26, 9:48 PM
+I couldn't find a single resource that explained the entire Rekursiv stack and how all the tools fit together, so I put together a beginner-friendly guide covering the architecture, individual tools, and the bigger vision of autonomous scientific discovery.
+
+Sharing it here for anyone looking to understand or get started with the stack.
+
+https://venkateshwarreddy.substack.com/p/when-ai-starts-doing-science-inside?r=uiua3&utm_campaign=post-expanded-share&utm_medium=web
+When AI Starts Doing Science: Inside Rekursiv.ai
+Understanding Sagent, Trackinizer, Priml, Configgle, and the research infrastructure being built to move AI from executing tasks to discovering new knowledge.
+When AI Starts Doing Science: Inside Rekursiv.ai
+
+A wild 
+Robin
+ appeared. — Yesterday at 4:27 PM
+
+Wave to say hi!
+jsuarez
+ just showed up! — Yesterday at 10:34 PM
+
+
+Wave to say hi!
+Dev
+ joined the party. — Yesterday at 10:56 PM
+
+
+Wave to say hi!
+Dev — Yesterday at 10:58 PM
+Hey all!
+Josh — Yesterday at 11:06 PM
+Hi Dev! Welcome to our tiny corner of the internet!
+
+Josh — Yesterday at 11:09 PM
+🧵 Trackinizer UI Brainstorm 
+Trackinizer UI Brainstorm
+170 Messages ›
+junpenglao
+6h ago
+just pushed a PR adding all of mls-bench tasks to priml, would love if y'all could take a look and review it
+
+MLS bench -> priml/
+1 Message ›
+There are no recent messages in this thread.
+3d ago
+Josh — 10/14/26, 3:18 AM
+im so wildly behind on PRs sorry all! maybe @junpenglao can help grab some too?
+
+
+junpenglao
+ started a thread: MLS bench -> priml/. See all threads. — 10/14/26, 12:11 PM
+Brijesh Thakkar
+ joined the party. — 10/15/26, 11:27 AM
+
+
+Wave to say hi!
+Brijesh Thakkar — 10/15/26, 11:30 AM
+i’m brijesh, cse undergrad at iit jodhpur
+what i’m working on right now:
+gpu/cuda research at spade lab: streammst, a streaming minimum spanning tree algorithm on gpus (paper in internal review)
+open source: c4gt contributor on meshkit (decentralized storage for socialcalc), plus contributions to bitcoin dev kit, apache datafusion and apache streampipes
+coursework side quests: adding syscalls to xv6 and hacking on llc dead-block prediction in champsim
+found rekursiv through dan. the idea of ai scientists’ discoveries becoming their own training signal is super interesting to me. keen to help with the infra side: making campaign runs cheaper/faster, gpu efficiency, eval pipelines.
+curious: how are you deciding which results are trustworthy enough to feed back into training? happy to help think through the next campaign
+
+Mike
+ joined the party. — 10/15/26, 9:03 PM
+
+
+Wave to say hi!
+Josh — 10/15/26, 10:17 PM
+ how are you deciding which results are trustworthy enough to feed back into training?
+hello! welcome!
+
+trust isnt actually a concern for us! we make the agent run experiments and built on our A/B testing harness called configgle. https://github.com/rekursiv-ai/configgle
+
+early results seem to show this works very well. there's no magic here; just thoughtful engineering and good baseline examples which can be found in https://github.com/rekursiv-ai/priml 
+GitHub
+GitHub - rekursiv-ai/configgle: Type-safe hierarchical experiment c...
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+Type-safe hierarchical experiment configuration using pure Python dataclass factories and dependency injection. - rekursiv-ai/configgle
+GitHub
+GitHub - rekursiv-ai/priml: Strongly typed configurable building bl...
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+update; i reworked some of the wesearch stuff. (context: this is the websearch/webfetch tooling of sagent). 
+
+it should have a better hitrate now. i also add support for brave search; they give 5$/mo for free or 1000 free searches.
+
+i did find much lower block rate if you use the headed (not headless) backend chrome.
+
+
+today  my objective is to work through all your wonderful PRs. and again my apologies for the slow response! 
+
+Josh — 10/16/26, 5:40 AM
+good news friends; we're making progress on a hosted trackinizer; for those of you that have been contributing we're gonna see if we can share some of our compute with you. stay tuned!
+
+Brijesh Thakkar — 10/16/26, 9:26 AM
+went through configgle, really like the “one experiment = one python function” stance, and the pre/super/post split in finalize() for pushing values down vs deriving them up is neat
+makes sense that the trust question is handled by the A/B harness itself, if every discovery has to beat a baseline arm in a controlled run, the loop stays honest
+going to set up priml locally and run a baseline end to end this weekend, then look for something to pick up. given my background, the gpu/perf side of the training loop is where i’d like to dig in. any area you’d point me to first?
+
+Josh — 10/16/26, 9:27 AM
+hi all--apologies again but i still havent gotten to PRs. i promise tomorrow is the day
+Josh — 10/16/26, 9:28 AM
+Thanks! configgle is the product of many many many failed attempts. its starting to take root elsewhere too. i think torchtitan has something like this now too. but our configgle is fairly old at this pt and very hardened.
+
+priml -- built on configgle --  is industrial grade ml research platform 🙂 
+Brijesh Thakkar — 10/16/26, 9:36 AM
+that hardening shows, the comparison table in the readme is one of the most honest i’ve seen. curious, what was the failure mode that finally pushed you away from yaml-style configs? reproducibility drift?
+setting up priml now, will report back with what i find
+av2k. — 10/16/26, 10:25 AM
+Hey everyone! I’ve been building ResearchFlow, an AI-powered research system designed to make exploring, understanding, and building upon research papers easier.
+
+Here are some of its key features:
+
+Research Assistant: An AI assistant that helps you navigate the research process, answer questions, explore concepts, and work with research literature.
+Adaptive Paper Explanations: Understand papers at your level of expertise, from foundational concepts to technical details.
+AI-Generated Podcasts & Slide Decks: Turn papers into engaging audio discussions and structured slides for easier learning and revision.
+Advanced RAG: Ask contextual questions and get answers grounded in research papers.
+Paper Collections & RAG Chat: Bookmark papers into folders and chat with your curated collections of literature.
+Genie: Synthesize novel research ideas and hypotheses by connecting insights across existing papers.
+
+I’d love to contribute to rekursiv.ai in any way that could be useful, whether through research tooling, AI capabilities, or the broader project.
+
+Here’s a demo: 
+
+https://lnkd.in/p/d-ChcMCV
+LinkedIn
+Close the Research Loop with ResearchFlow | Aarohan Verma posted on...
+Researchers spend their week reading. They should be spending it 𝘁𝗵𝗶𝗻𝗸𝗶𝗻𝗴.  Reading is the cost of admission. The real work — finding what matters, decoding what's dense, connecting the dots, turning it into a hypothesis to test, an idea to explore — quietly gets pushed to whatever evening you can spare.  ⚠️ 𝗧...
+Close the Research Loop with ResearchFlow | Aarohan Verma posted on...
+junpenglao — 10/16/26, 7:15 PM
+Happy Friday everyone!!! New blog post on Rekursiv https://rekursiv.ai/blog/supply-chain/ by @venkat from the community 🎊 👏
+rekursiv.ai
+An AI scientist built a better factory scheduler
+Venkateshwar Reddy Jambula used Sagent and Trackinizer to develop and validate a factory scheduling solver, then explored the research workflow across other optimization problems.
+
+Josh — 10/16/26, 8:32 PM
+Congrats @venkat! And thanks for helping out @junpenglao!
+
+Venkat I'll DM you but we should craft a tweet together and Ill see if I can get YC to repost it.
+
+If anyone finds areas that need fixing up, do let us know. 
+Dev — 10/16/26, 8:33 PM
+i love this open science!
+
+Josh — 10/16/26, 8:34 PM
+Everyone is a scientist now!
+
+Josh — 10/16/26, 8:38 PM
+Wow! This is totally awesome! Will you join us in the trackinizer thread and help us include your ideas into it!? This is really great stuff!!  All are welcome and all ideas will be incorporated!
+
+Our current thinking is to have tabs which are subdivided into chat and canvas. the canvas will be a dynamic rendering space where ideas are prototyped. we've been test driving this and love it--we think its a new kind of IDE more like an Integrated Reviewing Environment.
+
+As usual we'll be OSS'ing everythng so we can build it together. 🫂💪 🤖 🔬
+
+Josh — 10/16/26, 10:09 PM
+hi friends. i posted some math vignettes in priml. these are a collection of some of the ideas i think are important or want to learn more about.
+
+https://github.com/rekursiv-ai/priml/blob/main/docs/vignettes/arch/toc.md
+https://github.com/rekursiv-ai/priml/blob/main/docs/vignettes/math/toc.md
+
+i dont have any specific intention behind sharing them, other than i think the ideas are cool 🙂 
+GitHub
+priml/docs/vignettes/arch/toc.md at main · rekursiv-ai/priml
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+GitHub
+priml/docs/vignettes/math/toc.md at main · rekursiv-ai/priml
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+
+Josh — 10/16/26, 10:16 PM
+@jsuarez 100% love your highway network extension to mingru. i wrote it up in my style here https://github.com/rekursiv-ai/priml/blob/main/docs/vignettes/arch/mingru.md#pufferlibs-mingru
+(it helps me to use terse little equations so i can hold the precise details in my head. )
+
+
+We think alike! At luma we could build substantially better compressors using the simple highway network trick. My thinking was (at the time) that skip connections (more generally highway) are the single greatest breakthrough in DNNs because not only vanishing gradient but the learning dynamics allow the hessian to "fill in" in an arrow matrix block manner, ie, it becomes an automatic conditioner. 
+GitHub
+priml/docs/vignettes/arch/mingru.md at main · rekursiv-ai/priml
+Strongly typed configurable building blocks for A/B testing ML research. - rekursiv-ai/priml
+
+jsuarez [PUFF],  — Yesterday at 1:34 AM
+Our reasoning was much simpler. LayerNorm is unusably slow for small nets, so we needed a norm-free method. My first ever pub 10 years ago found that highway connections work in place of them
+
+ [PUFF], 
+Josh — Yesterday at 2:48 AM
+thats interesting! i was not aware of projected skips as being a proxy. but it makes sense given the smoothness it induces
+EiffL
+ is here. — Yesterday at 4:48 PM
+
+
+Wave to say hi!
+Nate — 1:23 AM
+https://github.com/morluto/rea
+GitHub
+GitHub - morluto/rea: Reverse engineer anything with agents, from a...
+Reverse engineer anything with agents, from app behavior down to native binaries. - morluto/rea
+
+Jan Tempus
+ started a thread: Bayesian Channel Coding versues Error Correcting Codes. See all threads. — 10/18/26, 4:47 PM
+Bayesian Channel Coding versues Error Correcting Codes
+9 Messages ›
+Josh
+1d ago
+av2k. — 9:22 AM
+Sorry for the late reply, Josh, been a bit caught up with switching organisations! This sounds awesome. Really like the chat + dynamic canvas direction. One key learning from ResearchFlow is that connecting insights across papers and turning them into testable hypotheses is just as important as understanding individual papers. Where would be the best place to start exploring Trackinizer? Excited to collaborate and build together!
+A wild 
+Brotisserie
+ appeared. — 9:44 AM
+
+
+Wave to say hi!
+venkat — 1:25 PM
+You can find it here. https://github.com/rekursiv-ai/trackinizer
+GitHub
+GitHub - rekursiv-ai/trackinizer: Epistemological database for agen...
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+Epistemological database for agent and human efforts, beliefs, and findings. - rekursiv-ai/trackinizer
+Shreyes — 5:15 PM
+@Josh @venkat @all hey all, I was offline for a while because of exams. anything big I missed?
+@Josh @venkat @all hey all, I was
+2 Messages ›
+junpenglao
+1h ago
+Shreyes — 5:24 PM
+@junpenglao thank you 🙏
+
+
+KNihalani
+ just showed up! — Yesterday at 10:36 PM
+
+
+Wave to say hi!
+KNihalani — Yesterday at 10:49 PM
+
+KNihalani — 12:09 AM
+was curious, do you guys take interns or anything?
+was curious, do you guys take interns or
+4 Messages ›
+KNihalani
+10h ago
+Everyone welcome 
+RaulPL
+! — 12:24 AM
+
+
+Wave to say hi!
+
+Josh
+ started a thread: kv cache campaign. See all threads. — 12:28 AM
+
+Josh
+ started a thread: was curious, do you guys take interns or. See all threads. — 12:30 AM
+Josh — 12:30 AM
+dm me and ill send you my contact info so we can meet?
+Josh — 12:37 AM
+🧵 Wow--so many autoresearch announcements lately! I wonder where this is all going? Chime in here!
+Autoresearch
+3 Messages ›
+Josh
+4h ago
+A wild 
+CNote
+ appeared. — 2:24 AM
+
+Wave to say hi!
+ViBi
+ joined the party. — 5:46 AM
+
+Wave to say hi!
+Realm
+ just slid into the server. — 7:18 AM
+
+
+Wave to say hi!
+KNihalani — 12:09 AM
+was curious, do you guys take interns or anything?
+Josh — 12:30 AM
+Hi! Right now the best way to participate is to materially contribute. This will help us grow and with additional funding we can hire additional folks.
+
+Our effort is a bit of a social experiment in the startup space in that, rather than stay in stealth mode until Series A, we're trying to grow a community of hacker scientists in public.
+
+KNihalani — 12:32 AM
+oh fs! was thinking unpaid anyway
+Josh — 12:37 AM
+Ah! Well then contributing to the community is the name of the game! We're racing rn to release a kind of portal for agentic research which we're hoping we the community can develop together. rn probably @venkat and @dhanya have taken these ideas the furthest.
+
+The team is a bit overwhelmed as we try to get this thing hosted. Then we're hoping to get community help to make it sing.
+KNihalani — 1:42 AM
+yep! sounds good, sorry I need to setup 2fa on my github but could i get a rundown on the different things u do etc?
+
+Sagent rewrite is in and I will now start merging PRs. Thanks @venkat for the new opener! 
+
+Image
+bunch of new features too. loving "autopilot": /send parent ensure my instructions are followed and that the agent does not go idle until all tasks are as complete as possible. 
+venkat — 10/30/26, 8:53 AM
+love it !!
+
+Josh — 10/30/26, 10:01 PM
+its all you!
+
+Samvel Topuzyan
+ hopped into the server. — Yesterday at 6:54 PM
+
+
+Wave to say hi!
+Samvel Topuzyan — Yesterday at 6:56 PM
+Josh — Yesterday at 8:37 PM
+hey folks! the sagent rewrite is complete! countless fixes but some highlights
+new UI for running agents (left arrow)
+MCP support
+improved grep/glob
+improved websearch/webfetch
+support for Google subs
+cleaned up slash command hierarchy
+dramatically simplified codebase (35% less code)
+smaller logs (loading faster thanks to treekle)
+bad tool calls are autofixed
+
+try it out: uvx sagent@latest
+
+i think the feature we like the most is autopilot. just do:
+
+/send parent ensure agent follows my instructions and completes all tasks 

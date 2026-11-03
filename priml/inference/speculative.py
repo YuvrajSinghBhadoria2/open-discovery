@@ -11,6 +11,7 @@ Search space:
     - 480 configurations for drafter type, tree depth, acceptance threshold,
       calibration data, FP4 format, and quantization settings.
 """
+
 from __future__ import annotations
 
 import abc
@@ -97,7 +98,7 @@ class E2M1Quantizer(FP4Quantizer):
             exp_code = -2  # Very small
 
         # Mantissa: 1 bit (0 or 0.5 offset)
-        mantissa = 0 if abs_val < 2.0 * (10 ** exp_code) else 1
+        mantissa = 0 if abs_val < 2.0 * (10**exp_code) else 1
 
         # Pack: sign(1) + exponent(2) + mantissa(1) = 4 bits
         packed = (sign << 3) | (exp_code << 1) | mantissa
@@ -117,10 +118,10 @@ class E2M1Quantizer(FP4Quantizer):
         # Plus subnormal cases for exp_code < 0
         if exp_code >= 0:
             mantissa_factor = 1.0 + (mantissa * 0.5)
-            value = mantissa_factor * (2 ** exp_code)
+            value = mantissa_factor * (2**exp_code)
         else:
             # Subnormal: small values near zero
-            value = 2 ** exp_code  # exp_code is -1 or -2
+            value = 2**exp_code  # exp_code is -1 or -2
 
         if sign:
             value = -value
@@ -350,7 +351,9 @@ class SpeculativeDecodingConfig:
     def __post_init__(self) -> None:
         """Validate configuration parameters after initialization."""
         if self.drafter_type not in DRAFTER_TYPES:
-            msg = f"drafter_type must be one of {DRAFTER_TYPES}, got {self.drafter_type}"
+            msg = (
+                f"drafter_type must be one of {DRAFTER_TYPES}, got {self.drafter_type}"
+            )
             raise ValueError(msg)
 
         if not 1 <= self.tree_depth <= 5:
@@ -382,7 +385,9 @@ class SpeculativeDecodingConfig:
         base = 1.0 + 0.15 * self.tree_depth
         threshold_factor = 1.0 / self.acceptance_threshold
         quant_factor = 1.3 if self.quantize_drafter else 1.0
-        drafter_factor = {"eagle": 1.0, "medusa": 1.2, "tiny_llama": 1.1}[self.drafter_type]
+        drafter_factor = {"eagle": 1.0, "medusa": 1.2, "tiny_llama": 1.1}[
+            self.drafter_type
+        ]
         return base * threshold_factor * quant_factor * drafter_factor
 
     def quality_estimate(self) -> float:
@@ -393,7 +398,9 @@ class SpeculativeDecodingConfig:
         """
         threshold_penalty = (1.1 - self.acceptance_threshold) ** 2
         quant_penalty = 0.1 if self.quantize_drafter else 0.0
-        drafter_penalty = {"eagle": 0.0, "medusa": 0.05, "tiny_llama": 0.1}[self.drafter_type]
+        drafter_penalty = {"eagle": 0.0, "medusa": 0.05, "tiny_llama": 0.1}[
+            self.drafter_type
+        ]
         return 1.0 - threshold_penalty - quant_penalty - drafter_penalty
 
 
@@ -444,6 +451,7 @@ def speculative_decoding_search_space() -> list[SpeculativeDecodingConfig]:
 # =============================================================================
 # Experiment Configuration Generators
 # =============================================================================
+
 
 def exp004() -> dict[str, Any]:
     """Generate exp004 experiment configuration (480 configs for FP4 speculative decoding).

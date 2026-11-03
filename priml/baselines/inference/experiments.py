@@ -5,6 +5,7 @@ Following priml pattern: one change per fork, frozen baselines.
 Generates 480 configurations varying drafter type, tree depth,
 acceptance threshold, calibration data, FP4 quantization, and format.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -13,6 +14,7 @@ from typing import Any
 # =============================================================================
 # Config Classes
 # =============================================================================
+
 
 @dataclass
 class SpeculativeDecodingConfig:
@@ -40,7 +42,9 @@ class SpeculativeDecodingConfig:
         # (DRAFTER_TYPES, CALIBRATION_DATASETS, VALID_FP4_FORMATS are defined at module level)
 
         if self.drafter_type not in DRAFTER_TYPES:
-            msg = f"drafter_type must be one of {DRAFTER_TYPES}, got {self.drafter_type}"
+            msg = (
+                f"drafter_type must be one of {DRAFTER_TYPES}, got {self.drafter_type}"
+            )
             raise ValueError(msg)
 
         if not 1 <= self.tree_depth <= 5:
@@ -79,7 +83,9 @@ class SpeculativeDecodingConfig:
         base = 1.0 + 0.15 * self.tree_depth
         threshold_factor = 1.0 / self.acceptance_threshold
         quant_factor = 1.3 if self.quantize_drafter else 1.0
-        drafter_factor = {"eagle": 1.0, "medusa": 1.2, "tiny_llama": 1.1}[self.drafter_type]
+        drafter_factor = {"eagle": 1.0, "medusa": 1.2, "tiny_llama": 1.1}[
+            self.drafter_type
+        ]
         return base * threshold_factor * quant_factor * drafter_factor
 
     def quality_estimate(self) -> float:
@@ -90,7 +96,9 @@ class SpeculativeDecodingConfig:
         """
         threshold_penalty = (1.1 - self.acceptance_threshold) ** 2
         quant_penalty = 0.1 if self.quantize_drafter else 0.0
-        drafter_penalty = {"eagle": 0.0, "medusa": 0.05, "tiny_llama": 0.1}[self.drafter_type]
+        drafter_penalty = {"eagle": 0.0, "medusa": 0.05, "tiny_llama": 0.1}[
+            self.drafter_type
+        ]
         return 1.0 - threshold_penalty - quant_penalty - drafter_penalty
 
 
@@ -159,6 +167,7 @@ def _generate_configs() -> list[SpeculativeDecodingConfig]:
 # =============================================================================
 # Experiment Configuration Generators
 # =============================================================================
+
 
 def exp004() -> dict[str, Any]:
     """Generate exp004 experiment configuration (480 configs for FP4 speculative decoding).

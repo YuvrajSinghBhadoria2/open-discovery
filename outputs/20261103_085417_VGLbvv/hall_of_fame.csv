@@ -1,0 +1,5 @@
+Complexity,Loss,Equation
+1,0.010422386,"0.04764037"
+3,2.7620805e-17,"x1 * x0"
+16,2.7385526e-17,"sqrt(((log(sin(x0)) * ((x1 * x0) * x1)) / log(sin(x0))) * x0)"
+21,2.7268034e-17,"sqrt((x1 * sqrt(x0 * ((((x1 * x0) * x1) * log(sin(x0))) / log(sin(x0))))) * x0)"

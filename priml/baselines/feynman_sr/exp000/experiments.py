@@ -2,33 +2,33 @@
 Feynman SR Experiments: configgle configurations for exp000+
 Following priml pattern: one change per fork, frozen baselines.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional
-from configgle import Makes, PartialConfig
-
+from typing import Any
 
 # Import our model and data configs
-from .data import FeynmanDataConfig, generate_data_for_equation, FeynmanEquation
+from .data import FeynmanEquation, generate_data_for_equation
 from .model import FeynmanSRModel, GAConfig
-
 
 # =============================================================================
 # BASE CONFIG CLASSES
 # =============================================================================
 
+
 @dataclass
 class FeynmanTrainStep:
     """Single training/evaluation step for one equation"""
+
     model: FeynmanSRModel = field(default_factory=FeynmanSRModel)
-    equation: Optional[FeynmanEquation] = None
-    variables: Dict[str, Any] = field(default_factory=dict)
+    equation: FeynmanEquation | None = None
+    variables: dict[str, Any] = field(default_factory=dict)
     target_values: Any = None
     n_samples: int = 1000
     seed: int = 42
 
-    def run(self) -> Dict:
+    def run(self) -> dict:
         """Execute one equation evaluation"""
         if self.equation is None:
             raise ValueError("No equation set")
@@ -40,27 +40,30 @@ class FeynmanTrainStep:
             self.equation, self.variables, self.target_values
         )
         # Check exact recovery using model's method
-        exact = self.model._check_exact_recovery(best_expr, self.equation.formula, self.equation.variables)
+        exact = self.model._check_exact_recovery(
+            best_expr, self.equation.formula, self.equation.variables
+        )
         return {
-            'expression': str(best_expr),
-            'nmse': nmse,
-            'complexity': info['complexity'],
-            'exact': exact
+            "expression": str(best_expr),
+            "nmse": nmse,
+            "complexity": info["complexity"],
+            "exact": exact,
         }
 
 
 @dataclass
 class FeynmanTrainLoop:
     """Main training loop: evaluates model on dataset split"""
+
     step: FeynmanTrainStep = field(default_factory=FeynmanTrainStep)
     dataset_split: str = "subset10"  # "subset10", "easy", "medium", "hard", "all"
     n_samples: int = 1000
     seed: int = 42
 
-    def run(self) -> Dict:
+    def run(self) -> dict:
         """Run evaluation on full dataset split"""
+
         from .data import load_feynman_10, load_feynman_full
-        from pathlib import Path
 
         if self.dataset_split == "subset10":
             dataset = load_feynman_10()
@@ -75,26 +78,27 @@ class FeynmanTrainLoop:
                 model=self.step.model,
                 equation=eq,
                 n_samples=self.n_samples,
-                seed=self.seed + i  # Different seed per equation
+                seed=self.seed + i,  # Different seed per equation
             )
             result = step_cfg.run()
-            results.append({**result, 'eq_id': eq.eq_id, 'true_formula': eq.formula})
-            if result.get('exact', False):
+            results.append({**result, "eq_id": eq.eq_id, "true_formula": eq.formula})
+            if result.get("exact", False):
                 exact_count += 1
 
         recovery_rate = exact_count / len(dataset) if dataset else 0.0
         return {
-            'recovery_rate': recovery_rate,
-            'exact_recoveries': exact_count,
-            'total_equations': len(dataset),
-            'results': results,
-            'dataset_split': self.dataset_split
+            "recovery_rate": recovery_rate,
+            "exact_recoveries": exact_count,
+            "total_equations": len(dataset),
+            "results": results,
+            "dataset_split": self.dataset_split,
         }
 
 
 # =============================================================================
 # EXPERIMENT CONFIGS (exp000 = baseline, each fork changes ONE thing)
 # =============================================================================
+
 
 def exp000() -> FeynmanTrainLoop:
     """
@@ -116,7 +120,7 @@ def exp000() -> FeynmanTrainLoop:
             tournsize=3,
             hall_of_fame_size=5,
             seed=42,
-            max_nodes=30
+            max_nodes=30,
         )
     )
     cfg.step.n_samples = 1000
@@ -179,12 +183,12 @@ def exp005() -> FeynmanTrainLoop:
 # =============================================================================
 
 ALL_EXPERIMENTS = {
-    'exp000': exp000,
-    'exp001': exp001,
-    'exp002': exp002,
-    'exp003': exp003,
-    'exp004': exp004,
-    'exp005': exp005,
+    "exp000": exp000,
+    "exp001": exp001,
+    "exp002": exp002,
+    "exp003": exp003,
+    "exp004": exp004,
+    "exp005": exp005,
 }
 
-DEFAULT_EXPERIMENT = 'exp000'
+DEFAULT_EXPERIMENT = "exp000"

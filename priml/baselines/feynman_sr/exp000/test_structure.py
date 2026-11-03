@@ -2,10 +2,16 @@
 Structure test for exp000 baseline - verifies imports and config structure
 Run this for quick CI verification without full GA execution.
 """
+
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
+sys.path.insert(
+    0,
+    os.path.dirname(
+        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    ),
+)
 
 print("Testing imports...")
 from priml.baselines.feynman_sr.exp000.data import (
@@ -63,16 +69,16 @@ for e in exprs[:3]:
     print(f"  - {e} (nodes={e.count_nodes()}, dim={e.dim})")
 
 print("\nTesting model...")
-model = FeynmanSRModel(ga_config=GAConfig(
-    population_size=10,
-    max_generations=2,
-    seed=42
-))
+model = FeynmanSRModel(
+    ga_config=GAConfig(population_size=10, max_generations=2, seed=42)
+)
 print("✓ Model created with GAConfig")
 
 print("\nTesting experiment configs...")
 cfg000 = exp000()
-print(f"✓ exp000: split={cfg000.dataset_split}, pop={cfg000.step.model.ga_config.population_size}")
+print(
+    f"✓ exp000: split={cfg000.dataset_split}, pop={cfg000.step.model.ga_config.population_size}"
+)
 
 cfg001 = exp001()
 print(f"✓ exp001: generations={cfg001.step.model.ga_config.max_generations}")
@@ -90,8 +96,8 @@ assert check_exact_recovery("x0 * x1", "x0*x1") == True
 assert check_exact_recovery("x0 * x1", "x0 * x2") == False
 print("✓ Exact recovery check works")
 
-print("\n" + "="*50)
+print("\n" + "=" * 50)
 print("ALL STRUCTURE TESTS PASSED!")
-print("="*50)
+print("=" * 50)
 print("\nThe exp000 baseline structure is correctly set up.")
 print("For full GA run, use: python -m priml.baselines.feynman_sr.exp000.experiments")

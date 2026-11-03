@@ -39,3 +39,6 @@ __pycache__/
 *.pth
 *.npy
 *.npz
+
+# Machine-local credential & GitHub permission reference (never commit)
+/LOCAL-ACCESS.md

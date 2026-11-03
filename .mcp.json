@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "gpu-5090": {
+      "url": "http://154.221.33.226:8080/mcp"
+    },
+    "ssh-manager": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "mcp-ssh-manager"
+      ],
+      "env": {}
+    }
+  }
+}
