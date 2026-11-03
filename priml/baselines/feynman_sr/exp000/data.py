@@ -240,9 +240,11 @@ def _eval_formula(formula: str, variables: dict[str, np.ndarray]) -> np.ndarray:
     formula_py = formula.replace("^", "**")
 
     try:
-        # Use ast.literal_eval for safety where possible, fallback to eval
-        return eval(formula_py, {"__builtins__": {}}, local_dict)
-    except Exception:
+        # Use ast.literal_eval for safety where possible
+        return ast.literal_eval(formula_py)
+    except (ValueError, SyntaxError):
+        # Fallback: return zeros
+        n = len(next(iter(variables.values())))
         # Fallback: return zeros
         n = len(next(iter(variables.values())))
         return np.zeros(n, dtype=np.float64)
@@ -266,6 +268,7 @@ class FeynmanDataConfig:
         self.cache_dir = cache_dir
 
     def load_dataset(self) -> FeynmanDataset:
+        """Load the dataset based on the configured split."""
         if self.split == "subset10":
             return load_feynman_10()
         elif self.split in ("easy", "medium", "hard", "all"):
