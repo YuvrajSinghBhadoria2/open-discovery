@@ -56,11 +56,9 @@ a very tiny surface: four base directories on Linux, macOS, and Windows.
 
 from __future__ import annotations
 
-from pathlib import Path
-
 import os
 import sys
-
+from pathlib import Path
 
 __all__ = [
     "base_dir_variables",
@@ -98,12 +96,12 @@ def data_dir(*, platform: str | None = None) -> Path:
     """
     platform = platform or sys.platform
     if platform == "win32":
-        return Path(os.environ.get("LOCALAPPDATA") or Path.home() / "AppData" / "Local")  # noqa: TID251 -- this module IS the userdirs layout.
+        return Path(os.environ.get("LOCALAPPDATA") or Path.home() / "AppData" / "Local")
     if xdg_data_home := os.environ.get("XDG_DATA_HOME", ""):
         return Path(xdg_data_home)
     if platform == "darwin":
-        return Path.home() / "Library" / "Application Support"  # noqa: TID251 -- this module IS the userdirs layout.
-    return Path.home() / ".local" / "share"  # noqa: TID251 -- this module IS the userdirs layout.
+        return Path.home() / "Library" / "Application Support"
+    return Path.home() / ".local" / "share"
 
 
 def config_dir(*, platform: str | None = None) -> Path:
@@ -136,7 +134,7 @@ def config_dir(*, platform: str | None = None) -> Path:
         return Path(xdg_config_home)
     if platform == "darwin":
         return data_dir(platform=platform)
-    return Path.home() / ".config"  # noqa: TID251 -- this module IS the userdirs layout.
+    return Path.home() / ".config"
 
 
 def cache_dir(*, platform: str | None = None) -> Path:
@@ -169,8 +167,8 @@ def cache_dir(*, platform: str | None = None) -> Path:
     if xdg_cache_home := os.environ.get("XDG_CACHE_HOME", ""):
         return Path(xdg_cache_home)
     if platform == "darwin":
-        return Path.home() / "Library" / "Caches"  # noqa: TID251 -- this module IS the userdirs layout.
-    return Path.home() / ".cache"  # noqa: TID251 -- this module IS the userdirs layout.
+        return Path.home() / "Library" / "Caches"
+    return Path.home() / ".cache"
 
 
 def state_dir(*, platform: str | None = None) -> Path:
@@ -205,7 +203,7 @@ def state_dir(*, platform: str | None = None) -> Path:
         return Path(xdg_state_home)
     if platform == "darwin":
         return data_dir(platform=platform)
-    return Path.home() / ".local" / "state"  # noqa: TID251 -- this module IS the userdirs layout.
+    return Path.home() / ".local" / "state"
 
 
 def base_dir_variables() -> dict[str, str]:
