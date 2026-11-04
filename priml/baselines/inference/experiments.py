@@ -1,5 +1,4 @@
-"""
-FP4 Speculative Decoding Experiment Configurations (exp004).
+"""FP4 Speculative Decoding Experiment Configurations (exp004).
 
 Following priml pattern: one change per fork, frozen baselines.
 Generates 480 configurations varying drafter type, tree depth,
@@ -27,6 +26,7 @@ class SpeculativeDecodingConfig:
         calibration_data: Calibration dataset (c4, wikitext, sharegpt, ultrachat)
         quantize_drafter: Whether to FP4-quantize the drafter model
         drafter_fp4_format: FP4 format if quantizing (e2m1, nvfp4_block16)
+
     """
 
     drafter_type: str = "eagle"
@@ -78,6 +78,7 @@ class SpeculativeDecodingConfig:
         Returns:
             Estimated speedup multiplier. Deeper trees and lower thresholds
             give higher speedup but potentially lower quality.
+
         """
 
         base = 1.0 + 0.15 * self.tree_depth
@@ -93,6 +94,7 @@ class SpeculativeDecodingConfig:
 
         Returns:
             Estimated quality metric. Higher is better (closer to autoregressive).
+
         """
         threshold_penalty = (1.1 - self.acceptance_threshold) ** 2
         quant_penalty = 0.1 if self.quantize_drafter else 0.0
@@ -135,6 +137,7 @@ def _generate_configs() -> list[SpeculativeDecodingConfig]:
 
     Returns:
         List of SpeculativeDecodingConfig objects.
+
     """
     configs: list[SpeculativeDecodingConfig] = []
 
@@ -183,6 +186,7 @@ def exp004() -> dict[str, Any]:
 
     Returns:
         Dictionary with experiment metadata and config list.
+
     """
     configs = _generate_configs()
     return {
@@ -210,6 +214,7 @@ def exp004_smoke() -> dict[str, Any]:
 
     Returns:
         Dictionary with minimal experiment configuration.
+
     """
     configs = [
         SpeculativeDecodingConfig(

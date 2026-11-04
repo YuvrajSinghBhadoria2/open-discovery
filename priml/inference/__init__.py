@@ -1,5 +1,4 @@
-"""
-Inference module for speculative decoding and FP4 quantization.
+"""Inference module for speculative decoding and FP4 quantization.
 
 Exports:
     - EAGLE, Medusa speculative decoding architectures

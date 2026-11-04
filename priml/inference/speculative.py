@@ -1,5 +1,4 @@
-"""
-Speculative decoding architectures and FP4 quantization for inference acceleration.
+"""Speculative decoding architectures and FP4 quantization for inference acceleration.
 
 Architectures:
     - EAGLE: Autoregressive head + token tree for draft generation
@@ -43,6 +42,7 @@ class FP4Quantizer(abc.ABC):
 
         Returns:
             FP4 integer code
+
         """
         raise NotImplementedError()
 
@@ -55,6 +55,7 @@ class FP4Quantizer(abc.ABC):
 
         Returns:
             FP32 reconstructed value
+
         """
         raise NotImplementedError()
 
@@ -153,6 +154,7 @@ class NVFP4Block16Quantizer(FP4Quantizer):
 
         Returns:
             FP4 integer code
+
         """
         # Delegate to e2m1 logic, block scaling handled separately
         # In a full implementation, block max/min would be computed
@@ -169,6 +171,7 @@ class NVFP4Block16Quantizer(FP4Quantizer):
 
         Returns:
             FP32 reconstructed value
+
         """
         # Delegate to e2m1 dequantization
         quantizer = E2M1Quantizer()
@@ -209,6 +212,7 @@ class TokenTreeVerifier(abc.ABC):
             Tuple of (accepted_tokens, all_accepted)
             - accepted_tokens: Tokens that passed verification
             - all_accepted: Whether all draft tokens were accepted
+
         """
         raise NotImplementedError()
 
@@ -239,6 +243,7 @@ class EAGLEVerifier(TokenTreeVerifier):
 
         Returns:
             Tuple of (accepted_tokens, all_accepted)
+
         """
         if not draft_tokens:
             return [], True
@@ -298,6 +303,7 @@ class MedusaVerifier(TokenTreeVerifier):
 
         Returns:
             Tuple of (accepted_tokens, all_accepted)
+
         """
         if not draft_tokens:
             return [], True
@@ -339,6 +345,7 @@ class SpeculativeDecodingConfig:
         calibration_data: Calibration dataset (c4, wikitext, sharegpt, ultrachat)
         quantize_drafter: Whether to FP4-quantize the drafter model
         drafter_fp4_format: FP4 format if quantizing (e2m1, nvfp4_block16)
+
     """
 
     drafter_type: str = "eagle"
@@ -381,6 +388,7 @@ class SpeculativeDecodingConfig:
         Returns:
             Estimated speedup multiplier. Deeper trees and lower thresholds
             give higher speedup but potentially lower quality.
+
         """
         base = 1.0 + 0.15 * self.tree_depth
         threshold_factor = 1.0 / self.acceptance_threshold
@@ -395,6 +403,7 @@ class SpeculativeDecodingConfig:
 
         Returns:
             Estimated quality metric. Higher is better (closer to autoregressive).
+
         """
         threshold_penalty = (1.1 - self.acceptance_threshold) ** 2
         quant_penalty = 0.1 if self.quantize_drafter else 0.0
@@ -421,6 +430,7 @@ def speculative_decoding_search_space() -> list[SpeculativeDecodingConfig]:
 
     Returns:
         List of SpeculativeDecodingConfig objects covering the search space.
+
     """
     configs: list[SpeculativeDecodingConfig] = []
 
@@ -462,6 +472,7 @@ def exp004() -> dict[str, Any]:
 
     Returns:
         Dictionary with experiment metadata and config list.
+
     """
     configs = speculative_decoding_search_space()
     return {
@@ -489,6 +500,7 @@ def exp004_smoke() -> dict[str, Any]:
 
     Returns:
         Dictionary with minimal experiment configuration.
+
     """
     configs = [
         SpeculativeDecodingConfig(

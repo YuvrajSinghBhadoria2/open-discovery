@@ -1,5 +1,4 @@
-"""
-Tests for exp004 FP4 speculative decoding configurations.
+"""Tests for exp004 FP4 speculative decoding configurations.
 
 12 CPU-based tests verifying bit-for-bit equivalence and configuration validity.
 These tests should run quickly without GPU requirements.
@@ -11,7 +10,7 @@ import sys
 sys.path.insert(
     0,
     os.path.dirname(
-        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
     ),
 )
 
@@ -300,7 +299,9 @@ def test_config_speedup_quality_tradeoff():
     if len(eagle_configs) >= 2:
         # Sort by threshold (higher = better quality)
         eagle_sorted = sorted(
-            eagle_configs, key=lambda c: c.acceptance_threshold, reverse=True
+            eagle_configs,
+            key=lambda c: c.acceptance_threshold,
+            reverse=True,
         )
         # Quality should generally decrease with lower thresholds
         # (this is a soft assertion since other factors also matter)
