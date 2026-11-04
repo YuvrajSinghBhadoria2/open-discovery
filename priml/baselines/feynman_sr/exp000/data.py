@@ -5,6 +5,7 @@ Downloads and caches the 120 Feynman equations from SRSD benchmark.
 
 from __future__ import annotations
 
+import ast
 import json
 from dataclasses import dataclass
 from pathlib import Path

@@ -7,9 +7,12 @@ from __future__ import annotations
 
 import random
 from dataclasses import dataclass, field
+from typing import ClassVar
 
 import numpy as np
 from deap import algorithms, base, creator, tools
+
+from priml.baselines.feynman_sr.exp000.data import generate_data_for_equation
 
 # =============================================================================
 # DIMENSIONAL GRAMMAR (from feynman_sr/grammar.py)
@@ -22,7 +25,7 @@ class Dim:
     T = 2
     Q = 3
     THETA = 4
-    NAMES = ["M", "L", "T", "Q", "THETA"]
+    NAMES = ("M", "L", "T", "Q", "THETA")
 
     @classmethod
     def from_str(cls, s: str):
@@ -117,7 +120,7 @@ class OpType:
     LOG = ("log", 1, lambda a: a if a.is_dimensionless() else None)
     ABS = ("abs", 1, lambda a: a)
 
-    ALL_OPS = [
+    ALL_OPS = (
         CONST,
         VAR,
         ADD,
@@ -136,9 +139,9 @@ class OpType:
         EXP,
         LOG,
         ABS,
-    ]
+    )
 
-    OPS = [
+    OPS = (
         ADD,
         SUB,
         MUL,
@@ -155,9 +158,8 @@ class OpType:
         EXP,
         LOG,
         ABS,
-    ]
-
-    SYMBOLS = {
+    )
+    SYMBOLS: ClassVar[dict] = {
         "add": "+",
         "sub": "-",
         "mul": "*",
@@ -199,7 +201,7 @@ class TypedExpr:
     const_id: int | None = None
 
     @classmethod
-    def constant(cls, value: float, dim: DimVec = DIMENSIONLESS, const_id: int = None):
+    def constant(cls, value: float, dim: DimVec = DIMENSIONLESS, const_id: int | None = None):
         return cls(OpType.from_name("const"), (), dim, value=value, const_id=const_id)
 
     @classmethod
@@ -459,7 +461,7 @@ class Grammar:
         depth: int = 0,
         rng: np.random.Generator = None,
         max_nodes: int = 20,
-        _call_count: list = None,
+        _call_count: list | None = None,
     ) -> TypedExpr | None:
         if _call_count is None:
             _call_count = [0]
@@ -586,14 +588,13 @@ class Grammar:
     def generate_dimension(
         self,
         target_dim: DimVec,
-        max_depth: int = None,
+        max_depth: int | None = None,
         max_nodes: int = 20,
         n_samples: int = 10,
-        seed: int = None,
+        seed: int | None = None,
     ) -> list[TypedExpr]:
         results = []
         rng = np.random.default_rng(seed)
-        depth_limit = max_depth or self.max_depth
         for _ in range(n_samples):
             expr = self.generate_random_expr(
                 target_dim, depth=0, rng=rng, max_nodes=max_nodes
@@ -626,7 +627,6 @@ def fit_constants(
     if not consts:
         return expr, {}
 
-    n_consts = len(consts)
     x0 = np.array([c.value for c in consts])
     const_ids = [c.const_id for c in consts]
 
@@ -651,7 +651,7 @@ def fit_constants(
         optimized_expr = expr.set_constants(result.x.tolist())
         const_values = dict(zip(const_ids, result.x.tolist()))
         return optimized_expr, const_values
-    except Exception:
+    except (ValueError, RuntimeError):
         return expr, {}
 
 
@@ -693,7 +693,7 @@ def evaluate_individual(individual, grammar, variables, target_values):
         individual.optimized_expr = optimized_expr
         individual.const_values = const_values
         return (-nmse,)
-    except Exception:
+    except (ValueError, RuntimeError):
         return (-float("inf"),)
 
 
@@ -765,7 +765,7 @@ def crossover(individual1, individual2, max_nodes: int = 30):
     return individual1, individual2
 
 
-def mutate(individual, grammar, target_dim, max_nodes: int = 30, seed: int = None):
+def mutate(individual, grammar, target_dim, max_nodes: int = 30, seed: int | None = None):
     expr = individual[0]
     paths = collect_subtree_paths(expr, max_depth=15)
     if not paths:
@@ -812,7 +812,7 @@ def clone_individual(individual):
     return clone
 
 
-def generate_individual(grammar: Grammar, target_dim: DimVec, seed: int = None):
+def generate_individual(grammar: Grammar, target_dim: DimVec, seed: int | None = None):
     exprs = grammar.generate_dimension(
         target_dim, max_depth=6, n_samples=5, max_nodes=20, seed=seed
     )
@@ -884,13 +884,13 @@ def run_ga_search(
             try:
                 fit = toolbox.evaluate(ind)
                 ind.fitness.values = fit
-            except Exception:
+            except (ValueError, RuntimeError):
                 ind.fitness.values = (-float("inf"),)
 
     hall_of_fame = tools.HallOfFame(config.hall_of_fame_size)
     hall_of_fame.update(population)
 
-    population, logbook = algorithms.eaSimple(
+    population, _logbook = algorithms.eaSimple(
         population,
         toolbox,
         cxpb=config.cxpb,
@@ -997,11 +997,8 @@ class FeynmanSRModel:
             expr_sympy = self._to_sympy(expr)
             true_sympy = sp.sympify(true_formula.replace("^", "**"))
             # Check structural equality
-            if sp.simplify(expr_sympy - true_sympy) == 0:
-                return True
-            # Check with constant tolerance (1%)
-            return False
-        except Exception:
+            return sp.simplify(expr_sympy - true_sympy) == 0
+        except (ValueError, RuntimeError):
             return False
 
     def _to_sympy(self, expr: TypedExpr):
