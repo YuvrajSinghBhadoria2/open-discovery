@@ -703,6 +703,7 @@ def fit_constants(
     expr: TypedExpr,
     variables: dict[str, np.ndarray],
     target_values: np.ndarray,
+    *,
     max_iter: int = 50,
     ftol: float = 1e-8,
     xtol: float = 1e-8,
@@ -1059,6 +1060,7 @@ def run_ga_search(
     target_dim: DimVec,
     variables: dict[str, np.ndarray],
     target_values: np.ndarray,
+    *,
     config: GAConfig,
 ) -> tuple[TypedExpr, float, dict]:
     """Run GA search for a single equation.
@@ -1195,7 +1197,7 @@ class FeynmanSRModel:
             target_dim,
             variables,
             target_values,
-            self.ga_config,
+            config=self.ga_config,
         )
 
     def evaluate_on_dataset(
@@ -1291,7 +1293,7 @@ class FeynmanSRModel:
         except (ValueError, RuntimeError):
             return False
 
-    def _to_sympy(self, expr: TypedExpr):
+    def _to_sympy(self, expr: TypedExpr) -> sp.Expr:
         """Convert TypedExpr to sympy expression.
 
         Args:
@@ -1301,8 +1303,6 @@ class FeynmanSRModel:
             Sympy expression
 
         """
-        import sympy as sp
-
         if expr.op.op_name == "const":
             return sp.nsimplify(expr.value, [sp.pi, sp.E])
         if expr.op.op_name == "var":
