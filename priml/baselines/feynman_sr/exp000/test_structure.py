@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(
     0,
-    Path(__file__).resolve().parents[4],
+    str(Path(__file__).resolve().parents[4]),
 )
 
 from priml.baselines.feynman_sr.exp000.data import (

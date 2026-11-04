@@ -48,7 +48,7 @@ def compute_nmse(pred: np.ndarray, target: np.ndarray) -> float:
     var = np.var(target)
     if var == 0:
         return float("inf")
-    return mse / var
+    return float(mse / var)
 
 
 def check_exact_recovery(

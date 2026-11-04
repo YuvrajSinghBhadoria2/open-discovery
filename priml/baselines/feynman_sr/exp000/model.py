@@ -3,11 +3,15 @@
 exp000: Baseline Genetic Algorithm with dimensional constraints.
 """
 
+# mypy: disable-error-code="no-any-return"
+# mypy: disable-error-code="attr-defined"
+
 from __future__ import annotations
 
 import random
 import re
 import warnings
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from typing import ClassVar
 
@@ -38,7 +42,7 @@ class Dim:
     NAMES = ("M", "L", "T", "Q", "THETA")
 
     @classmethod
-    def from_str(cls, s: str) -> tuple[int, int, int, int, int] | None:
+    def from_str(cls, s: str) -> tuple[int, ...] | None:
         """Parse dimension string into vector.
 
         Args:
@@ -72,7 +76,7 @@ class Dim:
 class DimVec:
     """Immutable dimensional vector for physical quantities."""
 
-    vec: tuple[int, int, int, int, int]
+    vec: tuple[int, ...]
 
     @classmethod
     def zero(cls) -> DimVec:
@@ -107,43 +111,99 @@ class DimVec:
 DIMENSIONLESS = DimVec.zero()
 
 
+def _dim_const(_: object) -> None:
+    return None
+
+
+def _dim_var(_: object) -> None:
+    return None
+
+
+def _dim_add(a: DimVec, b: DimVec) -> DimVec | None:
+    return a if a == b else None
+
+
+def _dim_sub(a: DimVec, b: DimVec) -> DimVec | None:
+    return a if a == b else None
+
+
+def _dim_mul(a: DimVec, b: DimVec) -> DimVec:
+    return a + b
+
+
+def _dim_div(a: DimVec, b: DimVec) -> DimVec:
+    return a - b
+
+
+def _dim_pow(a: DimVec, b: DimVec) -> DimVec | None:
+    return a + a if b.is_dimensionless() else None
+
+
+def _dim_pow2(a: DimVec) -> DimVec:
+    return a + a
+
+
+def _dim_pow3(a: DimVec) -> DimVec:
+    return a + a + a
+
+
+def _dim_pow_neg1(a: DimVec) -> DimVec:
+    return DimVec(tuple(-v for v in a.vec))
+
+
+def _dim_pow_half(a: DimVec) -> DimVec | None:
+    return DimVec(tuple(v // 2 for v in a.vec)) if all(v % 2 == 0 for v in a.vec) else None
+
+
+def _dim_neg(a: DimVec) -> DimVec:
+    return a
+
+
+def _dim_sqrt(a: DimVec) -> DimVec | None:
+    return DimVec(tuple(v // 2 for v in a.vec)) if all(v % 2 == 0 for v in a.vec) else None
+
+
+def _dim_sin(a: DimVec) -> DimVec | None:
+    return a if a.is_dimensionless() else None
+
+
+def _dim_cos(a: DimVec) -> DimVec | None:
+    return a if a.is_dimensionless() else None
+
+
+def _dim_exp(a: DimVec) -> DimVec | None:
+    return a if a.is_dimensionless() else None
+
+
+def _dim_log(a: DimVec) -> DimVec | None:
+    return a if a.is_dimensionless() else None
+
+
+def _dim_abs(a: DimVec) -> DimVec:
+    return a
+
+
 class OpType:
     """Operator type definitions with dimensional rules."""
 
-    CONST = ("const", 0, lambda *_: None)
-    VAR = ("var", 0, lambda *_: None)
-    ADD = ("add", 2, lambda a, b: a if a == b else None)
-    SUB = ("sub", 2, lambda a, b: a if a == b else None)
-    MUL = ("mul", 2, lambda a, b: a + b)
-    DIV = ("div", 2, lambda a, b: a - b)
-    POW = ("pow", 2, lambda a, b: a + a if b.is_dimensionless() else None)
-    POW2 = ("pow2", 1, lambda a: a + a)
-    POW3 = ("pow3", 1, lambda a: a + a + a)
-    POW_NEG1 = ("pow_neg1", 1, lambda a: DimVec(tuple(-v for v in a.vec)))
-    POW_HALF = (
-        "pow_half",
-        1,
-        lambda a: (
-            DimVec(tuple(v // 2 for v in a.vec))
-            if all(v % 2 == 0 for v in a.vec)
-            else None
-        ),
-    )
-    NEG = ("neg", 1, lambda a: a)
-    SQRT = (
-        "sqrt",
-        1,
-        lambda a: (
-            DimVec(tuple(v // 2 for v in a.vec))
-            if all(v % 2 == 0 for v in a.vec)
-            else None
-        ),
-    )
-    SIN = ("sin", 1, lambda a: a if a.is_dimensionless() else None)
-    COS = ("cos", 1, lambda a: a if a.is_dimensionless() else None)
-    EXP = ("exp", 1, lambda a: a if a.is_dimensionless() else None)
-    LOG = ("log", 1, lambda a: a if a.is_dimensionless() else None)
-    ABS = ("abs", 1, lambda a: a)
+    CONST = ("const", 0, _dim_const)
+    VAR = ("var", 0, _dim_var)
+    ADD = ("add", 2, _dim_add)
+    SUB = ("sub", 2, _dim_sub)
+    MUL = ("mul", 2, _dim_mul)
+    DIV = ("div", 2, _dim_div)
+    POW = ("pow", 2, _dim_pow)
+    POW2 = ("pow2", 1, _dim_pow2)
+    POW3 = ("pow3", 1, _dim_pow3)
+    POW_NEG1 = ("pow_neg1", 1, _dim_pow_neg1)
+    POW_HALF = ("pow_half", 1, _dim_pow_half)
+    NEG = ("neg", 1, _dim_neg)
+    SQRT = ("sqrt", 1, _dim_sqrt)
+    SIN = ("sin", 1, _dim_sin)
+    COS = ("cos", 1, _dim_cos)
+    EXP = ("exp", 1, _dim_exp)
+    LOG = ("log", 1, _dim_log)
+    ABS = ("abs", 1, _dim_abs)
 
     ALL_OPS = (
         CONST,
@@ -184,7 +244,7 @@ class OpType:
         LOG,
         ABS,
     )
-    SYMBOLS: ClassVar[dict] = {
+    SYMBOLS: ClassVar[dict[str, str]] = {
         "add": "+",
         "sub": "-",
         "mul": "*",
@@ -203,7 +263,7 @@ class OpType:
         "abs": "|·|",
     }
 
-    def __init__(self, name: str, arity: int, dim_rule: callable) -> None:
+    def __init__(self, name: str, arity: int, dim_rule: Callable) -> None:
         self.op_name = name
         self.arity = arity
         self.dim_rule = dim_rule
@@ -318,6 +378,7 @@ class TypedExpr:
         if self.op.op_name == "const":
             return np.full_like(next(iter(variables.values())), self.value)
         if self.op.op_name == "var":
+            assert self.var_name is not None
             return variables[self.var_name]
 
         child_vals = [c.evaluate(variables) for c in self.children]
@@ -588,9 +649,7 @@ class Grammar:
                     # For var * var, use the actual variables directly
                     if d1_is_var and d2_is_var:
                         left_var = next(v for v, d in self.variables.items() if d == d1)
-                        right_var = next(
-                            v for v, d in self.variables.items() if d == d2
-                        )
+                        right_var = next(v for v, d in self.variables.items() if d == d2)
                         left = TypedExpr.variable(left_var, d1)
                         right = TypedExpr.variable(right_var, d2)
                     elif d1_is_var and d2_is_dimless:
@@ -599,9 +658,7 @@ class Grammar:
                         right = TypedExpr.constant(rng.choice([0.5, 1.0, 2.0]), d2)
                     elif d1_is_dimless and d2_is_var:
                         left = TypedExpr.constant(rng.choice([0.5, 1.0, 2.0]), d1)
-                        right_var = next(
-                            v for v, d in self.variables.items() if d == d2
-                        )
+                        right_var = next(v for v, d in self.variables.items() if d == d2)
                         right = TypedExpr.variable(right_var, d2)
                     else:
                         continue
@@ -619,23 +676,25 @@ class Grammar:
                 if target in (d1, d2):
                     continue
                 # Recursively generate sub-expressions
-                left = self.generate_random_expr(
+                left_rec = self.generate_random_expr(
                     d1,
                     depth + 1,
                     rng,
                     max_nodes,
                     _call_count,
                 )
-                right = self.generate_random_expr(
+                right_rec = self.generate_random_expr(
                     d2,
                     depth + 1,
                     rng,
                     max_nodes,
                     _call_count,
                 )
-                if left and right:
-                    expr = TypedExpr.binary(op.op_name, left, right)
-                    if expr and expr.count_nodes() <= max_nodes:
+                if left_rec is not None and right_rec is not None:
+                    left_typed: TypedExpr = left_rec
+                    right_typed: TypedExpr = right_rec
+                    expr = TypedExpr.binary(op.op_name, left_typed, right_typed)
+                    if expr is not None and expr.count_nodes() <= max_nodes:
                         return expr
 
         # PRIORITY 2: Simple unary operations on variables
@@ -643,9 +702,7 @@ class Grammar:
             for op in self.valid_unary[target]:
                 child_dim = op.dim_rule(target)
                 if child_dim and child_dim in var_dims:
-                    child_var = next(
-                        v for v, d in self.variables.items() if d == child_dim
-                    )
+                    child_var = next(v for v, d in self.variables.items() if d == child_dim)
                     child = TypedExpr.variable(child_var, child_dim)
                     expr = TypedExpr.unary(op.op_name, child)
                     if expr and expr.count_nodes() <= max_nodes:
@@ -727,7 +784,7 @@ def fit_constants(
         return expr, {}
 
     x0 = np.array([c.value for c in consts])
-    const_ids = [c.const_id for c in consts]
+    const_ids: list[int] = [c.const_id for c in consts if c.const_id is not None]
 
     def residuals(params: np.ndarray) -> np.ndarray:
         expr_opt = expr.set_constants(params.tolist())
@@ -807,6 +864,8 @@ def evaluate_individual(
             return (-float("inf"),)
         nmse = mse / var
 
+        # Store optimized expression and constant values on individual
+        # DEAP Individual is a list with dynamic attributes
         individual.optimized_expr = optimized_expr
         individual.const_values = const_values
         return (-nmse,)
@@ -897,9 +956,7 @@ def replace_subexpr_at_path(
     return result if result.count_nodes() <= max_nodes else None
 
 
-def crossover(
-    individual1: list, individual2: list, max_nodes: int = 30
-) -> tuple[list, list]:
+def crossover(individual1: list, individual2: list, max_nodes: int = 30) -> tuple[list, list]:
     """Perform crossover between two individuals.
 
     Args:
@@ -961,20 +1018,22 @@ def mutate(
     rng = np.random.default_rng(seed)
     # With 20% probability, insert a constant instead of replacing subtree
     if rng.random() < 0.2:
-        path = rng.choice(paths)
+        path = random.choice(paths)
         subexpr = get_subexpr_at_path(expr, path)
         # Multiply by a constant (dimensionless)
         const = TypedExpr.constant(rng.uniform(0.1, 5.0), DIMENSIONLESS)
-        new_expr = replace_subexpr_at_path(
-            expr,
-            path,
-            TypedExpr.binary("mul", subexpr, const),
-            max_nodes,
-        )
-        if new_expr:
-            individual[0] = new_expr
-            del individual.fitness.values
-            return (individual,)
+        binary_expr = TypedExpr.binary("mul", subexpr, const)
+        if binary_expr is not None:
+            new_expr = replace_subexpr_at_path(
+                expr,
+                path,
+                binary_expr,
+                max_nodes,
+            )
+            if new_expr:
+                individual[0] = new_expr
+                del individual.fitness.values
+                return (individual,)
 
     # Standard subtree replacement
     path = random.choice(paths)
@@ -1015,9 +1074,7 @@ def clone_individual(individual: list) -> list:
     return clone
 
 
-def generate_individual(
-    grammar: Grammar, target_dim: DimVec, seed: int | None = None
-) -> list:
+def generate_individual(grammar: Grammar, target_dim: DimVec, seed: int | None = None) -> list:
     """Generate a random individual.
 
     Args:
@@ -1035,8 +1092,7 @@ def generate_individual(
         n_samples=5,
         seed=seed,
     )
-    rng = np.random.default_rng(seed)
-    expr = rng.choice(exprs) if exprs else TypedExpr.constant(0.5, DimVec.parse("1"))
+    expr = random.choice(exprs) if exprs else TypedExpr.constant(0.5, DimVec.parse("1"))
     return creator.Individual([expr])
 
 
@@ -1130,9 +1186,7 @@ def run_ga_search(
         verbose=False,
     )
 
-    best_individual = (
-        hall_of_fame[0] if hall_of_fame else tools.selBest(population, k=1)[0]
-    )
+    best_individual = hall_of_fame[0] if hall_of_fame else tools.selBest(population, k=1)[0]
     best_expr = getattr(best_individual, "optimized_expr", best_individual[0])
 
     best_fitness = best_individual.fitness.values
@@ -1229,7 +1283,7 @@ class FeynmanSRModel:
             best_expr, nmse, info = self.solve_equation(eq, variables, target)
 
             # Check exact recovery (symbolic equality with 1% constant tolerance)
-            exact = self.check_exact_recovery(best_expr, eq.formula, eq.variables)
+            exact = self.check_exact_recovery(best_expr, eq.formula)
             if exact:
                 exact_recoveries += 1
 
@@ -1289,7 +1343,7 @@ class FeynmanSRModel:
             expr_sympy = self._to_sympy(expr)
             true_sympy = sp.sympify(true_formula.replace("^", "**"))
             # Check structural equality
-            return sp.simplify(expr_sympy - true_sympy) == 0
+            return bool(sp.simplify(expr_sympy - true_sympy) == 0)
         except (ValueError, RuntimeError):
             return False
 

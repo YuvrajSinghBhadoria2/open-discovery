@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(
     0,
-    Path(__file__).resolve().parents[4],
+    str(Path(__file__).resolve().parents[4]),
 )
 
 from priml.baselines.feynman_sr.exp000.experiments import exp000
@@ -37,9 +37,7 @@ def test_exp000_reproducibility() -> None:
     # Check individual results match
     for r1, r2 in zip(result1["results"], result2["results"], strict=False):
         assert r1["nmse"] == r2["nmse"], f"NMSE differs for {r1['eq_id']}"
-        assert r1["expression"] == r2["expression"], (
-            f"Expression differs for {r1['eq_id']}"
-        )
+        assert r1["expression"] == r2["expression"], f"Expression differs for {r1['eq_id']}"
         assert r1["exact"] == r2["exact"], f"Exact flag differs for {r1['eq_id']}"
 
     valid_results = [r for r in result1["results"] if r["nmse"] != float("inf")]

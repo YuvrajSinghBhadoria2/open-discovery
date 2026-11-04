@@ -9,7 +9,7 @@ import ast
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, TypedDict
 
 import numpy as np
 import requests
@@ -40,9 +40,7 @@ class FeynmanDataset:
         """Get a difficulty split from the dataset."""
         if split == "all":
             return self
-        filtered = [
-            eq for eq in self.equations if eq.difficulty.lower() == split.lower()
-        ]
+        filtered = [eq for eq in self.equations if eq.difficulty.lower() == split.lower()]
         return FeynmanDataset(equations=filtered, split=split)
 
     def __len__(self) -> int:
@@ -51,10 +49,24 @@ class FeynmanDataset:
     def __getitem__(self, idx: int) -> FeynmanEquation:
         return self.equations[idx]
 
+    def __iter__(self):
+        return iter(self.equations)
+
+
+class FeynmanEquationData(TypedDict):
+    """Typed dict for Feynman equation data."""
+
+    eq_id: str
+    formula: str
+    target_dim: str
+    variables: dict[str, str]
+    description: str
+    difficulty: str
+
 
 # SRSD Feynman equation metadata (subset for exp000 - 10 equations for fast iteration)
 # Full 120 equations loaded from cached JSON
-FEYNMAN_10_SUBSET = [
+FEYNMAN_10_SUBSET: list[FeynmanEquationData] = [
     {
         "eq_id": "feynman-i.12.1",
         "formula": "x0*x1",
@@ -171,7 +183,7 @@ def load_feynman_full(cache_dir: Path | None = None) -> FeynmanDataset:
     return FeynmanDataset(equations=equations, split="all")
 
 
-def _generate_fallback_srsd() -> list[dict[str, Any]]:
+def _generate_fallback_srsd() -> list[FeynmanEquationData]:
     """Generate fallback SRSD data if download fails."""
     # This would contain all 120 equations in production
     # For exp000 we use the 10-equation subset
@@ -238,7 +250,7 @@ _ALLOWED_FUNCS = {
 def _eval_formula(formula: str, variables: dict[str, np.ndarray]) -> np.ndarray:
     """Safely evaluate a formula string with numpy using AST parsing."""
     # Replace variable names with array references
-    local_dict = dict(variables.items())
+    local_dict: dict[str, Any] = dict(variables.items())
     local_dict.update(_ALLOWED_FUNCS)
 
     # Replace ^ with ** for Python
@@ -249,7 +261,8 @@ def _eval_formula(formula: str, variables: dict[str, np.ndarray]) -> np.ndarray:
         tree = ast.parse(formula_py, mode="eval")
         _validate_ast(tree)
         # Evaluate with restricted globals
-        return eval(compile(tree, "<string>", "eval"), {"__builtins__": {}}, local_dict)
+        result = eval(compile(tree, "<string>", "eval"), {"__builtins__": {}}, local_dict)
+        return np.asarray(result, dtype=np.float64)
     except (ValueError, SyntaxError):
         # Fallback: return zeros
         n = len(next(iter(variables.values())))
