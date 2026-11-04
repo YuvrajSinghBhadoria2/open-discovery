@@ -5,7 +5,6 @@ Downloads and caches the 120 Feynman equations from SRSD benchmark.
 
 from __future__ import annotations
 
-import ast
 import json
 from dataclasses import dataclass
 from pathlib import Path
@@ -14,7 +13,7 @@ from typing import Any
 import numpy as np
 import requests
 
-from priml.lib.userdirs import user_cache_dir
+from priml.lib.userdirs import cache_dir as user_cache_dir
 
 
 @dataclass
@@ -186,7 +185,7 @@ def generate_data_for_equation(
     Returns (variables_dict, target_values)
     """
     rng = np.random.default_rng(seed)
-    variables = {}
+    variables: dict[str, np.ndarray] = {}
 
     # Generate random values for each variable within reasonable ranges
     for var_name, dim_str in eq.variables.items():
@@ -241,11 +240,8 @@ def _eval_formula(formula: str, variables: dict[str, np.ndarray]) -> np.ndarray:
     formula_py = formula.replace("^", "**")
 
     try:
-        # Use ast.literal_eval for safety where possible
-        return ast.literal_eval(formula_py)
+        return eval(formula_py, {"__builtins__": {}}, local_dict)
     except (ValueError, SyntaxError):
-        # Fallback: return zeros
-        n = len(next(iter(variables.values())))
         # Fallback: return zeros
         n = len(next(iter(variables.values())))
         return np.zeros(n, dtype=np.float64)
@@ -261,7 +257,7 @@ class FeynmanDataConfig:
         seed: int = 42,
         noise: float = 0.0,
         cache_dir: str | None = None,
-    ):
+    ) -> None:
         self.split = split
         self.n_samples = n_samples
         self.seed = seed

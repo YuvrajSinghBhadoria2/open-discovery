@@ -12,7 +12,7 @@ import numpy as np
 
 @dataclass
 class EvaluationMetrics:
-    """Container for evaluation metrics"""
+    """Container for evaluation metrics."""
 
     nmse: float
     exact_recovery: bool
@@ -31,7 +31,7 @@ class EvaluationMetrics:
 
 
 def compute_nmse(pred: np.ndarray, target: np.ndarray) -> float:
-    """Compute Normalized Mean Squared Error"""
+    """Compute Normalized Mean Squared Error."""
     pred = pred.flatten() if pred.ndim > 1 else pred
     target = target.flatten() if target.ndim > 1 else target
 
@@ -99,7 +99,7 @@ def check_exact_recovery(
 def evaluate_expression(
     expr, variables: dict[str, np.ndarray], target: np.ndarray, true_formula: str
 ) -> EvaluationMetrics:
-    """Evaluate a single expression and return metrics"""
+    """Evaluate a single expression and return metrics."""
     pred = expr.evaluate(variables)
     nmse = compute_nmse(pred, target)
     exact = check_exact_recovery(str(expr), true_formula)
@@ -115,7 +115,7 @@ def evaluate_expression(
 
 
 def aggregate_results(results: list[EvaluationMetrics]) -> dict[str, Any]:
-    """Aggregate metrics across multiple equations"""
+    """Aggregate metrics across multiple equations."""
     if not results:
         return {"recovery_rate": 0.0, "mean_nmse": float("inf"), "mean_complexity": 0}
 

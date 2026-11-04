@@ -1,13 +1,14 @@
-"""
-Feynman SR Model: Dimensional GA + Levenberg-Marquardt Constant Optimization
-exp000: Baseline Genetic Algorithm with dimensional constraints
+"""Feynman SR Model: Dimensional GA + Levenberg-Marquardt Constant Optimization.
+
+exp000: Baseline Genetic Algorithm with dimensional constraints.
 """
 
 from __future__ import annotations
 
 import random
+import warnings
 from dataclasses import dataclass, field
-from typing import ClassVar
+from typing import ClassVar, Optional
 
 import numpy as np
 from deap import algorithms, base, creator, tools
@@ -20,6 +21,8 @@ from priml.baselines.feynman_sr.exp000.data import generate_data_for_equation
 
 
 class Dim:
+    """Dimension indices for physical quantities."""
+
     M = 0
     L = 1
     T = 2
@@ -28,7 +31,15 @@ class Dim:
     NAMES = ("M", "L", "T", "Q", "THETA")
 
     @classmethod
-    def from_str(cls, s: str):
+    def from_str(cls, s: str) -> Optional[tuple[int, int, int, int, int]]:
+        """Parse dimension string into vector.
+
+        Args:
+            s: Dimension string like "M L^-1 T^-2"
+
+        Returns:
+            Tuple of exponents (M, L, T, Q, THETA) or None if dimensionless
+        """
         s = s.upper().replace("[", "").replace("]", "")
         if not s or s == "1":
             return None
@@ -52,32 +63,37 @@ class Dim:
 
 @dataclass(frozen=True)
 class DimVec:
+    """Immutable dimensional vector for physical quantities."""
+
     vec: tuple[int, int, int, int, int]
 
     @classmethod
-    def zero(cls):
+    def zero(cls) -> "DimVec":
+        """Create dimensionless vector."""
         return cls((0, 0, 0, 0, 0))
 
     @classmethod
-    def parse(cls, s: str):
+    def parse(cls, s: str) -> "DimVec":
+        """Parse dimension string into DimVec."""
         return cls(Dim.from_str(s) or (0, 0, 0, 0, 0))
 
-    def __add__(self, other):
+    def __add__(self, other: "DimVec") -> "DimVec":
         return DimVec(tuple(a + b for a, b in zip(self.vec, other.vec)))
 
-    def __sub__(self, other):
+    def __sub__(self, other: "DimVec") -> "DimVec":
         return DimVec(tuple(a - b for a, b in zip(self.vec, other.vec)))
 
-    def is_dimensionless(self):
+    def is_dimensionless(self) -> bool:
+        """Check if vector represents dimensionless quantity."""
         return all(v == 0 for v in self.vec)
 
-    def __eq__(self, other):
+    def __eq__(self, other: object) -> bool:
         return isinstance(other, DimVec) and self.vec == other.vec
 
-    def __hash__(self):
+    def __hash__(self) -> int:
         return hash(self.vec)
 
-    def __deepcopy__(self, memo):
+    def __deepcopy__(self, memo: dict) -> "DimVec":
         return self
 
 
@@ -85,6 +101,8 @@ DIMENSIONLESS = DimVec.zero()
 
 
 class OpType:
+    """Operator type definitions with dimensional rules."""
+
     CONST = ("const", 0, lambda *a: None)
     VAR = ("var", 0, lambda *a: None)
     ADD = ("add", 2, lambda a, b: a if a == b else None)
@@ -178,13 +196,14 @@ class OpType:
         "abs": "|·|",
     }
 
-    def __init__(self, name, arity, dim_rule):
+    def __init__(self, name: str, arity: int, dim_rule: callable) -> None:
         self.op_name = name
         self.arity = arity
         self.dim_rule = dim_rule
 
     @classmethod
-    def from_name(cls, name):
+    def from_name(cls, name: str) -> "OpType":
+        """Create OpType from operator name."""
         for op in cls.ALL_OPS:
             if op[0] == name:
                 return cls(*op)
@@ -193,23 +212,32 @@ class OpType:
 
 @dataclass
 class TypedExpr:
+    """Typed expression node with dimensional information."""
+
     op: OpType
-    children: tuple[TypedExpr, ...]
+    children: tuple["TypedExpr", ...]
     dim: DimVec
-    value: float | None = None
-    var_name: str | None = None
-    const_id: int | None = None
+    value: Optional[float] = None
+    var_name: Optional[str] = None
+    const_id: Optional[int] = None
 
     @classmethod
-    def constant(cls, value: float, dim: DimVec = DIMENSIONLESS, const_id: int | None = None):
+    def constant(
+        cls, value: float, dim: DimVec = DIMENSIONLESS, const_id: Optional[int] = None
+    ) -> "TypedExpr":
+        """Create constant expression."""
         return cls(OpType.from_name("const"), (), dim, value=value, const_id=const_id)
 
     @classmethod
-    def variable(cls, name: str, dim: DimVec):
+    def variable(cls, name: str, dim: DimVec) -> "TypedExpr":
+        """Create variable expression."""
         return cls(OpType.from_name("var"), (), dim, var_name=name)
 
     @classmethod
-    def binary(cls, op_name: str, left: TypedExpr, right: TypedExpr):
+    def binary(
+        cls, op_name: str, left: "TypedExpr", right: "TypedExpr"
+    ) -> Optional["TypedExpr"]:
+        """Create binary operation expression."""
         op = OpType.from_name(op_name)
         dim = op.dim_rule(left.dim, right.dim)
         if dim is None:
@@ -217,14 +245,15 @@ class TypedExpr:
         return cls(op, (left, right), dim)
 
     @classmethod
-    def unary(cls, op_name: str, child: TypedExpr):
+    def unary(cls, op_name: str, child: "TypedExpr") -> Optional["TypedExpr"]:
+        """Create unary operation expression."""
         op = OpType.from_name(op_name)
         dim = op.dim_rule(child.dim)
         if dim is None:
             return None
         return cls(op, (child,), dim)
 
-    def __str__(self):
+    def __str__(self) -> str:
         if self.op.op_name == "const":
             return f"{self.value:.6g}"
         elif self.op.op_name == "var":
@@ -240,10 +269,11 @@ class TypedExpr:
             sym = OpType.SYMBOLS.get(self.op.op_name, self.op.op_name)
             return f"({self.children[0]!s} {sym} {self.children[1]!s})"
 
-    def __deepcopy__(self, memo):
+    def __deepcopy__(self, memo: dict) -> "TypedExpr":
         return self
 
-    def get_constants(self):
+    def get_constants(self) -> list["TypedExpr"]:
+        """Get all constant nodes in expression."""
         if self.op.op_name == "const":
             return [self]
         consts = []
@@ -251,16 +281,17 @@ class TypedExpr:
             consts.extend(child.get_constants())
         return consts
 
-    def count_nodes(self):
+    def count_nodes(self) -> int:
+        """Count total nodes in expression tree."""
         if self.op.arity == 0:
             return 1
         return 1 + sum(c.count_nodes() for c in self.children)
 
-    def set_constants(self, new_values: list) -> TypedExpr:
-        """Create new expression with updated constant values (in order of get_constants)"""
+    def set_constants(self, new_values: list) -> "TypedExpr":
+        """Create new expression with updated constant values."""
         const_iter = iter(new_values)
 
-        def replace_consts(expr):
+        def replace_consts(expr: "TypedExpr") -> "TypedExpr":
             if expr.op.op_name == "const":
                 return TypedExpr.constant(next(const_iter), expr.dim, expr.const_id)
             if not expr.children:
@@ -271,6 +302,7 @@ class TypedExpr:
         return replace_consts(self)
 
     def evaluate(self, variables: dict[str, np.ndarray]) -> np.ndarray:
+        """Evaluate expression with given variable values."""
         if self.op.op_name == "const":
             return np.full_like(next(iter(variables.values())), self.value)
         elif self.op.op_name == "var":
@@ -333,11 +365,18 @@ class TypedExpr:
 
 
 class Grammar:
-    """Fast dimensional grammar for generating valid expressions - SIMPLIFIED"""
+    """Fast dimensional grammar for generating valid expressions - SIMPLIFIED."""
 
     def __init__(
         self, variables: dict[str, DimVec], target_dim: DimVec, max_depth: int = 10
-    ):
+    ) -> None:
+        """Initialize grammar with variable dimensions and target dimension.
+
+        Args:
+            variables: Mapping from variable name to dimension vector
+            target_dim: Target dimension for generated expressions
+            max_depth: Maximum depth for expression generation
+        """
         self.variables = variables
         self.target_dim = target_dim
         self.max_depth = max_depth
@@ -346,7 +385,8 @@ class Grammar:
         self.var_dims = set(variables.values())
         self._build()
 
-    def _build(self):
+    def _build(self) -> None:
+        """Build lookup tables for valid dimensional operations."""
         # Only use variable dimensions + dimensionless + simple combinations
         all_dims = set(self.var_dims)
         all_dims.add(DIMENSIONLESS)
@@ -395,7 +435,7 @@ class Grammar:
                     all_dims.add(self.target_dim)
 
         # Build valid unary
-        self.valid_unary = {}
+        self.valid_unary: dict[DimVec, list[OpType]] = {}
         for d in all_dims:
             valid = []
             for op in self.unary_ops:
@@ -414,7 +454,7 @@ class Grammar:
                     if res and res in all_dims:
                         priority_targets.append(res)
 
-        self.binary_candidates = {}
+        self.binary_candidates: dict[DimVec, list[tuple[OpType, DimVec, DimVec]]] = {}
         for target in set(priority_targets):
             candidates = []
             # PRIORITY 1: Direct variable combinations
@@ -457,12 +497,24 @@ class Grammar:
 
     def generate_random_expr(
         self,
-        target_dim: DimVec = None,
+        target_dim: Optional[DimVec] = None,
         depth: int = 0,
-        rng: np.random.Generator = None,
+        rng: Optional[np.random.Generator] = None,
         max_nodes: int = 20,
-        _call_count: list | None = None,
-    ) -> TypedExpr | None:
+        _call_count: Optional[list] = None,
+    ) -> Optional[TypedExpr]:
+        """Generate random expression matching target dimension.
+
+        Args:
+            target_dim: Target dimension (default: grammar's target_dim)
+            depth: Current recursion depth
+            rng: Random number generator
+            max_nodes: Maximum nodes in expression
+            _call_count: Internal call counter to prevent infinite recursion
+
+        Returns:
+            TypedExpr or None if generation fails
+        """
         if _call_count is None:
             _call_count = [0]
         _call_count[0] += 1
@@ -588,11 +640,23 @@ class Grammar:
     def generate_dimension(
         self,
         target_dim: DimVec,
-        max_depth: int | None = None,
+        max_depth: Optional[int] = None,
         max_nodes: int = 20,
         n_samples: int = 10,
-        seed: int | None = None,
+        seed: Optional[int] = None,
     ) -> list[TypedExpr]:
+        """Generate multiple expressions matching target dimension.
+
+        Args:
+            target_dim: Target dimension
+            max_depth: Maximum depth (default: grammar's max_depth)
+            max_nodes: Maximum nodes per expression
+            n_samples: Number of expressions to generate
+            seed: Random seed
+
+        Returns:
+            List of generated expressions
+        """
         results = []
         rng = np.random.default_rng(seed)
         for _ in range(n_samples):
@@ -617,7 +681,19 @@ def fit_constants(
     ftol: float = 1e-8,
     xtol: float = 1e-8,
 ) -> tuple[TypedExpr, dict[int, float]]:
-    """Optimize constants in expression using Levenberg-Marquardt"""
+    """Optimize constants in expression using Levenberg-Marquardt.
+
+    Args:
+        expr: Expression with constants to optimize
+        variables: Input variable values
+        target_values: Target output values
+        max_iter: Maximum iterations
+        ftol: Function tolerance
+        xtol: Parameter tolerance
+
+    Returns:
+        Tuple of (optimized expression, constant values dict)
+    """
     try:
         from scipy.optimize import least_squares
     except ImportError:
@@ -630,7 +706,7 @@ def fit_constants(
     x0 = np.array([c.value for c in consts])
     const_ids = [c.const_id for c in consts]
 
-    def residuals(params):
+    def residuals(params: np.ndarray) -> np.ndarray:
         expr_opt = expr.set_constants(params.tolist())
         pred = expr_opt.evaluate(variables)
         pred = pred.flatten() if pred.ndim > 1 else pred
@@ -649,7 +725,7 @@ def fit_constants(
             verbose=0,
         )
         optimized_expr = expr.set_constants(result.x.tolist())
-        const_values = dict(zip(const_ids, result.x.tolist()))
+        const_values = dict(zip(const_ids, result.x.tolist(), strict=False))
         return optimized_expr, const_values
     except (ValueError, RuntimeError):
         return expr, {}
@@ -666,7 +742,23 @@ if "Individual" not in creator.__dict__:
     creator.create("Individual", list, fitness=creator.FitnessMin)
 
 
-def evaluate_individual(individual, grammar, variables, target_values):
+def evaluate_individual(
+    individual,
+    grammar: Grammar,
+    variables: dict[str, np.ndarray],
+    target_values: np.ndarray,
+) -> tuple[float]:
+    """Evaluate fitness of an individual expression.
+
+    Args:
+        individual: DEAP individual containing expression
+        grammar: Grammar for dimensional validation
+        variables: Input variable values
+        target_values: Target output values
+
+    Returns:
+        Tuple of negative NMSE (for minimization)
+    """
     expr = individual[0]
     try:
         has_consts = any(c.op.op_name == "const" for c in expr.get_constants())
@@ -700,9 +792,20 @@ def evaluate_individual(individual, grammar, variables, target_values):
 def collect_subtree_paths(
     expr: TypedExpr,
     path: tuple[int, ...] = (),
-    visited: set | None = None,
+    visited: Optional[set] = None,
     max_depth: int = 15,
 ) -> list[tuple[int, ...]]:
+    """Collect all subtree paths in expression.
+
+    Args:
+        expr: Expression to traverse
+        path: Current path tuple
+        visited: Set of visited node ids
+        max_depth: Maximum recursion depth
+
+    Returns:
+        List of path tuples
+    """
     if visited is None:
         visited = set()
     expr_id = id(expr)
@@ -718,6 +821,15 @@ def collect_subtree_paths(
 
 
 def get_subexpr_at_path(expr: TypedExpr, path: tuple[int, ...]) -> TypedExpr:
+    """Get subexpression at given path.
+
+    Args:
+        expr: Root expression
+        path: Tuple of child indices
+
+    Returns:
+        Subexpression at path
+    """
     for idx in path:
         expr = expr.children[idx]
     return expr
@@ -725,7 +837,18 @@ def get_subexpr_at_path(expr: TypedExpr, path: tuple[int, ...]) -> TypedExpr:
 
 def replace_subexpr_at_path(
     expr: TypedExpr, path: tuple[int, ...], replacement: TypedExpr, max_nodes: int = 30
-) -> TypedExpr | None:
+) -> Optional[TypedExpr]:
+    """Replace subexpression at path with new expression.
+
+    Args:
+        expr: Root expression
+        path: Path to subexpression
+        replacement: Replacement expression
+        max_nodes: Maximum allowed nodes
+
+    Returns:
+        New expression with replacement, or None if too large
+    """
     if not path:
         return replacement if replacement.count_nodes() <= max_nodes else None
     idx = path[0]
@@ -741,6 +864,16 @@ def replace_subexpr_at_path(
 
 
 def crossover(individual1, individual2, max_nodes: int = 30):
+    """Perform crossover between two individuals.
+
+    Args:
+        individual1: First parent
+        individual2: Second parent
+        max_nodes: Maximum nodes in offspring
+
+    Returns:
+        Tuple of offspring individuals
+    """
     expr1, expr2 = individual1[0], individual2[0]
     paths1 = collect_subtree_paths(expr1, max_depth=15)
     paths2 = collect_subtree_paths(expr2, max_depth=15)
@@ -765,7 +898,25 @@ def crossover(individual1, individual2, max_nodes: int = 30):
     return individual1, individual2
 
 
-def mutate(individual, grammar, target_dim, max_nodes: int = 30, seed: int | None = None):
+def mutate(
+    individual,
+    grammar: Grammar,
+    target_dim: DimVec,
+    max_nodes: int = 30,
+    seed: Optional[int] = None,
+):
+    """Mutate an individual by replacing a random subtree.
+
+    Args:
+        individual: Individual to mutate
+        grammar: Grammar for generating valid replacements
+        target_dim: Target dimension
+        max_nodes: Maximum nodes in expression
+        seed: Random seed
+
+    Returns:
+        Tuple containing mutated individual
+    """
     expr = individual[0]
     paths = collect_subtree_paths(expr, max_depth=15)
     if not paths:
@@ -803,6 +954,14 @@ def mutate(individual, grammar, target_dim, max_nodes: int = 30, seed: int | Non
 
 
 def clone_individual(individual):
+    """Create a deep copy of an individual.
+
+    Args:
+        individual: Individual to clone
+
+    Returns:
+        Cloned individual
+    """
     clone = creator.Individual(list(individual))
     clone.fitness = (
         creator.FitnessMin(individual.fitness.values)
@@ -812,7 +971,19 @@ def clone_individual(individual):
     return clone
 
 
-def generate_individual(grammar: Grammar, target_dim: DimVec, seed: int | None = None):
+def generate_individual(
+    grammar: Grammar, target_dim: DimVec, seed: Optional[int] = None
+):
+    """Generate a random individual.
+
+    Args:
+        grammar: Grammar for expression generation
+        target_dim: Target dimension
+        seed: Random seed
+
+    Returns:
+        New individual
+    """
     exprs = grammar.generate_dimension(
         target_dim, max_depth=6, n_samples=5, max_nodes=20, seed=seed
     )
@@ -825,6 +996,8 @@ def generate_individual(grammar: Grammar, target_dim: DimVec, seed: int | None =
 
 @dataclass
 class GAConfig:
+    """Genetic Algorithm configuration."""
+
     population_size: int = 200
     max_generations: int = 50
     cxpb: float = 0.6
@@ -843,9 +1016,19 @@ def run_ga_search(
     target_values: np.ndarray,
     config: GAConfig,
 ) -> tuple[TypedExpr, float, dict]:
-    """Run GA search for a single equation. Returns (best_expr, best_nmse, info_dict)"""
-    import warnings
+    """Run GA search for a single equation.
 
+    Args:
+        equation_name: Name of equation for logging
+        grammar: Grammar for expression generation
+        target_dim: Target dimension
+        variables: Input variable values
+        target_values: Target output values
+        config: GA configuration
+
+    Returns:
+        Tuple of (best expression, best NMSE, info dict)
+    """
     warnings.filterwarnings("ignore", category=RuntimeWarning)
 
     # Set seeds for reproducibility
@@ -930,14 +1113,23 @@ def run_ga_search(
 
 @dataclass
 class FeynmanSRModel:
-    """Main model interface for priml experiments"""
+    """Main model interface for priml experiments."""
 
     ga_config: GAConfig = field(default_factory=GAConfig)
 
     def solve_equation(
         self, eq, variables, target_values
     ) -> tuple[TypedExpr, float, dict]:
-        """Solve a single Feynman equation"""
+        """Solve a single Feynman equation.
+
+        Args:
+            eq: Feynman equation object
+            variables: Input variable values
+            target_values: Target output values
+
+        Returns:
+            Tuple of (best expression, NMSE, info dict)
+        """
         # Build grammar
         var_dims = {name: DimVec.parse(dim) for name, dim in eq.variables.items()}
         target_dim = DimVec.parse(eq.target_dim)
@@ -952,7 +1144,16 @@ class FeynmanSRModel:
     def evaluate_on_dataset(
         self, dataset, n_samples: int = 1000, seed: int = 42
     ) -> dict:
-        """Evaluate model on a dataset split. Returns metrics dict."""
+        """Evaluate model on a dataset split.
+
+        Args:
+            dataset: FeynmanDataset to evaluate on
+            n_samples: Number of samples per equation
+            seed: Random seed
+
+        Returns:
+            Metrics dictionary
+        """
         results = []
         exact_recoveries = 0
 
@@ -963,7 +1164,7 @@ class FeynmanSRModel:
             best_expr, nmse, info = self.solve_equation(eq, variables, target)
 
             # Check exact recovery (symbolic equality with 1% constant tolerance)
-            exact = self._check_exact_recovery(best_expr, eq.formula, eq.variables)
+            exact = self.check_exact_recovery(best_expr, eq.formula, eq.variables)
             if exact:
                 exact_recoveries += 1
 
@@ -986,10 +1187,34 @@ class FeynmanSRModel:
             "results": results,
         }
 
+    def check_exact_recovery(
+        self, expr: TypedExpr, true_formula: str, variables: dict
+    ) -> bool:
+        """Check if expression matches true formula (symbolic + constant tolerance).
+
+        Args:
+            expr: Predicted expression
+            true_formula: True formula string
+            variables: Variable dictionary
+
+        Returns:
+            True if expressions match
+        """
+        return self._check_exact_recovery(expr, true_formula, variables)
+
     def _check_exact_recovery(
         self, expr: TypedExpr, true_formula: str, variables: dict
     ) -> bool:
-        """Check if expression matches true formula (symbolic + constant tolerance)"""
+        """Check if expression matches true formula (symbolic + constant tolerance).
+
+        Args:
+            expr: Predicted expression
+            true_formula: True formula string
+            variables: Variable dictionary
+
+        Returns:
+            True if expressions match
+        """
         try:
             import sympy as sp
 
@@ -1002,6 +1227,14 @@ class FeynmanSRModel:
             return False
 
     def _to_sympy(self, expr: TypedExpr):
+        """Convert TypedExpr to sympy expression.
+
+        Args:
+            expr: TypedExpr to convert
+
+        Returns:
+            Sympy expression
+        """
         import sympy as sp
 
         if expr.op.op_name == "const":

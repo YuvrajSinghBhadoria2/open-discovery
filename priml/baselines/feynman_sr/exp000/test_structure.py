@@ -1,5 +1,5 @@
 """
-Structure test for exp000 baseline - verifies imports and config structure
+Structure test for exp000 baseline - verifies imports and config structure.
 Run this for quick CI verification without full GA execution.
 """
 
@@ -92,8 +92,8 @@ print(f"✓ exp003: split={cfg003.dataset_split}")
 print(f"\n✓ All {len(ALL_EXPERIMENTS)} experiment configs registered")
 
 print("\nTesting exact recovery check...")
-assert check_exact_recovery("x0 * x1", "x0*x1") == True
-assert check_exact_recovery("x0 * x1", "x0 * x2") == False
+assert check_exact_recovery("x0 * x1", "x0*x1") is True
+assert check_exact_recovery("x0 * x1", "x0 * x2") is False
 print("✓ Exact recovery check works")
 
 print("\n" + "=" * 50)

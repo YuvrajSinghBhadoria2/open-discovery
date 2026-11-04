@@ -1,5 +1,5 @@
 """
-Test script for exp000 baseline - verifies bit-for-bit reproducibility
+Test script for exp000 baseline - verifies bit-for-bit reproducibility.
 """
 
 import os
@@ -15,8 +15,8 @@ sys.path.insert(
 from priml.baselines.feynman_sr.exp000.experiments import exp000
 
 
-def test_exp000_reproducibility():
-    """Run exp000 twice and verify identical results"""
+def test_exp000_reproducibility() -> None:
+    """Run exp000 twice and verify identical results."""
     print("Running exp000 (run 1)...")
 
     # Create smoke test config: smaller population, fewer generations
@@ -54,9 +54,10 @@ def test_exp000_reproducibility():
     print(
         f"  Exact recoveries: {result1['exact_recoveries']}/{result1['total_equations']}"
     )
-    print(
-        f"  Mean NMSE: {sum(r['nmse'] for r in result1['results'] if r['nmse'] != float('inf')) / len([r for r in result1['results'] if r['nmse'] != float('inf')]):.6f}"
-    )
+    valid_results = [r for r in result1["results"] if r["nmse"] != float("inf")]
+    if valid_results:
+        mean_nmse = sum(r["nmse"] for r in valid_results) / len(valid_results)
+        print(f"  Mean NMSE: {mean_nmse:.6f}")
 
     # Print per-equation results
     for r in result1["results"]:
@@ -65,7 +66,7 @@ def test_exp000_reproducibility():
             f"  {status} {r['eq_id']}: NMSE={r['nmse']:.6f}, expr={r['expression'][:80]}"
         )
 
-    return result1
+    return
 
 
 if __name__ == "__main__":
